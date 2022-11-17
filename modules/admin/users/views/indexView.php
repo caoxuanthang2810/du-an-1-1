@@ -1,10 +1,5 @@
 <?php get_header('', 'Quản lý khách hàng') ?>
 
-<div class=" container mx-auto bg-gray-300 pt-8 pb-10 ">
-    
-    <div class="container mx-auto ">
-
-        <div class="bg-white h-[710px] ml-[180px] w-[1200px] mt-[-570px] ">
             <div class="bg-slate-100 h-[50px] ">
 
                 <table>
