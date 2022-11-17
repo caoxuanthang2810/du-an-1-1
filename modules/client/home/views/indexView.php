@@ -22,7 +22,7 @@
             <h2 class="mt-[15px] font-bold text-[25px] mb-5">Sản phẩm bán chạy</h2>
         </div>
         <div class="mt-[23px] ">
-            <a href="?/role=admin&mod=danh_muc">
+            <a href="?role=admin&mod=danh_muc">
 
                 <button class="border border-[#EFA969] font-bold w-[100px] h-[40px] text-[18px] hover:bg-[#EFA969] hover:text-white rounded-xl">Xem Thêm</button>
             </a>
