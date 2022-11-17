@@ -1,15 +1,85 @@
+<?php get_header('base', $title) ?>
+<head>
+   
 
-<html>
-    <head>
-        <title>Upload file Ajax</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script src="public/js/customs.js" type="text/javascript"></script>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <style>
-            #show_list_file { width:  200px; height: 200px; overflow: hidden;}
-            #show_list_file img { max-width: 100%; max-height: 100%;}
-        </style>
+    <!-- Header -->
+    <div class="">
+        <div class="container mx-auto flex justify-between items-center border-b-2">
+            <div class="">
+                <ul class="flex gap-6 text-[13px] items-center">
+                    <li class="logo__item">
+                        <a class="flex" href="https://goo.gl/maps/dfQDF4H3aH7vK4ue9">
+                            <img src="https://cdn.pnj.io/images/image-update/layout/icon-stores-new.svg" alt="">
+                            <span class="text-[24px] ml-2">Cửa hàng</span>
+                        </a>
+                    </li>
 
-        ĐÂY LÀ HEADER
+                    <li class="logo__item">
+                        <a class="flex" href="tel:+1800545457">
+                            <img src="https://cdn.pnj.io/images/image-update/layout/icon-hotline-new.svg" alt="">
+                            <span class="text-[24px] ml-2">1800 54 54 57</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <img class="h-[150px]" src="./public/images/logo/logo.png" alt="">
+            </div>
+
+            <div class="flex gap-8 items-center">
+
+                <div>
+                    <ul class="flex gap-5">
+                        <li class="border border-[#EFA969] rounded-[10px] p-3 font-bold">
+                            <a href="./index.php?dang-nhap">Đăng nhập</a>
+                        </li>
+                        <li class="bg-[#EFA969] rounded-[10px] font-bold p-3">
+                            <a href="./index.php?dang-ky">Đăng ký</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>
+                            <a href="./index.php?gio-hang" class="flex items-center">
+                                <!-- <img src="https://cdn.pnj.io/images/image-update/layout/icon-cart-new.svg" alt=""> -->
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span class="ml-2">Giỏ hàng</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Navbar -->
+
+    <div class="mt-2 ">
+        <div class="container mx-auto">
+            <div class="py-[5px] flex items-center justify-between border-b-2 border-slate-500 h-[80px]">
+                <div>
+                    <ul class="flex gap-5">
+                        <li class="hover:text-black hover:underline text-lg "><a href="./index.php">Trang chủ</a></li>
+                        <li class="hover:text-black hover:underline text-lg"><a href="./index.php?gioi-thieu">Giới thiệu</a></li>
+                        <li class="hover:text-black hover:underline text-lg"><a href="./index.php?danh-muc">Danh mục sản phẩm</a></li>
+                    </ul>
+                </div>
+                <div class="form__search max-w-[35%] py-2 ">
+                    <form action="" class="flex ">
+                        <input type="text" placeholder="Tìm Kiếm Nhanh" class=" bg-[#ededed] border-[#ededed] text-[18px] rounded-[35px] pl-2 outline-transparent" required>
+                        <button class="form__search_btn text-[24px] pr-2 ml-3">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</head>
