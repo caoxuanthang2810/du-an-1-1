@@ -1,9 +1,9 @@
 <?php get_header('', 'Quản lý khách hàng') ?>
 
-<div class="w-full">
-    <div class=" mx-[40px]  ">
+<div class="bg-gray-300 pt-8 pb-10">
+    <div class=" container mx-auto  ">
 
-        <div class="bg-white h-[676px]">
+        <div class="bg-white h-[710px] ml-[180px] w-[1200px]">
             <div class="bg-slate-100 h-[50px] ">
 
                 <table>
@@ -38,3 +38,4 @@
         </div>
     </div>
 </div>
+<?php get_footer() ?>
