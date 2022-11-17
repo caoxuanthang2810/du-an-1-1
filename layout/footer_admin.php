@@ -1,7 +1,7 @@
 <div class="container mx-auto py-4 border-2px-white md:block hidden">
         <div class="flex justify-between">
             <div class="w-[200px] h-[200px]">
-                <img src="../Asset/Image/logo/—Pngtree—golden leaf camera photography logo_8535019 4.png" class="w-full h-full" alt="">
+                <img src="./public/images/logo/logo.png" class="w-full h-full" alt="">
             </div>
             <div class="text-right font-medium">
                 <span>Copyright © 2015 CÔNG TY CỔ PHẦN ĐẦU TƯ VÀ PHÂN PHỐI BÌNH MINH <br>

@@ -20,7 +20,7 @@
 	</div>
 
 			<div class="border-b-2 border-gray-300">
-				<img src="../Asset//Image//logo//—Pngtree—golden leaf camera photography logo_8535019 4.png" alt="" class="w-[200px] h-[140px]">
+				<img src="./public/images/logo/logo.png" alt="" class="w-[200px] h-[140px]">
 			</div>
 			<div class="">
 				<p class="h-[30px] mt-5"><a href="?role=admin&mod=home" class="text-lg ml-4 text-medium text-black hover:text-[#EFA969]">Trang Chủ</a></p>

@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php get_header('', 'Danh mục sản phẩm') ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-
+    <!--begin::Subheader-->
     <div class=" mx-[40px]  ">
 
         <div class="bg-white h-[676px] mt-10">
@@ -63,6 +54,4 @@
 
             </div>
         </div>
-</body>
-
-</html>
+<?php get_footer() ?>

@@ -1,37 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php get_header('', 'Danh mục sản phẩm') ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-
-    <div class=" mx-[40px]  ">
-
-        <div class="bg-white h-[676px] mt-10">
+    <!--begin::Subheader-->
+    <div class=" mx-[40px]  mt-10">
+        
+        <div class="bg-white h-[676px]">
             <div class="bg-slate-100 h-[50px] ">
 
                 <table>
                     <tr class="text-center h-[55px]">
                         <th class="w-[100px]">ID</th>
-                        <th class="w-[650px]">Nội dung</th>
-                        <th class="w-[250px]">Thời gian bình luận</th>
-                        <th class="w-[200px]">Mã sản phẩm</th>
-                        <th class="w-[200px]">Mã khách hàng</th>
-                        <th class="w-[200px]">Hành động</th>
+                        
+                        <th class="w-[1000px]">Xuất Xứ</th>
+                        
+                        <th class="w-[100px]">Hành động</th>
 
                     </tr>
 
                     <tr class="text-center h-[55px]">
                         <td>1</td>
-                        <td>Cường non vãi</td>
-                        <td>15/11/2022 21:12:00</td>
-                        <td>A001022</td>
-                        <td>3</td>
+                        
+                        <td>Đài Loan</td>
+                       
                         <td><button> <i class="fa-solid fa-pen mr-2"></i></button>
                             <button><i class="fa-solid fa-trash-can"></i></button>
                         </td>
@@ -63,6 +52,4 @@
 
             </div>
         </div>
-</body>
-
-</html>
+<?php get_footer() ?>
