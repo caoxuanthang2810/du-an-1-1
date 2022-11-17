@@ -7,7 +7,7 @@
 
 
 
-<div class="bg-gray-300  ">
+<div class="bg-gray-300">
 	<div class="h-[50px] flex justify-between bg-[#F29D38] leading-[50px]">
 		<div class="ml-[250px]">
 			<a href="">
@@ -23,8 +23,8 @@
 		</div>
 
 	</div>
-	<div class="  float-left ">
-		<div class="w-[250px]  bg-white">
+	<div class="flex justify-between">
+		<div class="w-[250px] bg-white">
 			<div class="border-b-2 border-gray-300">
 				<img src="../Asset//Image//logo//—Pngtree—golden leaf camera photography logo_8535019 4.png" alt="" class="w-[200px] h-[140px]">
 			</div>
