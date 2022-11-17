@@ -1,8 +1,4 @@
 <?php get_header('base', $title) ?>
-<?php $user = get_auth(); ?>
-<?php $notifications = get_notification(); ?>
-
-
 
 
 
@@ -23,8 +19,8 @@
 		</div>
 
 	</div>
-	<div class=" ">
-		<div class="w-[250px]  bg-white">
+	<div class=" float-left mr-10">
+		<div class="w-[250px]  bg-white h-[740px]">
 			<div class="border-b-2 border-gray-300">
 				<img src="../Asset//Image//logo//—Pngtree—golden leaf camera photography logo_8535019 4.png" alt="" class="w-[200px] h-[140px]">
 			</div>
