@@ -15,7 +15,7 @@ function checkFormRegister(){
 
     if(email.value != ""){
         if(!CheckEmail.test(email.value)){
-            msgErrorEmail.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Nhập sai định dạng email";
+            msgErrorEmail.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập sai định dạng email";
             email.focus();
             return false;
         }else{
@@ -23,7 +23,7 @@ function checkFormRegister(){
             email.focus();
         }
     }else{
-        msgErrorEmail.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Nhập email";
+        msgErrorEmail.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập email";
         userName.focus();
         return false;
     }

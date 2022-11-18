@@ -1,11 +1,12 @@
 <?php
 
 function construct() {
-    request_auth(false);
+   
     load_model('index');
 }
 
 function indexAction() {
+    request_auth(false);
     $notifications = get_notification();
     load_view('index', [
         "notifications" => $notifications
@@ -13,6 +14,7 @@ function indexAction() {
 }
 
 function indexPostAction() {
+    request_auth(false);
     // validation
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -29,4 +31,8 @@ function indexPostAction() {
         push_notification('danger', ['Tài khoản hoặc mật khẩu không chính xác']);
         header('Location: ?role=admin&mod=auth');
     }
+}
+
+function logout(){
+    request_auth(true);
 }

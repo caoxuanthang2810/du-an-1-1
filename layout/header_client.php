@@ -32,7 +32,7 @@
                 <div>
                     <ul class="flex gap-5">
                         <li class="border border-[#EFA969] rounded-[10px] p-3 font-bold">
-                            <a href="./index.php?dang-nhap">Đăng nhập</a>
+                            <a href="?role=client&...">Đăng nhập</a>
                         </li>
                         <li class="bg-[#EFA969] rounded-[10px] font-bold p-3">
                             <a href="./index.php?dang-ky">Đăng ký</a>
