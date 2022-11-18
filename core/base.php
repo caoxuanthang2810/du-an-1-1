@@ -100,7 +100,9 @@ function load_view($name, $data_send = array()) {
         }
         require $path;
     } else {
-        echo "Không tìm thấy {$path}";
+        $path = "../error/404.php";
+        // echo "Không tìm thấy {$path}";
+        require $path;
     }
 }
 
