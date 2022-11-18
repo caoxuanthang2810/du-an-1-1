@@ -1,35 +1,35 @@
 <?php get_header('', 'Chức vụ') ?>
 
-    <!--begin::Subheader-->
-    <div class=" mx-[40px]  mt-10">
-        
-        <div class="bg-white h-[676px]">
+<!--begin::Subheader-->
+<div class="bg-gray-300 pt-2">
+    <div class=" container mx-auto  ">
+        <div class="ml-[180px] w-5/6 mt-[-510px]">
             <div class="bg-slate-100 h-[50px] ">
 
                 <table>
                     <tr class="text-center h-[55px]">
                         <th class="w-[100px]">ID</th>
-                        
+
                         <th class="w-[1250px]">Chức vụ</th>
-                        
+
                         <th class="w-[100px]">Hành động</th>
 
                     </tr>
 
                     <tr class="text-center h-[55px]">
                         <td>1</td>
-                        
+
                         <td>Admin</td>
-                       
+
                         <td><button> <i class="fa-solid fa-pen mr-2"></i></button>
                             <button><i class="fa-solid fa-trash-can"></i></button>
                         </td>
                     </tr>
                     <tr class="text-center h-[55px]">
                         <td>2</td>
-                        
+
                         <td>User</td>
-                       
+
                         <td><button> <i class="fa-solid fa-pen mr-2"></i></button>
                             <button><i class="fa-solid fa-trash-can"></i></button>
                         </td>
@@ -61,4 +61,7 @@
 
             </div>
         </div>
+    </div>
+</div>
+
 <?php get_footer() ?>

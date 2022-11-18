@@ -32,10 +32,10 @@
                 <div>
                     <ul class="flex gap-5">
                         <li class="border border-[#EFA969] rounded-[10px] p-3 font-bold">
-                            <a href="?role=client&...">Đăng nhập</a>
+                            <a href="?role=client&mod=dang_nhap">Đăng nhập</a>
                         </li>
                         <li class="bg-[#EFA969] rounded-[10px] font-bold p-3">
-                            <a href="./index.php?dang-ky">Đăng ký</a>
+                            <a href="?role=client&mod=dang_ky">Đăng ký</a>
                         </li>
                     </ul>
                 </div>
@@ -43,7 +43,7 @@
                 <div>
                     <ul>
                         <li>
-                            <a href="./index.php?gio-hang" class="flex items-center">
+                            <a href="?role=client&mod=gio_hang" class="flex items-center">
                                 <!-- <img src="https://cdn.pnj.io/images/image-update/layout/icon-cart-new.svg" alt=""> -->
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 <span class="ml-2">Giỏ hàng</span>
@@ -64,9 +64,9 @@
             <div class="py-[5px] flex items-center justify-between border-b-2 border-slate-500 h-[80px]">
                 <div>
                     <ul class="flex gap-5">
-                        <li class="hover:text-black hover:underline text-lg "><a href="./index.php">Trang chủ</a></li>
-                        <li class="hover:text-black hover:underline text-lg"><a href="./index.php?gioi-thieu">Giới thiệu</a></li>
-                        <li class="hover:text-black hover:underline text-lg"><a href="./index.php?danh-muc">Danh mục sản phẩm</a></li>
+                        <li class="hover:text-black hover:underline text-lg "><a href="?role=client&mod=home">Trang chủ</a></li>
+                        <li class="hover:text-black hover:underline text-lg"><a href="?role=client&mod=gioi_thieu">Giới thiệu</a></li>
+                        <li class="hover:text-black hover:underline text-lg"><a href="?role=client&mod=danh_muc">Danh mục sản phẩm</a></li>
                     </ul>
                 </div>
                 <div class="form__search max-w-[35%] py-2 ">

@@ -3,25 +3,29 @@
 
 
 
-	<div class="h-[50px] flex justify-between bg-[#F29D38] leading-[50px]">
-		<div class="ml-[250px]">
-			<a href="">
-				<i class="fa-solid fa-arrow-left text-white"></i>
-				<span class="text-white font-bold">TRANG CHỦ</span>
-			</a>
-		</div>
-		<div class="mr-10">
-			<a href="">
-				<i class="fa-solid fa-arrow-right-to-bracket text-white"></i>
-				<span class="text-white font-bold">ĐĂNG XUẤT</span>
-			</a>
-		</div>
-
+<div class="h-[50px] flex justify-between bg-[#F29D38] leading-[50px]">
+	<div class="ml-[250px]">
+		<a href="">
+			<i class="fa-solid fa-arrow-left text-white"></i>
+			<span class="text-white font-bold">TRANG CHỦ</span>
+		</a>
+	</div>
+	<div class="mr-10">
+		<a href="">
+			<i class="fa-solid fa-arrow-right-to-bracket text-white"></i>
+			<span class="text-white font-bold">ĐĂNG XUẤT</span>
+		</a>
 	</div>
 
-			<div class="border-b-2 border-gray-300">
-				<img src="./public/images/logo/logo.png" alt="" class="w-[200px] h-[140px]">
-			</div>
+</div>
+
+
+<div class="">
+	<img src="./public/images/logo/logo.png" alt="" class="w-[200px] h-[140px]">
+
+	<div class=" ">
+		<div class="w-[250px]  bg-white">
+			
 			<div class="">
 				<p class="h-[30px] mt-5"><a href="?role=admin&mod=home" class="text-lg ml-4 text-medium text-black hover:text-[#EFA969]">Trang Chủ</a></p>
 				<p class="h-[30px] mt-5"><a href="?role=admin&mod=users" class="text-lg ml-4 text-medium text-black hover:text-[#EFA969]">Quản Lý Tài Khoản</a></p>
@@ -34,4 +38,4 @@
 			</div>
 		</div>
 	</div>
-	</div>
+</div>

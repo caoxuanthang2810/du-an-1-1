@@ -1,9 +1,10 @@
 <?php get_header('', 'Bình luận') ?>
 
     <!--begin::Subheader-->
-    <div class=" mx-[40px]  ">
-
-        <div class="bg-white h-[676px] mt-10">
+    <div class=" bg-gray-300 pt-2  ">
+    <div class=" container mx-auto  ">
+       
+        <div class="bg-white w-5/6 ml-[180px] mt-[-510px]">
             <div class="bg-slate-100 h-[50px] ">
 
                 <table>
@@ -54,4 +55,7 @@
 
             </div>
         </div>
+    </div>
+    </div>
+
 <?php get_footer() ?>

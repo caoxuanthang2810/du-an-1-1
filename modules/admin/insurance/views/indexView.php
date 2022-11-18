@@ -1,9 +1,9 @@
 <?php get_header('', 'Bảo hành') ?>
 
     <!--begin::Subheader-->
-    <div class=" mx-[40px]  mt-10">
-        
-        <div class="bg-white h-[676px]">
+    <div class="bg-gray-300 pt-2">
+    <div class=" container mx-auto  ">
+        <div class="ml-[180px] w-5/6 mt-[-510px]">
             <div class="bg-slate-100 h-[50px] ">
 
                 <table>
@@ -61,4 +61,7 @@
 
             </div>
         </div>
+    </div>
+    </div>
+
 <?php get_footer() ?>
