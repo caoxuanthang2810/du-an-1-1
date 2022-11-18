@@ -60,4 +60,14 @@ define('LAYOUTPATH', APPPATH.DIRECTORY_SEPARATOR.$layout_folder);
 $config_folder= 'config';
 define('CONFIGPATH', APPPATH.DIRECTORY_SEPARATOR.$config_folder);
 
+
+
+/*
+ * --------------------------------------------------------------------
+ * error path
+ * --------------------------------------------------------------------
+ */
+$error_folder= 'error';
+define('ERRORPATH', APPPATH.DIRECTORY_SEPARATOR.$error_folder);
+
 require COREPATH.DIRECTORY_SEPARATOR.'appload.php';

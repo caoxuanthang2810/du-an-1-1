@@ -6,7 +6,9 @@ $request_path = MODULESPATH . DIRECTORY_SEPARATOR . get_role() . DIRECTORY_SEPAR
 if (file_exists($request_path)) {
     require $request_path;
 } else {
-    echo "Không tìm thấy:$request_path ";
+    $request_path = ERRORPATH.DIRECTORY_SEPARATOR . "404.php";
+
+    require $request_path;
 }
 
 // get method if get default null
