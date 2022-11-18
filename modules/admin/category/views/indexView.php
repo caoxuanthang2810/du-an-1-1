@@ -1,4 +1,4 @@
-<?php get_header('', 'Danh mục sản phẩm') ?>
+<?php get_header('', 'Danh mục') ?>
 
     <!--begin::Subheader-->
     <div class=" mx-[40px] ">
