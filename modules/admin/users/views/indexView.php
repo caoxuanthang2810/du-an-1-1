@@ -1,13 +1,21 @@
 <?php get_header('', 'Quản lý khách hàng') ?>
 
+<<<<<<< Updated upstream
 <div class="bg-gray-300 pt-2">
     <div class=" container mx-auto  ">
 
         <div class="bg-white  ml-[180px] w-5/6 mt-[-510px] ">
             <div class="bg-slate-100 h-[50px] ">
+=======
+<div class="w-5/6 mx-auto">
+    <div class=" ">
+
+        <div class="bg-red-300 h-[676px]  ">
+            <div class="">
+>>>>>>> Stashed changes
 
                 <table>
-                    <tr class="text-center h-[55px]">
+                    <tr class="text-center h-[55px] ">
                         <th class="w-[100px]">ID</th>
                         <th class="w-[250px]">Tên tài khoản</th>
                         <th class="w-[500px]">Mật khẩu</th>
