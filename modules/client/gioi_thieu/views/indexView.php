@@ -1,12 +1,13 @@
 <?php get_header('', 'Giới thiệu') ?>
 <div class=" container mx-auto">
-    <div class=" mt-5 mb-8">
-        <img src="../Asset//Image//banner//banner_gioithieu.png" alt="" class="w-full ">
-    </div>
+
     <div class="">
-        <h1 class="text-5xl text-[#EFA969] font-bold	text-center mb-10">
+        <h1 class="text-5xl text-[#EFA969] font-bold	text-center mb-10 mt-10">
             Giới Thiệu
         </h1>
+        <div class=" mt-10 mb-8 ">
+            <img src="./public/images/logo/gioithieu.png" alt="" class="h-[400px] w-[250px] mx-auto">
+        </div>
         <p class="text-[24px] text-black-500 font-medium indent-6 break-normal mb-10">Thương hiệu Luxury thành lập vào ngày 17/03/2011, là một trong những thương hiệu uy tín và nổi bật trong ngành kỹ thuật số. Công ty được xây dựng và phát triển dựa trên sự hợp tác từ những thương hiệu lớn trong ngành kỹ thuật số, nhằm mang đến cho người tiêu dùng những sản phẩm chất lượng với giá thành hợp lý nhất</p>
     </div>
     <div class="">
@@ -29,5 +30,5 @@
         <p class="text-[24px] text-black-500 font-medium break-all ">Luxury đã và đang hợp tác phân phối với nhiều thương hiệu uy tín nhất trên toàn thế giới nhằm mang đến cho khách hàng nhiều sự lựa chọn cũng như an tâm về chất lượng hơn.Các thương hiệu máy ảnh, kỹ thuật số như: SONY, NIKON, CANON, FUJIFILM, SAMSUNG,…. và nhiều nhãn hàng khác.</p>
     </div>
 
-    </div>
+</div>
 <?php get_footer() ?>

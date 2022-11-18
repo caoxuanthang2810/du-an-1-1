@@ -1,6 +1,6 @@
 <?php get_header('', 'Đăng ký') ?>
 
-<<div class="container mx-auto">
+<div class="container mx-auto">
     <div class="flex justify-center mt-[28px]">
         <form action="" class="w-[600px] flex justify-center mb-[190px]" method="POST">
             <div>
