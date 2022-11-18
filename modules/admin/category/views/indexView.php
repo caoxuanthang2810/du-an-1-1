@@ -1,7 +1,9 @@
 <?php get_header('', 'Danh mục') ?>
 
-    <!--begin::Subheader-->
-    <div class=" mx-[40px] ">
+<!--begin::Subheader-->
+<div class=" container mx-auto pt-2 ">
+
+    <div class="bg-white  ml-[180px] w-5/6 mt-[-510px] ">
 
         <form action="" class="flex my-[20px] justify-between">
             <div>
@@ -14,7 +16,7 @@
         </form>
 
 
-        <div class="bg-white h-[676px]">
+        <div class="bg-white ">
             <div class="bg-slate-100 h-[50px] ">
                 <table>
                     <tr class="text-center h-[55px]">
@@ -37,4 +39,7 @@
             </div>
         </div>
     </div>
+</div>
+
+</div>
 <?php get_footer() ?>

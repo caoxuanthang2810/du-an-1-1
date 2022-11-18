@@ -19,7 +19,7 @@
 
 	</div>
 
-			<div class="border-b-2 border-gray-300">
+			<div class="">
 				<img src="./public/images/logo/logo.png" alt="" class="w-[200px] h-[140px]">
 			</div>
 			<div class="">
