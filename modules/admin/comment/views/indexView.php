@@ -1,4 +1,4 @@
-<?php get_header('', 'Comment') ?>
+<?php get_header('', 'Bình luận') ?>
 
     <!--begin::Subheader-->
     <div class=" mx-[40px]  ">

@@ -1,4 +1,4 @@
-<?php get_header('', 'Tổng quan') ?>
+<?php get_header('', 'Trang chủ') ?>
 
     <!--begin::Subheader-->
     <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
