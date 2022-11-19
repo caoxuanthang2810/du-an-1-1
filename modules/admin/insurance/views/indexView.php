@@ -15,27 +15,20 @@
                         <th class="w-[100px]">Hành động</th>
 
                     </tr>
-
+                    
+                    <?php foreach ($insurance as $key):
+                        extract($key)
+                    ?>
                     <tr class="text-center h-[55px]">
-                        <td>1</td>
+                        <td><?=$id?></td>
                         
-                        <td>12 Tháng</td>
+                        <td><?=$name?></td>
                        
                         <td><button> <i class="fa-solid fa-pen mr-2"></i></button>
                             <button><i class="fa-solid fa-trash-can"></i></button>
                         </td>
                     </tr>
-                    <tr class="text-center h-[55px]">
-                        <td>2</td>
-                        
-                        <td>24 Tháng</td>
-                       
-                        <td><button> <i class="fa-solid fa-pen mr-2"></i></button>
-                            <button><i class="fa-solid fa-trash-can"></i></button>
-                        </td>
-                    </tr>
-
-
+                    <?php endforeach;?>
                 </table>
                 <!-- <table>
       <tr>

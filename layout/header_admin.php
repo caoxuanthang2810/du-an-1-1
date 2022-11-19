@@ -1,6 +1,8 @@
 <?php get_header('base', $title) ?>
 
-
+<head>
+	<meta charset="UTF-8">
+</head>
 
 
 <div class="h-[50px] flex justify-between bg-[#F29D38] leading-[50px]">
