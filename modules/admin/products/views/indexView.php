@@ -26,21 +26,22 @@
                   <th class="w-[200px]">Hành động</th>
 
                </tr>
-
+                <?php foreach ($products as $row) :?>
+                  
                <tr class="text-center h-[55px]">
-                  <td>1</td>
-                  <td>CANON EOS 1500D KIT EF-S18-55MM F3.5-5.6 IS II</td>
-                  <td>11,090,000 VNĐ</td>
-                  <td>1</td>
-                  <td><img src="../Asset/Image/items/canon-eos-1500d-kit-1855mm-f3556-iii(2) 10.png" alt=""></td>
-                  <td>24 tháng</td>
-                  <td>Đài Loan</td>
-                  <td>gà v</td>
+                  <td><?=$row['id']?></td>
+                  <td><?=$row['name']?></td>
+                  <td><?=$row['price']?></td>
+                  <td><?=$row['quantily']?></td>
+                  <td><img src="<?=$row['image']?>" alt=""></td>
+                  <td><?=$row['insurance']?></td>
+                  <td><?=$row['made_in']?></td>
+                  <td><?=$row['id_categories']?></td>
                   <td><button> <i class="fa-solid fa-pen mr-2"></i></button>
                      <button><i class="fa-solid fa-trash-can"></i></button>
                   </td>
                </tr>
-
+                  <?php endforeach; ?>
 
             </table>
             <!-- <table>
