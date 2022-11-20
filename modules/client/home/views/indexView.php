@@ -32,21 +32,23 @@
 
     <div>
         <div class="grid grid-cols-4 gap-24 text-center">
+            <?php foreach($products as $product): ?>
             <div class="border-2 border-[#EFA969] rounded-xl">
                 <div>
-                    <img src="../Asset/Image/product/canon-eos-1500d-kit-1855mm-f3556-iii(2) 1.png" alt="" class="mx-auto mt-3">
+                    <img src="./public/images/container/<?=$product['image'];?>" alt="" class="mx-auto mt-3">
                 </div>
                 <div>
-                    <p class="font-semibold mt-2 mb-1 p-3">MÁY ẢNH CANON EOS 1500D KIT EF-S18-55MM F3.5-5.6 IS II</p>
+                    <p class="font-semibold mt-2 mb-1 p-3"><?= $product['name']?></p>
                 </div>
                 <div>
-                    <span class="text-red-500 font-bold ">11,090,000 VNĐ</span>
+                    <span class="text-red-500 font-bold "><?= $product['price']?>VNĐ</span>
                 </div>
                 <div class="mt-3 mb-4">
                     <button class="border border-[#EFA969] rounded-xl font-bold w-[100px] text-[18px] hover:bg-[#EFA969]  hover:text-white p-1">Mua Hàng</button>
                 </div>
             </div>
-            <div class="border border-[#EFA969]  rounded-xl">
+            <?php endforeach ?>
+            <!-- <div class="border border-[#EFA969]  rounded-xl">
                 <div>
                     <img src="../Asset/Image/product/may-anh-canon-eos-m50-ii-kit-efm1545mm 1.png" alt="" class="mx-auto mt-3">
                 </div>
@@ -257,7 +259,7 @@
                 </div>
                 <div class="mt-3 mb-3">
                     <button class="border border-[#EFA969] rounded-xl font-bold w-[100px] text-[18px] hover:bg-[#EFA969]  hover:text-white p-1">Mua Hàng</button>
-                </div>
+                </div> -->
                 
             </div>
             

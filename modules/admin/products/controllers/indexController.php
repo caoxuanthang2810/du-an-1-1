@@ -31,9 +31,9 @@ function createAction() {
 
 function deleteAction() {
     $id = $_GET['id'];
-    // delete_category($id);
-    delete_production($id);
     // push_notification('success', ['Xoá danh mục sản phẩm thành công']);
+    delete_products($id);
+    push_notification('success', ['Xoá danh mục sản phẩm thành công']);
     header('Location: ?role=admin&mod=products');
 }
 

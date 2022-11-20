@@ -33,12 +33,15 @@
                   <td><?=$row['name']?></td>
                   <td><?=$row['price']?></td>
                   <td><?=$row['quantily']?></td>
-                  <td><img src="<?=$row['image']?>" alt=""></td>
+                  <td><img src="../public/images/container/<?=$row['image'];?>" alt=""></td>
                   <td><?=$row['insurance']?></td>
                   <td><?=$row['made_in']?></td>
                   <td><?=$row['id_categories']?></td>
                   <td><button> <i class="fa-solid fa-pen mr-2"></i></button>
-                     <button><i class="fa-solid fa-trash-can"></i></button>
+                  
+                     <a href="?role=admin&mod=products&action=delete&id=<?php echo $row['id'] ?>" onclick="return confirm('Bạn chắc chắn muốn xoá danh mục: <?php echo $row['name'] ?> không? Hành động sẽ xoá danh mục và toàn bộ sản phẩm có trong danh mục này.')">
+                     <button ><i class="fa-solid fa-trash-can"></i></button>
+                     </a>
                   </td>
                </tr>
                   <?php endforeach; ?>
