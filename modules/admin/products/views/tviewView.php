@@ -10,41 +10,41 @@
     <form action="" method="POST">
         <label for="">
             Tên sản phẩm
-            <input type="text">
+            <input type="text" name="name">
         </label>
 
         <label for="">
             Giá
-            <input type="text">
+            <input type="text" name="price">
         </label>
 
         <label for="">
             Số lượng
-            <input type="text">
+            <input type="text" name="quanlity">
         </label>
 
         <label for="">
             Ảnh sản phẩm
-            <input type="text">
+            <input type="text" name="image">
         </label>
 
         <label for="">
             Thời gian bảo hành
-            <input type="text">
+            <input type="text" name="insurance">
         </label>
 
         <label for="">
             Xuất xứ
-            <input type="text">
+            <input type="text" name="made_in">
         </label>
 
         <label for="">
             Danh mục
-            <input type="text">
+            <input type="text" name="id_categories">
         </label>
 
         <div>
-            <button>Thêm mới</button>
+            <button name="btn_create">Thêm mới</button>
         </div>
     </form>
 </body>
