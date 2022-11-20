@@ -1,7 +1,7 @@
 <?php
 function get_list_products()
 {
-    $result = db_fetch_array("SELECT p.id, p.name, p.price, p.quantily, p.image, i.name, m.name, c.name FROM `products` p 
+    $result = db_fetch_array("SELECT p.id, p.name, p.price, p.quantily, p.image,i.id, i.name_insurance, m.id, m.name_made_in, c.id, c.name_cate FROM `products` p 
     INNER JOIN `insurance` i ON i.id = p.insurance 
     INNER JOIN `made_in` m ON m.id = p.made_in
     INNER JOIN `categories` c ON c.id = p.id_categories");
@@ -25,13 +25,19 @@ function get_one_products($id)
 //     return $id;
 // }
 
-// function update_production($id, $name, $description) {
-//     db_update('products', [
-//         'name' => $name,
-//         'description' => $description
-//     ], "id = $id");
-//     return true;
-// }
+function update_production($id, $name, $price,$quantity, $image, $insurance, $made_in, $id_categories) {
+    db_update('products', [
+        'name' => $name,
+        'price' => $price,
+        'quantily' => $quantity,
+        'image' => $image,
+        'insurance' => $insurance,
+        'made_in' => $made_in,
+        'id_categories' => $id_categories,
+    ], "id = $id");
+     get_img();
+    return true;
+}
 
 function delete_products($id) {
     db_delete('products', "id = $id");

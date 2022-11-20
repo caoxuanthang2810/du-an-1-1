@@ -31,8 +31,8 @@
 
                     <tr class="text-center h-[55px]">
                         <td><?=$row['id']?></td>
-                        <td><?=$row['name']?></td>
-                        <td><button> <i class="fa-solid fa-pen mr-2"></i></button>
+                        <td><?=$row['name_cate']?></td>
+                        <td><a href="?role=admin&views=category=update_View?id=<?php echo $row['id'] ?>"><button> <i class="fa-solid fa-pen mr-2"></i></button></a>
                             <button><i class="fa-solid fa-trash-can"></i></button>
                         </td>
                     </tr>
