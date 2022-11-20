@@ -1,7 +1,10 @@
 <?php
 function get_list_products()
 {
-    $result = db_fetch_array("SELECT * FROM `products`");
+    $result = db_fetch_array("SELECT p.id, p.name, p.price, p.quantily, p.image, i.name, m.name, c.name FROM `products` p 
+    INNER JOIN `insurance` i ON i.id = p.insurance 
+    INNER JOIN `made_in` m ON m.id = p.made_in
+    INNER JOIN `categories` c ON c.id = p.id_categories");
     return $result;
 }
 
