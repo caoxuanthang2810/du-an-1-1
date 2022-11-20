@@ -28,10 +28,10 @@ function get_one_production($id) {
 //     return true;
 // }
 
-// function delete_production($id) {
-//     db_delete('products', "id = $id");
-//     return true;
-// }
+function delete_production($id) {
+    db_delete('products', "id = $id");
+    return true;
+}
 
 // function get_list_categories() {
 //     $result = db_fetch_array("SELECT * FROM `categories`");

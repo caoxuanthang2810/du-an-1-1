@@ -11,10 +11,10 @@ function indexAction() {
     load_view('index', $data);
 }
 
-// function createAction() {
-//     $data['products'] = get_list_products();
-//     load_view('create', $data);
-// }
+function createAction() {
+    $data['products'] = get_list_products();
+    load_view('create', $data);
+}
 
 // function createPostAction() {
 //     $name = $_POST['name'];
@@ -29,12 +29,13 @@ function indexAction() {
 //     header('Location: ?role=admin&mod=product');
 // }
 
-// function deleteAction() {
-//     $id = $_GET['id_cate'];
-//     delete_category($id);
-//     push_notification('success', ['Xoá danh mục sản phẩm thành công']);
-//     header('Location: ?role=admin&mod=category');
-// }
+function deleteAction() {
+    $id = $_GET['id'];
+    // delete_category($id);
+    delete_production($id);
+    // push_notification('success', ['Xoá danh mục sản phẩm thành công']);
+    header('Location: ?role=admin&mod=products');
+}
 
 // function updateAction()
 // {
