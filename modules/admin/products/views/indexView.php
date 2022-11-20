@@ -41,17 +41,18 @@
 
                </tr>
                <?php foreach ($products as $row) : ?>
-
+                    
                   <tr class="text-center h-[55px]">
                      <td><?= $row['id'] ?></td>
                      <td><?= $row['name'] ?></td>
                      <td><?= $row['price'] ?></td>
                      <td><?= $row['quantily'] ?></td>
                      <td><img src="../public/images/container/<?= $row['image']; ?>" alt=""></td>
-                     <td><?= $row['insurance'] ?></td>
-                     <td><?= $row['made_in'] ?></td>
-                     <td><?= $row['id_categories'] ?></td>
-                     <td><button> <i class="fa-solid fa-pen mr-2"></i></button>
+                     <td><?= $row['name_insurance'] ?></td>
+                     <td><?= $row['name_made_in'] ?></td>
+                     <td><?= $row['name_cate'] ?></td>
+                     <td>
+                        <a href="#"><button> <i class="fa-solid fa-pen mr-2"></i></button></a>
 
                         <a href="?role=admin&mod=products&action=delete&id=<?php echo $row['id'] ?>" onclick="return confirm('Bạn chắc chắn muốn xoá danh mục: <?php echo $row['name'] ?> không? Hành động sẽ xoá danh mục và toàn bộ sản phẩm có trong danh mục này.')">
                            <button><i class="fa-solid fa-trash-can"></i></button>
