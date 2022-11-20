@@ -29,12 +29,12 @@ function indexAction() {
 //     header('Location: ?role=admin&mod=product');
 // }
 
-// function deleteAction() {
-//     $id = $_GET['id_cate'];
-//     delete_category($id);
-//     push_notification('success', ['Xoá danh mục sản phẩm thành công']);
-//     header('Location: ?role=admin&mod=category');
-// }
+function deleteAction() {
+    $id = $_GET['id'];
+    delete_product($id);
+    push_notification('success', ['Xoá danh mục sản phẩm thành công']);
+    header('Location: ?role=admin&mod=products');
+}
 
 // function updateAction()
 // {
