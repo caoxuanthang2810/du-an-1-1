@@ -15,20 +15,20 @@
                         <th class="w-[200px]">Mã sản phẩm</th>
                         <th class="w-[200px]">Mã khách hàng</th>
                         <th class="w-[200px]">Hành động</th>
-
                     </tr>
-
+                    <?php foreach($comment as $row):?>
+                     
                     <tr class="text-center h-[55px]">
-                        <td>1</td>
-                        <td>Cường non vãi</td>
-                        <td>15/11/2022 21:12:00</td>
-                        <td>A001022</td>
-                        <td>3</td>
+                        <td><?=$row['id']?></td>
+                        <td><?=$row['content']?></td>
+                        <td><?=$row['time']?></td>
+                        <td><?=$row['id_product']?></td>
+                        <td><?=$row['id_user']?></td>
                         <td><button> <i class="fa-solid fa-pen mr-2"></i></button>
                             <button><i class="fa-solid fa-trash-can"></i></button>
                         </td>
                     </tr>
-
+                        <?php endforeach; ?>
 
                 </table>
                 <!-- <table>
