@@ -4,8 +4,8 @@
 //     return $result;
 // }
 
-function get_list_categories() {
-    $result = db_fetch_array("SELECT * FROM `categories`");
+function get_list_madein() {
+    $result = db_fetch_array("SELECT * FROM `made_in`");
     return $result;
 }
 

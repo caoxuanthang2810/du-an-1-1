@@ -7,7 +7,7 @@ function construct() {
 
 function indexAction() {
     
-    $data['categories'] = get_list_categories();// lấy mảng  có danh mục trọng đb
+    $data['comment'] = get_list_comment();// lấy mảng  có danh mục trọng đb
     load_view('index', $data);
 }
 

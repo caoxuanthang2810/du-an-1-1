@@ -4,8 +4,8 @@
 //     return $result;
 // }
 
-function get_list_categories() {
-    $result = db_fetch_array("SELECT * FROM `categories`");
+function get_list_comment() {
+    $result = db_fetch_array("SELECT * FROM `comments`");
     return $result;
 }
 
