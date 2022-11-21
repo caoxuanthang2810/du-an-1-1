@@ -16,24 +16,23 @@
 
                     </tr>
 
-                    <tr class="text-center h-[55px]">
-                        <td>1</td>
+                    <?php foreach ($role as $key) :
+                        extract($key)
+                    ?>
+                        <tr class="text-center h-[55px]">
+                            <td><?=$id?></td>
+                            <td><?= $name?></td>
+                            <td>
+                                <a href="?role=admin&mod=role&action=update&id=<?=$id?>">
+                                    <button> <i class="fa-solid fa-pen mr-2"></i></button>
+                                </a>
+                                <a href="?role=admin&mod=role&action=delete&id=<?=$id?>" onclick="return confirm('Bạn chắc chắn muốn xoá danh mục: <?php echo $row['name'] ?> không? Hành động sẽ xoá danh mục và toàn bộ sản phẩm có trong danh mục này.')">
+                                    <button><i class="fa-solid fa-trash-can"></i></button>
+                                </a>
 
-                        <td>Admin</td>
-
-                        <td><button> <i class="fa-solid fa-pen mr-2"></i></button>
-                            <button><i class="fa-solid fa-trash-can"></i></button>
-                        </td>
-                    </tr>
-                    <tr class="text-center h-[55px]">
-                        <td>2</td>
-
-                        <td>User</td>
-
-                        <td><button> <i class="fa-solid fa-pen mr-2"></i></button>
-                            <button><i class="fa-solid fa-trash-can"></i></button>
-                        </td>
-                    </tr>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
 
 
                 </table>

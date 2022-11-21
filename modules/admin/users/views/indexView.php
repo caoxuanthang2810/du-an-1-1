@@ -20,20 +20,20 @@
                         <th class="w-[200px]">Hành động</th>
 
                     </tr>
-
+                   <?php foreach($users as $row):?>
                     <tr class="text-center h-[55px]">
-                        <td>1</td>
-                        <td>Cao xuân Thắng</td>
-                        <td>Cao xuân Thắng</td>
-                        <td>thangpqph24059@fptkjj</td>
-                        <td>04698568734596</td>
-                        <td>Hoài Đức, Hà Nội</td>
-                        <td>Thành viên</td>
-                        <td><button> <i class="fa-solid fa-pen mr-2"></i></button>
+                        <td><?= $row['id'] ?></td>
+                        <td><?= $row['username'] ?></td>
+                        <td><?= $row['password'] ?></td>
+                        <td><?= $row['email'] ?></td>
+                        <td><?= $row['phone'] ?></td>
+                        <td><?= $row['address'] ?></td>
+                        <td><?= $row['name'] ?></td>
+                        <td><a href="?role=admin&mod=users&action=update&id=<?php echo $row['id'] ?>"> <i class="fa-solid fa-pen mr-2"></i></a>
                             <button><i class="fa-solid fa-trash-can"></i></button>
                         </td>
                     </tr>
-
+                   <?php endforeach; ?>
 
                 </table>
             </div>
