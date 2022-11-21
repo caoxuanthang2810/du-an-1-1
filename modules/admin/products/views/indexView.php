@@ -4,7 +4,7 @@
    <div class="container mx-auto ">
 
 
-      
+
 
       <form action="" class="flex my-[20px] justify-between my-[20px] mx-[200px] mt-[-510px]">
          <div>
@@ -14,12 +14,13 @@
             </button>
          </div>
          <div>
-            <div class="">
+            <div class="w-[150px] h-[50px] bg-amber-400  ml-[20px] rounded-[5px] text-center">
+               <a href="?role=admin&mod=products&action=create" class="">
 
-               <a href="?role=admin&mod=products&action=create">
-
+                  <span class="text-white text-2xl leading-[50px]">
+                     Thêm mới
+                  </span>
                </a>
-               <button class="w-[163px] h-[50px] bg-amber-400 text-white ml-[20px] rounded-[5px] ">Thêm mới</button>
             </div>
          </div>
       </form>
@@ -34,6 +35,7 @@
                   <th class="w-[500px]">Giá sản phẩm</th>
                   <th class="w-[200px]">Số lượng</th>
                   <th class="w-[200px]">Ảnh sản phẩm</th>
+                  <th class="w-[200px]">Mô tả sản phẩm</th>
                   <th class="w-[200px]">Bảo hành</th>
                   <th class="w-[200px]">Xuất Xứ</th>
                   <th class="w-[200px]">Mã danh mục</th>
@@ -41,20 +43,21 @@
 
                </tr>
                <?php foreach ($products as $row) : ?>
-                    
+
                   <tr class="text-center h-[55px]">
                      <td><?= $row['id'] ?></td>
                      <td><?= $row['name'] ?></td>
                      <td><?= $row['price'] ?></td>
                      <td><?= $row['quantily'] ?></td>
                      <td><img src="../public/images/container/<?= $row['image']; ?>" alt=""></td>
+                     <td><?= $row['description'] ?></td>
                      <td><?= $row['name_insurance'] ?></td>
                      <td><?= $row['name_made_in'] ?></td>
                      <td><?= $row['name_cate'] ?></td>
                      <td>
                         <a href="#"><button> <i class="fa-solid fa-pen mr-2"></i></button></a>
 
-                        <a href="?role=admin&mod=products&action=delete&id=<?php echo $row['id'] ?>" onclick="return confirm('Bạn chắc chắn muốn xoá danh mục: <?php echo $row['name'] ?> không? Hành động sẽ xoá danh mục và toàn bộ sản phẩm có trong danh mục này.')">
+                        <a href="?role=admin&mod=products&action=delete&id=<?php echo $row['id'] ?>">
                            <button><i class="fa-solid fa-trash-can"></i></button>
                         </a>
                      </td>
@@ -62,29 +65,6 @@
                <?php endforeach; ?>
 
             </table>
-            <!-- <table>
-         <tr>
-            <th class="ml-[30px]">Tên đơn</th>
-            <th>Giá sản phẩm</th>
-            <th>Số lượng</th>
-            <th>Ảnh sản phẩm</th>
-            <th>Bảo hành</th>
-            <th>Xuất Xứ</th>
-            <th>Mã danh mục</th>
-            <th>Hành động</th>
-         </tr>
-         
-         <tr>
-            <td>1</td>
-            <td>5</td>
-            </tr>
-            <tr>
-            <td>9</td>
-            <td>10</td>
-            </tr>
-         </table> -->
-
-
          </div>
       </div>
    </div>
