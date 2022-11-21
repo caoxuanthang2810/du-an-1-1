@@ -17,13 +17,10 @@ function createAction() {
 }
 
 function createPostAction() {
-
-    $image = "";
-
     $name = $_POST['name'];
     $price =  $_POST['price'];
     $quantily =  $_POST['quantily'];
-    $image =  "img";
+    $image =  $_FILES["image"];
     $description = $_POST['description'];
     $insurance =  $_POST['insurance'];
     $made_in =  $_POST['made_in'];
