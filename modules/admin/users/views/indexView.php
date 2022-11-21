@@ -7,7 +7,6 @@
         <div class="bg-white  ml-[180px] w-5/6 mt-[-510px] ">
             <div class="bg-slate-100 h-[50px] ">
 
-
                 <table>
                     <tr class="text-center h-[55px] ">
                         <th class="w-[100px]">ID</th>
@@ -21,18 +20,29 @@
 
                     </tr>
 
-                    <tr class="text-center h-[55px]">
-                        <td>1</td>
-                        <td>Cao xuân Thắng</td>
-                        <td>Cao xuân Thắng</td>
-                        <td>thangpqph24059@fptkjj</td>
-                        <td>04698568734596</td>
-                        <td>Hoài Đức, Hà Nội</td>
-                        <td>Thành viên</td>
-                        <td><button> <i class="fa-solid fa-pen mr-2"></i></button>
-                            <button><i class="fa-solid fa-trash-can"></i></button>
-                        </td>
-                    </tr>
+                    <?php foreach ($users as $key) :
+                        extract($key)
+                    ?>
+                        <tr class="text-center h-[55px]">
+                            <td><?=$id?></td>
+                            <td><?= $username?></td>
+                            <td><?= $password?></td>
+                            <td><?= $email?></td>
+                            <td><?= $phone?></td>
+                            <td><?= $address?></td>
+                            <td><?= $name_role?></td>
+                            
+                            <td>
+                                <a href="?role=admin&mod=users&action=update&id=<?=$id?>">
+                                    <button> <i class="fa-solid fa-pen mr-2"></i></button>
+                                </a>
+                                <a href="?role=admin&mod=users&action=delete&id=<?=$id?>" onclick="return confirm('Bạn chắc chắn muốn xoá danh mục: <?php echo $row['name_made_in'] ?> không? Hành động sẽ xoá danh mục và toàn bộ sản phẩm có trong danh mục này.')">
+                                    <button><i class="fa-solid fa-trash-can"></i></button>
+                                </a>
+
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
 
 
                 </table>
