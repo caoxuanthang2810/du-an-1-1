@@ -16,21 +16,33 @@ function createAction() {
     load_view('create', $data);
 }
 
-// function createPostAction() {
-//     $name = $_POST['name'];
-//     $description = $_POST['description'];
-//     if (empty($name)) {
-//         push_notification('danger', ['Vui lòng nhập vào tên danh mục']);
-//         header('Location: ?role=admin&mod=product&action=create');
-//         die();
-//     }
-//     create_product($name, $description);
-//     push_notification('success', ['Tạo mới danh mục sản phẩm thành công']);
-//     header('Location: ?role=admin&mod=product');
-// }
+function createPostAction() {
+
+    $image = "";
+
+    $name = $_POST['name'];
+    $price =  $_POST['price'];
+    $quantily =  $_POST['quantily'];
+    $image =  "img";
+    $description = $_POST['description'];
+    $insurance =  $_POST['insurance'];
+    $made_in =  $_POST['made_in'];
+    $id_categories =  $_POST['id_categories'];
+
+    if (empty($name)) {
+        push_notification('danger', ['Vui lòng nhập vào tên danh mục']);
+        header('Location: ?role=admin&mod=products&action=create');
+        die();
+    }
+    create_products($name, $price,$description,$quantily, $image, $insurance, $made_in, $id_categories);
+    push_notification('success', ['Tạo mới danh mục sản phẩm thành công']);
+    header('Location: ?role=admin&mod=products');
+}
 
 function deleteAction() {
+    echo "Ok";
     $id = $_GET['id'];
+    
     // push_notification('success', ['Xoá danh mục sản phẩm thành công']);
     delete_products($id);
     push_notification('success', ['Xoá danh mục sản phẩm thành công']);
