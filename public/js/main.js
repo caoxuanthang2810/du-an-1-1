@@ -15,7 +15,7 @@ function checkFormRegister(){
 
     if(email.value != ""){
         if(!CheckEmail.test(email.value)){
-            msgErrorEmail.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập sai định dạng email";
+            msgErrorEmail.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập sai định dạng email";
             email.focus();
             return false;
         }else{
@@ -23,14 +23,14 @@ function checkFormRegister(){
             email.focus();
         }
     }else{
-        msgErrorEmail.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập email";
+        msgErrorEmail.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập email";
         userName.focus();
         return false;
     }
 
     if(userName.value != ""){
         if(userName.value.length < 3){
-            msgErrorUserName.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Nhập tên tài khoản lớn hơn 3 kí tự";
+            msgErrorUserName.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập tên tài khoản lớn hơn 3 kí tự";
             userName.focus();
             return false;
         }else{
@@ -38,14 +38,14 @@ function checkFormRegister(){
             userName.focus();
         }
     }else{
-        msgErrorUserName.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Nhập tên tài khoản";
+        msgErrorUserName.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập tên tài khoản";
         userName.focus();
         return false;
     }
 
     if(password.value != ""){
         if(password.value.length < 3){
-            msgErrorPass.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Nhập mật khẩu lớn hơn 3 kí tự";
+            msgErrorPass.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập mật khẩu lớn hơn 3 kí tự";
             password.focus();
             return false;
         }else{
@@ -53,7 +53,7 @@ function checkFormRegister(){
             password.focus();
         }
     }else{
-        msgErrorPass.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Nhập mật khẩu";
+        msgErrorPass.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập mật khẩu";
         password.focus();
         return false;
     }
@@ -61,8 +61,8 @@ function checkFormRegister(){
     if(passwordcheck.value != ""){
         if(password.value != passwordcheck.value){
             msgErrorRePass.innerHTML = "";
-            msgErrorPassSame1.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Mật khẩu không trùng khớp";
-            msgErrorPassSame2.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Mật khẩu không trùng khớp";
+            msgErrorPassSame1.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Mật khẩu không trùng khớp";
+            msgErrorPassSame2.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Mật khẩu không trùng khớp";
             passwordcheck.focus();
             return false;
         }else{
@@ -71,7 +71,7 @@ function checkFormRegister(){
             passwordcheck.focus();
         }
     }else{
-        msgErrorRePass.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Nhập lại mật khẩu";
+        msgErrorRePass.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập lại mật khẩu";
         passwordcheck.focus();
         return false;
     }
@@ -88,7 +88,7 @@ function checkFormLogin(){
 
     if(email.value != ""){
         if(!CheckEmail.test(email.value)){
-            msgErrorEmail.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Nhập sai định dạng email";
+            msgErrorEmail.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập sai định dạng email";
             email.focus();
             return false;
         }else{
@@ -98,14 +98,14 @@ function checkFormLogin(){
         msgErrorEmail.innerHTML = "";
         email.focus();
     }else{
-        msgErrorEmail.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Nhập email";
+        msgErrorEmail.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập email";
         email.focus();
         return false;
     }
 
     if(password.value != ""){
         if(password.value.length < 3){
-            msgErrorPass.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Nhập mật khẩu lớn hơn 3 kí tự";
+            msgErrorPass.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập mật khẩu lớn hơn 3 kí tự";
             password.focus();
             return false;
         }else{
@@ -113,7 +113,7 @@ function checkFormLogin(){
             password.focus();
         }
     }else{
-        msgErrorPass.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Nhập mật khẩu";
+        msgErrorPass.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập mật khẩu";
         password.focus();
         return false;
     }
@@ -135,7 +135,7 @@ function checkFormInfor(){
     
     if(fullname.value != ""){
         if(fullname.value.length < 3){
-            msgErrorFullname.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Nhập họ và tên lớn hơn 3 kí tự";
+            msgErrorFullname.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập họ và tên lớn hơn 3 kí tự";
             fullname.focus();
             return false;
         }else{
@@ -143,14 +143,14 @@ function checkFormInfor(){
             fullname.focus();
         }
     }else{
-        msgErrorFullname.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Nhập họ và tên";
+        msgErrorFullname.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập họ và tên";
         fullname.focus();
         return false;
     }
 
     if(phone.value != ""){
         if(!CheckPhone.test(phone.value)){
-            msgErrorPhone.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Nhập dạng đúng số điện thoại";
+            msgErrorPhone.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập dạng đúng số điện thoại";
             phone.focus();
             return false;
         }else{
@@ -158,14 +158,14 @@ function checkFormInfor(){
             phone.focus();
         }
     }else{
-        msgErrorPhone.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Nhập só điện thoại";
+        msgErrorPhone.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập só điện thoại";
         phone.focus();
         return false;
     }
     
     if(email.value != ""){
         if(!CheckEmail.test(email.value)){
-            msgErrorEmail.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Nhập sai định dạng email";
+            msgErrorEmail.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập sai định dạng email";
             email.focus();
             return false;
         }else{
@@ -175,14 +175,14 @@ function checkFormInfor(){
         msgErrorEmail.innerHTML = "";
         email.focus();
     }else{
-        msgErrorEmail.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Nhập email";
+        msgErrorEmail.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập email";
         email.focus();
         return false;
     }
 
     if(address.value != ""){
         if(address.value.length < 3){
-            msgErrorAddress.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Nhập địa chỉ lớn hơn 3 kí tự";
+            msgErrorAddress.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập địa chỉ lớn hơn 3 kí tự";
             address.focus();
             return false;
         }else{
@@ -190,7 +190,7 @@ function checkFormInfor(){
             address.focus();
         }
     }else{
-        msgErrorAddress.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='../Asset/Image/logo/1200px-Nuvola_apps_error.svg.png'> Nhập địa chỉ";
+        msgErrorAddress.innerHTML = "<img class='h-[10px] w-[10px] mr-1' src='./public/images/logo/1200px-Nuvola_apps_error.svg.png'> Nhập địa chỉ";
         address.focus();
         return false;
     }

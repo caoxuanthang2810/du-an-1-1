@@ -11,10 +11,10 @@ function indexAction() {
     load_view('index', $data);
 }
 
-// function createAction() {
-//     $data['products'] = get_list_products();
-//     load_view('create', $data);
-// }
+function createAction() {
+    $data['products'] = get_list_products();
+    load_view('create', $data);
+}
 
 // function createPostAction() {
 //     $name = $_POST['name'];
@@ -31,7 +31,8 @@ function indexAction() {
 
 function deleteAction() {
     $id = $_GET['id'];
-    delete_product($id);
+    // push_notification('success', ['Xoá danh mục sản phẩm thành công']);
+    delete_products($id);
     push_notification('success', ['Xoá danh mục sản phẩm thành công']);
     header('Location: ?role=admin&mod=products');
 }
