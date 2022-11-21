@@ -16,20 +16,20 @@ function createAction() {
 }
 
 function createPostAction() {
-    $name = $_POST['name'];
-    $description = $_POST['description'];
+    $name = $_POST['name_cate'];
+    
     if (empty($name)) {
         push_notification('danger', ['Vui lòng nhập vào tên danh mục']);
         header('Location: ?role=admin&mod=category&action=create');
         die();
     }
-    create_category($name, $description);
+    create_category($name);
     push_notification('success', ['Tạo mới danh mục sản phẩm thành công']);
     header('Location: ?role=admin&mod=category');
 }
 
 function deleteAction() {
-    $id = $_GET['id_cate'];
+    $id = $_GET['id'];
     delete_category($id);
     push_notification('success', ['Xoá danh mục sản phẩm thành công']);
     header('Location: ?role=admin&mod=category');
@@ -37,7 +37,7 @@ function deleteAction() {
 
 function updateAction()
 {
-    $id = $_GET['id_cate'];
+    $id = $_GET['id'];
     $cate = get_one_category($id);
     $data['category'] = $cate;
     if ($cate) {
@@ -48,21 +48,21 @@ function updateAction()
 }
 
 function updatePostAction() {
-    $id = $_GET['id_cate'];
+    $id = $_GET['id'];
     $cate = get_one_category($id);
     if (!$cate) {
         header('Location: ?role=admin&mod=category');
         die();
     }
-    $name = $_POST['name'];
-    $description = $_POST['description'];
+    $name = $_POST['name_cate'];
+    
     if (empty($name)) {
         push_notification('errors', [
-            'name' => 'Vui lòng nhập vào tên danh mục'
+            'name_cate' => 'Vui lòng nhập vào tên danh mục'
         ]);
         header('Location: ?role=admin&mod=category&action=update&id_cate='.$id);
     }
-    update_category($id, $name, $description);
+    update_category($id, $name);
     push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
     header('Location: ?role=admin&mod=category');
 }

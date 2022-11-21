@@ -9,8 +9,13 @@
             <div>
             </div>
             <div>
-                <div class="">
-                    <button class="w-[163px] h-[50px] bg-amber-400 text-white ml-[20px] rounded-[5px] ">Thêm mới</button>
+                <div class="w-[150px] h-[50px] bg-amber-400  ml-[20px] rounded-[5px] text-center">
+                    <a href="?role=admin&mod=category&action=create" class="">
+
+                        <span class="text-white text-2xl leading-[50px]">
+                            Thêm mới
+                        </span>
+                    </a>
                 </div>
             </div>
         </form>
@@ -25,19 +30,24 @@
                         <th class="w-[200px]">Hành động</th>
 
                     </tr>
-                   <?php
+                    <?php
                     foreach ($categories as $row) :
-                       ?>
+                    ?>
 
-                    <tr class="text-center h-[55px]">
-                        <td><?=$row['id']?></td>
-                        <td><?=$row['name_cate']?></td>
-                        <td><a href="?role=admin&views=category=update_View?id=<?php echo $row['id'] ?>"><button> <i class="fa-solid fa-pen mr-2"></i></button></a>
-                            <button><i class="fa-solid fa-trash-can"></i></button>
-                        </td>
-                    </tr>
-                      <?php endforeach; ?>
+                        <tr class="text-center h-[55px]">
+                            <td><?= $row['id'] ?></td>
+                            <td><?= $row['name_cate'] ?></td>
+                            <td>
+                                <a href="?role=admin&mod=category&action=update&id=<?php echo $row['id'] ?>">
+                                    <button> <i class="fa-solid fa-pen mr-2"></i></button>
+                                </a>
+                                <a href="?role=admin&mod=category&action=delete&id=<?php echo $row['id'] ?>" onclick="return confirm('Bạn chắc chắn muốn xoá danh mục: <?php echo $row['name_cate'] ?> không? Hành động sẽ xoá danh mục và toàn bộ sản phẩm có trong danh mục này.')">
+                                    <button><i class="fa-solid fa-trash-can"></i></button>
+                                </a>
 
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
                 </table>
             </div>
         </div>

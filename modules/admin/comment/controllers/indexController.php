@@ -12,10 +12,10 @@ function indexAction() {
 }
 
 function deleteAction() {
-    $id = $_GET['id_cate'];
-    delete_category($id);
+    $id = $_GET['id'];
+    delete_comment($id);
     push_notification('success', ['Xoá danh mục sản phẩm thành công']);
-    header('Location: ?role=admin&mod=category');
+    header('Location: ?role=admin&mod=comment');
 }
 
 // function createAction() {
