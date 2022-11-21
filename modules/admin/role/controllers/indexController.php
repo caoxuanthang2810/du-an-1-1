@@ -7,7 +7,7 @@ function construct() {
 
 function indexAction() {
     
-    $data['categories'] = get_list_categories();// lấy mảng  có danh mục trọng đb
+    $data['role'] = get_list_role();// lấy mảng  có danh mục trọng đb
     load_view('index', $data);
 }
 
@@ -16,53 +16,52 @@ function createAction() {
 }
 
 function createPostAction() {
-    $name = $_POST['name'];
-    $description = $_POST['description'];
+    $name = $_POST['name_role'];
     if (empty($name)) {
         push_notification('danger', ['Vui lòng nhập vào tên danh mục']);
-        header('Location: ?role=admin&mod=category&action=create');
+        header('Location: ?role=admin&mod=role&action=create');
         die();
     }
-    create_category($name, $description);
+    create_role($name);
     push_notification('success', ['Tạo mới danh mục sản phẩm thành công']);
-    header('Location: ?role=admin&mod=category');
+    header('Location: ?role=admin&mod=role');
 }
 
 function deleteAction() {
-    $id = $_GET['id_cate'];
-    delete_category($id);
+    $id = $_GET['id'];
+    delete_role($id);
     push_notification('success', ['Xoá danh mục sản phẩm thành công']);
-    header('Location: ?role=admin&mod=category');
+    header('Location: ?role=admin&mod=role');
 }
 
 function updateAction()
 {
-    $id = $_GET['id_cate'];
-    $cate = get_one_category($id);
-    $data['category'] = $cate;
+    $id = $_GET['id'];
+    $cate = get_one_role($id);
+    $data['role'] = $cate;
     if ($cate) {
         load_view('update', $data);
     } else {
-        header('Location: ?role=admin&mod=category');
+        header('Location: ?role=admin&mod=role');
     }
 }
 
 function updatePostAction() {
-    $id = $_GET['id_cate'];
-    $cate = get_one_category($id);
+    $id = $_GET['id'];
+    $cate = get_one_role($id);
     if (!$cate) {
-        header('Location: ?role=admin&mod=category');
+        header('Location: ?role=admin&mod=role');
         die();
     }
-    $name = $_POST['name'];
-    $description = $_POST['description'];
+    $name = $_POST['name_role'];
+    
     if (empty($name)) {
         push_notification('errors', [
             'name' => 'Vui lòng nhập vào tên danh mục'
         ]);
-        header('Location: ?role=admin&mod=category&action=update&id_cate='.$id);
+        header('Location: ?role=admin&mod=role&action=update&id='.$id);
     }
-    update_category($id, $name, $description);
+    update_role($id, $name);
     push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
-    header('Location: ?role=admin&mod=category');
+    header('Location: ?role=admin&mod=role');
 }

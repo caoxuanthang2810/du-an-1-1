@@ -21,19 +21,22 @@ function createPostAction() {
     $price =  $_POST['price'];
     $quantily =  $_POST['quantily'];
     $image =  $_FILES["image"];
+
+
     $description = $_POST['description'];
     $insurance =  $_POST['insurance'];
     $made_in =  $_POST['made_in'];
     $id_categories =  $_POST['id_categories'];
 
-    if (empty($name)) {
-        push_notification('danger', ['Vui lòng nhập vào tên danh mục']);
+    move_uploaded_file($image['tmp_name'], "./public/images/container/" . $image['name']);
+     if (empty($name)) {
+         push_notification('danger', ['Vui lòng nhập vào tên danh mục']);
         header('Location: ?role=admin&mod=products&action=create');
         die();
-    }
-    create_products($name, $price,$description,$quantily, $image, $insurance, $made_in, $id_categories);
-    push_notification('success', ['Tạo mới danh mục sản phẩm thành công']);
-    header('Location: ?role=admin&mod=products');
+     }
+     create_products($name, $price,$description,$quantily, $image, $insurance, $made_in, $id_categories);
+     push_notification('success', ['Tạo mới danh mục sản phẩm thành công']);
+     header('Location: ?role=admin&mod=products');
 }
 
 function deleteAction() {
