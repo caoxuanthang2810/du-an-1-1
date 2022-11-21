@@ -1,5 +1,11 @@
 <?php get_header('', 'Chỉnh sửa sản phẩm') ?>
-<form action="" method="POST">
+<div class=" container mx-auto pt-2 ">
+
+    <div class="bg-white  ml-[180px] w-5/6 mt-[-510px] ">
+        <div class="">
+            <span>Mời nhập tên Xuất Sứ</span>
+        </div>
+        <form action="" method="POST">
         <label for="">
             Tên thành viên
             <input type="text" name="name" value="<?php echo $users['username'] ?>">
@@ -28,8 +34,8 @@
         <label for="">
         <label>Vai trò</label>
          <select class="form-control select2" name="id_role">
-             <?php foreach ($role as $item) : ?>
-                 <option value="<?php echo $item['id_role'] ?>"><?php echo $item['name_role'] ?></option>
+             <?php foreach ($users as $item) : ?>
+                 <option value="<?php echo $item['id'] ?>"><?php echo $item['name_role'] ?></option>
              <?php endforeach ?>
          </select>
         </label>
@@ -39,4 +45,6 @@
            <a href="?role=admin&mod=products&action=create">Thêm mới</a>
         </div>
     </form>
+    </div>
+</div>
 <?php get_footer() ?>

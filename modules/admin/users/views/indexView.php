@@ -28,7 +28,7 @@
                         <td><?= $row['email'] ?></td>
                         <td><?= $row['phone'] ?></td>
                         <td><?= $row['address'] ?></td>
-                        <td><?= $row['name'] ?></td>
+                        <td><?= $row['name_role'] ?></td>
                         <td><a href="?role=admin&mod=users&action=update&id=<?php echo $row['id'] ?>"> <i class="fa-solid fa-pen mr-2"></i></a>
                             <button><i class="fa-solid fa-trash-can"></i></button>
                         </td>
