@@ -1,6 +1,7 @@
 <?php get_header('base', $title) ?>
+
 <head>
-   
+
 
     <!-- Header -->
     <div class="">
@@ -30,6 +31,11 @@
             <div class="flex gap-8 items-center">
 
                 <div>
+                    <!-- <ul class="flex gap-5">
+                        <img class="w-[40px] h-[40px]" src="./Asset/Image/logo/avata.png" alt="">
+                        <p class="mt-[10px]">Cường Cường Cường</p>
+                    </ul> -->
+
                     <ul class="flex gap-5">
                         <li class="border border-[#EFA969] rounded-[10px] p-3 font-bold">
                             <a href="?role=client&mod=dang_nhap">Đăng nhập</a>

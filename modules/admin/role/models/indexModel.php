@@ -10,7 +10,7 @@ function get_list_role() {
 }
 
 function get_one_role($id) {
-    $result = db_fetch_row("SELECT * FROM `role` WHERE id = $id");
+    $result = db_fetch_row("SELECT * FROM `role` WHERE id_role = $id");
     return $result;
 }
 
@@ -49,11 +49,11 @@ function create_role($name) {
 function update_role($id, $name) {
     db_update('role', [
         'name_role' => $name,
-    ], "id = $id");
+    ], "id_role = $id");
     return true;
 }
 
 function delete_role($id) {
-    db_delete('role', "id = $id");
+    db_delete('role', "id_role = $id");
     return true;
 }

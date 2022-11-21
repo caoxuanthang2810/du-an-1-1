@@ -20,13 +20,13 @@
                         extract($key)
                     ?>
                         <tr class="text-center h-[55px]">
-                            <td><?=$id?></td>
+                            <td><?=$id_role?></td>
                             <td><?= $name_role?></td>
                             <td>
-                                <a href="?role=admin&mod=role&action=update&id=<?=$id?>">
+                                <a href="?role=admin&mod=role&action=update&id=<?=$id_role?>">
                                     <button> <i class="fa-solid fa-pen mr-2"></i></button>
                                 </a>
-                                <a href="?role=admin&mod=role&action=delete&id=<?=$id?>" onclick="return confirm('Bạn chắc chắn muốn xoá danh mục: <?php echo $row['name'] ?> không? Hành động sẽ xoá danh mục và toàn bộ sản phẩm có trong danh mục này.')">
+                                <a href="?role=admin&mod=role&action=delete&id=<?=$id_role?>" onclick="return confirm('Bạn chắc chắn muốn xoá danh mục: <?php echo $row['name'] ?> không? Hành động sẽ xoá danh mục và toàn bộ sản phẩm có trong danh mục này.')">
                                     <button><i class="fa-solid fa-trash-can"></i></button>
                                 </a>
 
