@@ -8,11 +8,11 @@
             </div>
 
             <div class="w-[400px] h-[400px] container mx-auto">
-                <p class="font-semibold text-lg mb-[20px]">Sửa tên chức vụ</p>
+                <p class="font-semibold text-lg  mb-[20px]">Sửa chức vụ</p>
                 <form action="" method="POST" class="text-center">
-                    <input type="text" name="name_role" value="<?= $name_role?>"
-                        class="w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md"><br>
-                    <button type="submit" class="w-[163px] h-[50px] bg-orange-300 rounded-md text-white	my-[100px]">Cập nhật</button>
+                    <input type="text" name="name_role"
+                        class="w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md pl-2" value="<?php echo $role['name_role'] ?>"><br>
+                    <button type="submit" class="w-[163px] h-[50px] bg-orange-300 rounded-md text-white	my-[100px]">Thêm mới</button>
                 </form>
             </div>
 
