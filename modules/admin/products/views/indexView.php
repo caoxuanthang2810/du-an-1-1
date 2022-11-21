@@ -1,6 +1,6 @@
 <?php get_header('', 'Trang quản lý sản phẩm') ?>
 
-<div class="  bg-gray-300 pt-2 ">
+<div class="  bg-[#fff] pt-2 ">
    <div class="container mx-auto ">
 
 
@@ -49,13 +49,15 @@
                      <td><?= $row['name'] ?></td>
                      <td><?= $row['price'] ?></td>
                      <td><?= $row['quantily'] ?></td>
-                     <td><img src="../public/images/container/<?= $row['image']; ?>" alt=""></td>
+                     <td><img src="./public/images/container/<?= $row['image']; ?>" alt=""></td>
                      <td><?= $row['description'] ?></td>
                      <td><?= $row['name_insurance'] ?></td>
                      <td><?= $row['name_made_in'] ?></td>
                      <td><?= $row['name_cate'] ?></td>
                      <td>
-                        <a href="#"><button> <i class="fa-solid fa-pen mr-2"></i></button></a>
+                        <a href="?role=admin&mod=products&action=update&id=<?php echo $row['id'] ?>">
+                           <button> <i class="fa-solid fa-pen mr-2"></i></button>
+                        </a>
 
                         <a href="?role=admin&mod=products&action=delete&id=<?php echo $row['id'] ?>"onclick="return confirm('Bạn chắc chắn muốn xoá danh mục: <?php echo $row['name'] ?> không? Hành động sẽ xoá danh mục và toàn bộ sản phẩm có trong danh mục này.')">
                            <button><i class="fa-solid fa-trash-can"></i></button>
@@ -69,4 +71,3 @@
       </div>
    </div>
 </div>
-<?php get_footer() ?>

@@ -10,7 +10,7 @@ function get_list_products()
 
 function get_one_products($id)
 {
-    $result = db_fetch_row("SELECT * FROM `products` WHERE c.id = $id");
+    $result = db_fetch_row("SELECT * FROM `products` WHERE id = $id");
     return $result;
 }
 
@@ -30,11 +30,11 @@ function create_products($name, $price,$description,$quantily, $image, $insuranc
     return $id;
 }
 
-function update_products($id, $name, $price,$quantity, $image,$description, $insurance, $made_in, $id_categories) {
+function update_products($id, $name, $price,$quantily, $image,$description, $insurance, $made_in, $id_categories) {
     db_update('products', [
         'name' => $name,
         'price' => $price,
-        'quantily' => $quantity,
+        'quantily' => $quantily,
         'image' => $image,
         'description' => $description,
         'insurance' => $insurance,
@@ -57,7 +57,7 @@ function  get_img()
 
         $error = [];
 
-        $target_dir = '../public/images/container/';
+        $target_dir = './public/images/container/';
         $image = $_FILES['image']['name'];
         $target_file = $target_dir . $image;
         $allowUpload = true;
@@ -77,6 +77,9 @@ function  get_img()
         // up loadfile
         if ($allowUpload == true) {
             move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
+
+            // move_uploaded_file($image['tmp_name'], "./public/images/container/" . $image['name']);
+
         }
     }
 }
