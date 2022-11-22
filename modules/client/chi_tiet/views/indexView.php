@@ -1,19 +1,23 @@
 <?php get_header('', 'Chi tiết sản phẩm') ?>
 <div class=" container mx-auto">
+    <?php foreach($data as $key):?>
+        
+    
+    <!-- Copy -->
     <div class=" mt-10  border-b-2 border-gray-500">
-        <h1 class="text-2xl text-[#FF0000] ml-12  font-medium">MÁY ẢNH CANON EOS 1500D KIT EF-S18-55MM F3.5-5.6 IS II</h1>
+        <h1 class="text-2xl text-[#FF0000] ml-12  font-medium"><?php echo $key["name"] ?></h1>
         <div class="grid grid-cols-2 gap-2">
             <div class="">
-                <img src="../Asset//Image//items//camera-canon.png" alt="" class="w-95% h-80%">
+                <img src="./public/images/container/canon-eos-1500d-kit-1855mm-f3556-iii(2) 1.png" alt="" class="w-95% h-80%">
             </div>
 
             <div class="">
-                <p class="text-xl text-black-900 my-7 font-normal">Mã sản phẩm: <span>A01010220</span></p>
-                <p class="text-xl text-black-900 my-7 font-normal">Số lượng: <Span>Hết hàng</Span></p>
-                <p class="text-xl text-black-900 my-7 font-normal">Giá bán <span class="text-[#FF0000]">11,090,000 VNĐ </span> (Đã có VAT)</p>
-                <p class="text-xl text-black-900 my-7 font-normal">Thương hiệu: <span>Canon</span></p>
-                <p class="text-xl text-black-900 my-7 font-normal">Bảo hành: <span>24 Tháng</span></p>
-                <p class="text-xl text-black-900 my-10 font-normal">Xuất sứ : <span>Đài Loan</span></p>
+                <p class="text-xl text-black-900 my-7 font-normal">Mã sản phẩm: <span><?php echo $key["id"] ?></span></p>
+                <p class="text-xl text-black-900 my-7 font-normal">Số lượng: <Span><?php echo $key["quantily"] ?></Span></p>
+                <p class="text-xl text-black-900 my-7 font-normal">Giá bán <span class="text-[#FF0000]"><?php echo $key["price"] ?> VNĐ </span></p>
+                <p class="text-xl text-black-900 my-7 font-normal">Thương hiệu: <span><?php echo $key["name_cate"] ?></span></p>
+                <p class="text-xl text-black-900 my-7 font-normal">Bảo hành: <span><?php echo $key["name_insurance"] ?></span></p>
+                <p class="text-xl text-black-900 my-10 font-normal">Xuất sứ : <span><?php echo $key["name_made_in"] ?></span></p>
                 <div class="flex ml-4">
                     <i class="fa-solid fa-plus mt-2 mr-5 text-3xl"></i>
                     <div class="w-[60px] h-[50px] border-2 border-slate-500 text-center"><span class="leading-[40px] text-3xl">1</span></div><i class="fa-solid fa-minus mt-2 ml-5 text-3xl"></i>
@@ -30,11 +34,12 @@
             </div>
         </div>
     </div>
+    
     <div class=" border-b-2 border-gray-500">
         <h2 class="text-2xl text-[#000000] font-bold mt-4">TÍNH NĂNG NỔI BẬT</h2>
 
         <div class="ml-10 grid grid-cols-2 gap-2 w-80%">
-            <div class="">
+            <!-- <div class="">
                 <p class="text-xl text-[#000000] font-bold mt-4">Máy Ảnh Canon EOS 1500D Kit 18-55mm F3.5-5.6 IS II</p>
                 <p class="text-xl text-[#000000] mt-4">- Cảm biến 24.1MP APS-C CMOS</p>
                 <p class="text-xl text-[#000000] mt-2"> - Chíp xử lý hình ảnh DIGIC 4+</p>
@@ -52,9 +57,14 @@
                 <p class="text-xl text-[#000000] mt-4">- Trọng lượng: 427g</p>
                 <p class="text-xl text-[#000000] mt-4">- Kích thước: 129X101.3X77.6 mm</p>
                 <p class="text-xl text-[#000000] mt-4">- Phụ kiện đi kèm: cáp trước sau ống kính, pin, sạc pin, dây đeo, CD-ROM, cáp USB, sách hướng dẫn, thẻ bảo hành</p>
+            </div> -->
+            <div class="mt-5">
+                <span><?php echo $key["description"] ?></span>
             </div>
         </div>
     </div>
+
+    <?php endforeach; ?>
     <div class="">
         <h1 class="text-2xl text-[#000000] font-bold mt-4 my-10">Đánh giá sản phẩm </h1>
         <div class="border-2 border-gray-400 my-10 rounded ml-10">

@@ -5,5 +5,8 @@ function construct() {
 }
 
 function indexAction() {
-    load_view('index');
+    $id = $_GET['id'];
+    $cate = get_one_products($id);
+    $data["products"] = $cate;
+    load_view('index', $data);
 }
