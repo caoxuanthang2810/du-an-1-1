@@ -220,9 +220,23 @@ function get_auth()
 function request_auth($isLogin = true)
 {
     if (is_auth() !== $isLogin) {
-        header("Location: " . ($isLogin ? '?role=admin&mod=auth' : '?role=admin'));
+        if(get_auth()){
+            if($_SESSION["auth"]["id_role"] = 2){
+            header("Location: " . ($isLogin ? '?role=client&mod=dang_nhap' : '?role=client'));
+            }else if($_SESSION["auth"]["id_role"] = 1){
+                header("Location: " . ($isLogin ? '?role=admin&mod=auth' : '?role=admin'));
+            }else{
+                echo "Có lõi rồi đấy";
+            }
+        }
         die;
     }
+
+    // if (is_auth() !== $isLogin) {
+    //     header("Location: " . ($isLogin ? '?role=admin&mod=auth' : '?role=admin'));
+    //     die;
+    // }
 }
+
 
 ?>

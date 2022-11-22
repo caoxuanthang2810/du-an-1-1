@@ -12,13 +12,13 @@
 
                 <div class="mt-[48px]">
                     <div class="my-3 font-bold">Email</div>
-                    <input type="text" id="email" class="border border-[#EFA969] w-[400px] py-4 pl-4 rounded-[5px]" placeholder="John.snow@gmail.com">
+                    <input type="text" id="email" name="email" class="border border-[#EFA969] w-[400px] py-4 pl-4 rounded-[5px]" placeholder="John.snow@gmail.com">
                     <span id="msg-error-email" class="flex items-center mt-2 ml-2 text-[#ff4d4f]"></span>
                 </div>
 
                 <div class="">
                     <div class="my-3 font-bold">Mật khẩu</div>
-                    <input type="text" id="password" class="border border-[#EFA969] w-[400px] py-4 pl-4 rounded-[5px]" placeholder="*********">
+                    <input type="text" name="password" id="password" class="border border-[#EFA969] w-[400px] py-4 pl-4 rounded-[5px]" placeholder="*********">
                     <span id="msg-error-pass" class="flex items-center mt-1 ml-2 text-[#ff4d4f]"></span>
                 </div>
 
@@ -28,7 +28,7 @@
 
                 <div class="mt-12">
                     <div class="flex justify-center text-[18px]">
-                        <span class="text-[#616161] mr-1">Bạn chưa có tài khoản?</span> <a href="./index.php?dang-nhap" class="text-[#EFA969]">Đăng ký ngay</a>
+                        <span class="text-[#616161] mr-1">Bạn chưa có tài khoản?</span> <a href="?role=client&mod=dang_ky" class="text-[#EFA969]">Đăng ký ngay</a>
                     </div>
                 </div>
             </div>
