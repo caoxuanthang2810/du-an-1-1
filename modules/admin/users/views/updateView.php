@@ -28,7 +28,7 @@
         <label for="">
         <label>Vai trò</label>
          <select class="form-control select2" name="id_role">
-             <?php foreach ($role as $item) : ?>
+             <?php foreach ($users as $item) : ?>
                  <option value="<?php echo $item['id_role'] ?>"><?php echo $item['name_role'] ?></option>
              <?php endforeach ?>
          </select>

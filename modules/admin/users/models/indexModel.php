@@ -1,8 +1,8 @@
 <?php
 
 function get_list_users() {
-    $result = db_fetch_array("SELECT u.id, u.username, u.password, u.email, u.phone, u.address, r.id, r.name FROM `users` u
-    INNER JOIN `role` r ON r.id = u.id_role");
+    $result = db_fetch_array("SELECT u.id, u.username, u.password, u.email, u.phone, u.address, r.id_role, r.name_role FROM `users` u
+    INNER JOIN `role` r ON r.id_role = u.id_role");
     return $result;
 }
 
