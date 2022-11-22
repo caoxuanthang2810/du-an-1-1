@@ -1,4 +1,5 @@
 <?php get_header('base', $title) ?>
+<?php $user = get_auth() ?>
 
 <head>
 
@@ -30,20 +31,34 @@
 
             <div class="flex gap-8 items-center">
 
-                <div>
-                    <!-- <ul class="flex gap-5">
-                        <img class="w-[40px] h-[40px]" src="./Asset/Image/logo/avata.png" alt="">
-                        <p class="mt-[10px]">Cường Cường Cường</p>
-                    </ul> -->
+                <div class="">
+                    <?php
+                    if (isset($user)) {
+                    ?>
+                        <ul class="flex gap-5">
+                            <div>
+                                <img class="w-[40px] h-[40px]" src="./public/images/logo/avata.png" alt="">
+                            </div>
+                            <div>
+                                <p class="mt-[10px] text-[#FF0000]"><?php echo $_SESSION["auth"]["username"] ?></p>
+                                <a href="" class="hover:underline">Đăng xuất</a>
+                            </div>
+                        </ul>
+                    <?php
+                    } else {
+                    ?>
+                        <ul class="flex gap-5">
+                            <li class="border border-[#EFA969] rounded-[10px] p-3 font-bold">
+                                <a href="?role=client&mod=dang_nhap">Đăng nhập</a>
+                            </li>
+                            <li class="bg-[#EFA969] rounded-[10px] font-bold p-3">
+                                <a href="?role=client&mod=dang_ky">Đăng ký</a>
+                            </li>
+                        </ul>
 
-                    <ul class="flex gap-5">
-                        <li class="border border-[#EFA969] rounded-[10px] p-3 font-bold">
-                            <a href="?role=client&mod=dang_nhap">Đăng nhập</a>
-                        </li>
-                        <li class="bg-[#EFA969] rounded-[10px] font-bold p-3">
-                            <a href="?role=client&mod=dang_ky">Đăng ký</a>
-                        </li>
-                    </ul>
+                    <?php
+                    }
+                    ?>
                 </div>
 
                 <div>

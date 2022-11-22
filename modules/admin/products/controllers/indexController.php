@@ -20,7 +20,7 @@ function createPostAction() {
     $name = $_POST['name'];
     $price =  $_POST['price'];
     $quantily =  $_POST['quantily'];
-    $image =  $_FILES["image"];
+    $image =  $_FILES["img"];
 
     // $image =  get_img($_FILES["image"]);
 
@@ -32,7 +32,7 @@ function createPostAction() {
     $made_in =  $_POST['made_in'];
     $id_categories =  $_POST['id_categories'];
 
-    if (isset($_FILES['image'])) {
+    if (isset($_FILES['img'])) {
 
         $error = [];
 
@@ -106,7 +106,7 @@ function updatePostAction() {
     $name = $_POST['name'];
     $price =  $_POST['price'];
     $quantily =  $_POST['quantily'];
-    $image =  $_FILES["image"];
+    $image =  $_FILES["img"];
 
     // $image =  get_img($_FILES["image"]);
 

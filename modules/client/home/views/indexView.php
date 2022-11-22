@@ -1,11 +1,5 @@
 <?php get_header('', 'Trang chủ') ?>
-<?php $user = get_auth() ?>
-
-<?php
-// echo "<pre>";
-// print_r($_SESSION["auth"]);
-// echo "<pre>";
-?>
+<?php // $user = get_auth() ?>
 
 <div class="container mx-auto mb-6">
     <header>

@@ -1,7 +1,7 @@
 <?php
 function get_list_products()
 {
-    $result = db_fetch_array("SELECT p.id, p.name, p.price, p.quantily, p.image, p.description, i.name_insurance, m.name_made_in, c.name_cate FROM `products` p 
+    $result = db_fetch_array("SELECT p.id, p.name, p.price, p.quantily, p.img, p.description, i.name_insurance, m.name_made_in, c.name_cate FROM `products` p 
     INNER JOIN `insurance` i ON i.id = p.insurance 
     INNER JOIN `made_in` m ON m.id = p.made_in
     INNER JOIN `categories` c ON c.id = p.id_categories");
@@ -20,7 +20,7 @@ function create_products($name, $price,$description,$quantily, $image, $insuranc
         'name' => $name,
         'price' => $price,
         'quantily' => $quantily,
-        'image' => $image,
+        'img' => $image,
         'description' => $description,
         'insurance' => $insurance,
         'made_in' => $made_in,
@@ -35,7 +35,7 @@ function update_products($id, $name, $price,$quantily, $image,$description, $ins
         'name' => $name,
         'price' => $price,
         'quantily' => $quantily,
-        'image' => $image,
+        'img' => $image,
         'description' => $description,
         'insurance' => $insurance,
         'made_in' => $made_in,
@@ -53,12 +53,12 @@ function delete_products($id) {
 function  get_img()
 {
 
-    if (isset($_FILES['image'])) {
+    if (isset($_FILES['img'])) {
 
         $error = [];
 
         $target_dir = './public/images/container/';
-        $image = $_FILES['image']['name'];
+        $image = $_FILES['img']['name'];
         $target_file = $target_dir . $image;
         $allowUpload = true;
         $allowtype = ['jpg', 'png', 'jpeg', 'gif'];
@@ -70,13 +70,13 @@ function  get_img()
             $allowUpload = false;
         }
 
-        if ($_FILES['image']['size'] > $maxfilesize) {
+        if ($_FILES['img']['size'] > $maxfilesize) {
             echo " File không vượt quá " . $maxfilesize . "(Bytes)";
             $allowUpload = false;
         }
         // up loadfile
         if ($allowUpload == true) {
-            move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
+            move_uploaded_file($_FILES['img']['tmp_name'], $target_file);
 
             // move_uploaded_file($image['tmp_name'], "./public/images/container/" . $image['name']);
 
