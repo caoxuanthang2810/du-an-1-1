@@ -1,12 +1,11 @@
 <?php
 
 function construct() {
-    // request_auth();
+    request_auth();
     load_model('index');
 }
 
 function indexAction() {
-    
     $data['categories'] = get_list_categories();// lấy mảng  có danh mục trọng đb
     load_view('index', $data);
 }

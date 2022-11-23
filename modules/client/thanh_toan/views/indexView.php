@@ -1,30 +1,32 @@
 <?php get_header('', 'Thanh toán') ?>
 <div class="container mx-auto mb-6">
     <h2 class="font-bold text-[25px] text-center my-9">Thanh toán</h2>
+    <?php foreach($data as $key): ?>
     <div class="border border-[#EFA969] h-[200px]">
         <div class="flex justify-center">
             <div>
-                <img src="../Asset/Image/product/canon-eos-1500d-kit-1855mm-f3556-iii(2) 1.png" alt="" class="mx-4 my-3 w-[180px]">
+                <img src="./public/images/container/canon-eos-1500d-kit-1855mm-f3556-iii(2) 1.png" alt="" class="mx-4 my-3 w-[180px]">
             </div>
             <div>
-                <h3 class="font-semibold text-[21px] my-[50px] mx-7">CANON EOS 1500D KIT EF-S18-55MM F3.5-5.6 IS II</h3>
+                <h3 class="font-semibold text-[21px] my-[50px] mx-7"><?php echo $key["name"] ?></h3>
             </div>
         </div>
         <div class="flex justify-center">
             <div>
-                <p class=" mt-[-110px] font-semibold text[18px] ml-[-117px]"> Phân loại A01010220</p>
+                <p class=" mt-[-110px] font-semibold text[18px] ml-[-117px]">Hãng <?php echo $key["name_cate"] ?></p>
             </div>
             <div>
-                <p class="font-semibold text[18px] mt-[-60px] ml-[-150px]">x1</p>
+                <p class="font-semibold text[18px] mt-[-60px] ml-[-150px]">Xuất xứ <?php echo $key["name_made_in"] ?></p>
             </div>
 
         </div>
         <div class="text-center  mt-[-60px] ml-[500px]">
-            <span class="font-bold text[18px] text-red-500">11,090,000 VNĐ</span>
+            <span class="font-bold text[18px] text-red-500"><?php echo $key["price"] ?> VNĐ</span>
         </div>
     </div>
+    <?php endforeach; ?>
     <div class=" mt-[28px] text-center">
-        <form action="" class=" mb-[190px]  " method="POST">
+        <form action="" class=" mb-[190px]" method="POST">
             <div class=" grid grid-cols-2">
 
                 <div class="mt-[48px]">

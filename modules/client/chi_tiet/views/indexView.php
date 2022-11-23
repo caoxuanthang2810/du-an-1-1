@@ -24,10 +24,10 @@
                 </div>
                 <div class="flex mt-6 my-10">
                     <div class="w-[150px] h-[55px] bg-[#EFA969] text-center mt-4 rounded ">
-                        <a href="" class="text-2xl text-[#FFFFFF] leading-[50px] font-bold ">Mua Ngay</a>
+                        <a href="?role=client&mod=thanh_toan&id=<?php echo $key["id"] ?>" class="text-2xl text-[#FFFFFF] leading-[50px] font-bold ">Mua Ngay</a>
                     </div>
                     <div class="w-[150px] h-[55px] bg-[#FFFFF] text-center mt-4  w-1/5 ml-10 rounded border-2 border-[#EFA969]">
-                        <a href="" class="text-2xl text-[#EFA969] leading-[50px] font-bold  ">Giỏ Hàng</a>
+                        <a href="?role=client&mod=gio_hang&id=<?php echo $key["id"] ?>" class="text-2xl text-[#EFA969] leading-[50px] font-bold  ">Giỏ Hàng</a>
                     </div>
                 </div>
 
