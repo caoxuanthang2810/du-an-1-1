@@ -5,22 +5,22 @@
     <div class="border border-[#EFA969] h-[200px]">
         <div class="flex justify-center">
             <div>
-                <img src="./public/images/container/<?= $key['img']; ?>" alt="" class="mx-4 my-3 w-[180px]">
+                <img src="./public/images/container/<?= $key['img']; ?>" alt="" class=" w-[180px]">
             </div>
             <div>
                 <h3 class="font-semibold text-[21px] my-[50px] mx-7"><?php echo $key["name"] ?></h3>
             </div>
         </div>
-        <div class="flex justify-center">
+        <div class="text-center">
             <div>
-                <p class=" mt-[-110px] font-semibold text[18px] ml-[-117px]">Hãng <?php echo $key["name_cate"] ?></p>
+                <p class=" mt-[-80px] font-semibold text[18px] ml-[20px]">Hãng <?php echo $key["name_cate"] ?></p>
             </div>
             <div>
-                <p class="font-semibold text[18px] mt-[-60px] ml-[-150px]">Xuất xứ <?php echo $key["name_made_in"] ?></p>
+                <p class="font-semibold text[18px] mt-[10px] ml-[38px]">Xuất xứ <?php echo $key["name_made_in"] ?></p>
             </div>
 
         </div>
-        <div class="text-center  mt-[-60px] ml-[500px]">
+        <div class="text-center  mt-[-50px] ml-[460px]">
             <span class="font-bold text[18px] text-red-500"><?php echo $key["price"] ?> VNĐ</span>
         </div>
     </div>
