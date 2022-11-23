@@ -9,7 +9,10 @@ function get_one_users($id) {
     $result = db_fetch_row("SELECT u.*,r.name_role FROM `users` u INNER JOIN `role` r ON u.id_role = r.id_role WHERE `id` = $id");
     return $result;
 }
-
+function get_list_role() {
+    $result = db_fetch_array("SELECT * FROM `role`");
+    return $result;
+}
 function update_users($id, $username,$password,$email,$phone,$address,$id_role) {
     db_update('users', [
         'username' => $username,

@@ -22,9 +22,11 @@ function deleteAction() {
 function updateAction()
 {
     $id = $_GET['id'];
+    
     $cate= get_one_users($id);
     $data['users'] = $cate;
     if ($cate) {
+        $data['role'] = get_list_role();
         load_view('update', $data);
     } else {
         header('Location: ?role=admin&mod=users');

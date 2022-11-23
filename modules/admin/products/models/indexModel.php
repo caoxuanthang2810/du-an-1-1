@@ -1,7 +1,7 @@
 <?php
 function get_list_products()
 {
-    $result = db_fetch_array("SELECT p.id, p.name, p.price, p.quantily, p.img, p.description, i.name_insurance, m.name_made_in, c.name_cate, c.id FROM `products` p 
+    $result = db_fetch_array("SELECT p.id, p.name, p.price, p.quantily, p.img, p.description, i.name_insurance, m.name_made_in, c.name_cate FROM `products` p 
     INNER JOIN `insurance` i ON i.id = p.insurance 
     INNER JOIN `made_in` m ON m.id = p.made_in
     INNER JOIN `categories` c ON c.id = p.id_categories");
@@ -13,18 +13,7 @@ function get_one_products($id)
     $result = db_fetch_row("SELECT * FROM `products` WHERE id = $id");
     return $result;
 }
-function get_list_categories() {
-    $result = db_fetch_array("SELECT * FROM `categories` ");
-    return $result;
-}
-function get_list_madein() {
-    $result = db_fetch_array("SELECT * FROM `made_in`");
-    return $result;
-}
-function get_list_insurance() {
-    $result = db_fetch_array("SELECT * FROM `insurance`");
-    return $result;
-}
+
 
 function create_products($name, $price,$description,$quantily, $image, $insurance, $made_in, $id_categories) {
     // $user = get_auth();
@@ -94,4 +83,16 @@ function  get_img()
 
         }
     }
+}
+function get_list_categories() {
+    $result = db_fetch_array("SELECT * FROM `categories` ");
+    return $result;
+}
+function get_list_madein() {
+    $result = db_fetch_array("SELECT * FROM `made_in`");
+    return $result;
+}
+function get_list_insurance() {
+    $result = db_fetch_array("SELECT * FROM `insurance`");
+    return $result;
 }

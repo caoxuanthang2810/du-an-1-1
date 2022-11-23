@@ -29,10 +29,14 @@
             </div>
             <div class=" mt-3">
                 Chức vụ:
-                <!-- <input type="text" name="made_in" value="<?= $users['id_role'] ?>" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[88px]"> -->
+                
                 <select name="id_role" id="">
-                        <option value="<?= $users['id_role'] ?>"><?= $users['name_role'] ?></option>
-                </select>
+                           <?php foreach ($role as $value) { ?>
+                              <option value="<?= $value['id_role'] ?>"><?php echo $value['name_role']; ?></option>
+                           <?php
+                           }
+                           ?>
+                        </select>
             </div>
             <div class="text-center">
                 <button type="submit" class="w-[163px] h-[50px] bg-orange-300 rounded-md text-white	my-[50px] ">Thêm mới</button>
