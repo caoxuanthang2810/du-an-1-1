@@ -12,9 +12,9 @@ function indexAction() {
 }
 
 function createAction() {
-    $data['categories'] = get_list_categories();
     $data['madein'] = get_list_madein();
     $data['insurance'] = get_list_insurance();
+    $data['categories'] = get_list_categories();
     load_view('create', $data);
    
 }

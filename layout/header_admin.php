@@ -7,7 +7,7 @@
 
 <div class="h-[50px] flex justify-between bg-[#F29D38] leading-[50px]">
 	<div class="ml-[250px]">
-		<a href="?role=admin&mod=home">
+		<a href="?role=client&mod=home">
 			<i class="fa-solid fa-arrow-left text-white"></i>
 			<span class="text-white font-bold">TRANG CHỦ</span>
 		</a>
