@@ -5,7 +5,7 @@
 // }
 
 function get_list_categories() {
-    $result = db_fetch_array("SELECT * FROM `categories` c ");
+    $result = db_fetch_array("SELECT * FROM `categories` ");
     return $result;
 }
 

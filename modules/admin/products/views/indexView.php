@@ -51,15 +51,19 @@
                      <td><?= $row['quantily'] ?></td>
                      <td><img src="./public/images/container/<?= $row['img']; ?>" alt=""></td>
                      <td><?= $row['description'] ?></td>
-                     <td><?= $row['name_insurance'] ?></td>
+                     <td>
+                        
+                        <?= $row['name_insurance'] ?>
+                     </td>
                      <td><?= $row['name_made_in'] ?></td>
-                     <td><?= $row['name_cate'] ?></td>
+                     <td>
+                        <?= $row['name_cate'] ?></td>
                      <td>
                         <a href="?role=admin&mod=products&action=update&id=<?php echo $row['id'] ?>">
                            <button> <i class="fa-solid fa-pen mr-2"></i></button>
                         </a>
 
-                        <a href="?role=admin&mod=products&action=delete&id=<?php echo $row['id'] ?>"onclick="return confirm('Bạn chắc chắn muốn xoá danh mục: <?php echo $row['name'] ?> không? Hành động sẽ xoá danh mục và toàn bộ sản phẩm có trong danh mục này.')">
+                        <a href="?role=admin&mod=products&action=delete&id=<?php echo $row['id'] ?>" onclick="return confirm('Bạn chắc chắn muốn xoá danh mục: <?php echo $row['name'] ?> không? Hành động sẽ xoá danh mục và toàn bộ sản phẩm có trong danh mục này.')">
                            <button><i class="fa-solid fa-trash-can"></i></button>
                         </a>
                      </td>

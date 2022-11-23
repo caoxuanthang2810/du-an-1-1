@@ -27,15 +27,36 @@
             </div>
             <div class=" mt-3">
                 Thời gian bảo hành:
-                <input type="text" name="insurance" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[5px]">
+                <select name="insurance" id="">
+                           <?php foreach ($insurance as $value) { ?>
+                              <option value="<?= $value['id'] ?>"><?php echo $value['name_insurance']; ?></option>
+                           <?php
+                           }
+                           ?>
+                        </select>
+                <!-- <input type="text" name="insurance" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[5px]"> -->
             </div>
             <div class=" mt-3">
                 Xuất xứ:
-                <input type="text" name="made_in" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[88px]">
+                <select name="made_in" id="">
+                           <?php foreach ($madein as $value) { ?>
+                              <option value="<?= $value['id'] ?>"><?php echo $value['name_made_in']; ?></option>
+                           <?php
+                           }
+                           ?>
+                        </select>
+                <!-- <input type="text" name="made_in" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[88px]"> -->
             </div>
             <div class=" mt-3">
-                Danh mục:
-                <input type="text" name="id_categories" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[70px]">
+            Danh Mục:
+                        <select name="id_categories" id="">
+                           <?php foreach ($categories as $value) { ?>
+                              <option value="<?= $value['id'] ?>"><?php echo $value['name_cate']; ?></option>
+                           <?php
+                           }
+                           ?>
+                        </select>
+                
             </div>
             <div class=" mt-5">
                 <span class="mr-[50px]">Ảnh sản phẩm</span>
