@@ -44,7 +44,7 @@
             </div>
             <div class=" mt-5">
                 <span class="mr-[50px]">Ảnh sản phẩm</span>
-                <input type="file" name="img">
+                <input type="file" name="img" required>
             </div>
             <div class="text-center">
                 <button type="submit" class="w-[163px] h-[50px] bg-orange-300 rounded-md text-white	my-[50px] ">Thêm mới</button>

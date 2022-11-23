@@ -10,10 +10,9 @@
             <div class="w-[400px] h-[400px] container mx-auto">
                 <p class="font-semibold text-lg  mb-[20px]">Xuất xứ</p>
                 <form action="" method="POST" class="text-center">
-                    <input type="text" name="name_insurance"
-                        class="w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md"><br>
-                    <button type="submit" class="w-[163px] h-[50px] bg-orange-300 rounded-md text-white	my-[100px]">Thêm
-                        mới</button>
+                    <input type="text" name="name_made_in"
+                        class="w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md pl-2"><br>
+                    <button type="submit" class="w-[163px] h-[50px] bg-orange-300 rounded-md text-white	my-[100px]">Thêm mới</button>
                 </form>
             </div>
 
