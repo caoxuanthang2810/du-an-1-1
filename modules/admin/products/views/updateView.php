@@ -5,7 +5,7 @@
         <div class="font-bold text-3xl my-[85px] text-center">
             <h1>Cập nhật sản phẩm</h1>
         </div>
-        <form action="" method="POST" enctype="multipart/form-data " class="ml-[350px]">
+        <form action="" method="POST" enctype="multipart/form-data" class="ml-[350px]">
 
             <div class=" mt-3">
                 Tên sản phẩm:
@@ -44,7 +44,7 @@
             </div>
             <div class=" mt-5">
                 <span class="mr-[50px]">Ảnh sản phẩm</span>
-                <input type="file" name="image">
+                <input type="file" name="img">
             </div>
             <div class="text-center">
                 <button type="submit" class="w-[163px] h-[50px] bg-orange-300 rounded-md text-white	my-[50px] ">Thêm mới</button>

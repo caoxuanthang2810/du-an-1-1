@@ -37,7 +37,7 @@
                 <a href="?role=client&mod=chi_tiet&id=<?= $product['id']; ?>">
                     <div class="border-2 border-[#EFA969] rounded-xl">
                         <div>
-                            <img src="./public/images/container/<?= $product['image']; ?>" alt="" class="mx-auto mt-3">
+                            <img src="./public/images/container/<?= $product['img']; ?>" alt="" class="mx-auto mt-3">
                         </div>
                         <div>
                             <p class="font-semibold mt-2 mb-1 p-3"><?= $product['name'] ?></p>

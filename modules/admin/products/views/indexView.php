@@ -49,7 +49,7 @@
                      <td><?= $row['name'] ?></td>
                      <td><?= $row['price'] ?></td>
                      <td><?= $row['quantily'] ?></td>
-                     <td><img src="./public/images/container/<?= $row['image']; ?>" alt=""></td>
+                     <td><img src="./public/images/container/<?= $row['img']; ?>" alt=""></td>
                      <td><?= $row['description'] ?></td>
                      <td><?= $row['name_insurance'] ?></td>
                      <td><?= $row['name_made_in'] ?></td>

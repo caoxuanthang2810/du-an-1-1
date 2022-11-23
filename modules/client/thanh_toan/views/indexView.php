@@ -5,7 +5,7 @@
     <div class="border border-[#EFA969] h-[200px]">
         <div class="flex justify-center">
             <div>
-                <img src="./public/images/container/canon-eos-1500d-kit-1855mm-f3556-iii(2) 1.png" alt="" class="mx-4 my-3 w-[180px]">
+                <img src="./public/images/container/<?= $key['img']; ?>" alt="" class="mx-4 my-3 w-[180px]">
             </div>
             <div>
                 <h3 class="font-semibold text-[21px] my-[50px] mx-7"><?php echo $key["name"] ?></h3>

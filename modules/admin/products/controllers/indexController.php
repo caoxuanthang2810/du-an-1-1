@@ -37,7 +37,7 @@ function createPostAction() {
         $error = [];
 
         $target_dir = './public/images/container/';
-        $image = $_FILES['image']['name'];
+        $image = $_FILES['img']['name'];
         $target_file = $target_dir . $image;
         $allowUpload = true;
         $allowtype = ['jpg', 'png', 'jpeg', 'gif'];
@@ -49,16 +49,15 @@ function createPostAction() {
             $allowUpload = false;
         }
 
-        if ($_FILES['image']['size'] > $maxfilesize) {
+        if ($_FILES['img']['size'] > $maxfilesize) {
             echo " File không vượt quá " . $maxfilesize . "(Bytes)";
             $allowUpload = false;
         }
         // up loadfile
         if ($allowUpload == true) {
-            move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
+            move_uploaded_file($_FILES['img']['tmp_name'], $target_file);
 
             // move_uploaded_file($image['tmp_name'], "./public/images/container/" . $image['name']);
-
         }
     }
 
@@ -120,12 +119,12 @@ function updatePostAction() {
 
     // move_uploaded_file($image['tmp_name'], "../public/images/container/" . $image['name']);
 
-    if (isset($_FILES['image'])) {
+    if (isset($_FILES['img'])) {
 
         $error = [];
 
-        $target_dir = '../public/images/container/';
-        $image = $_FILES['image']['name'];
+        $target_dir = './public/images/container/';
+        $image = $_FILES['img']['name'];
         $target_file = $target_dir . $image;
         $allowUpload = true;
         $allowtype = ['jpg', 'png', 'jpeg', 'gif'];
@@ -137,13 +136,13 @@ function updatePostAction() {
             $allowUpload = false;
         }
 
-        if ($_FILES['image']['size'] > $maxfilesize) {
+        if ($_FILES['img']['size'] > $maxfilesize) {
             echo " File không vượt quá " . $maxfilesize . "(Bytes)";
             $allowUpload = false;
         }
         // up loadfile
         if ($allowUpload == true) {
-            move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
+            move_uploaded_file($_FILES['img']['tmp_name'], $target_file);
 
             // move_uploaded_file($image['tmp_name'], "./public/images/container/" . $image['name']);
 

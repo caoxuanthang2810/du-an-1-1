@@ -8,7 +8,8 @@
         <h1 class="text-2xl text-[#FF0000] ml-12  font-medium"><?php echo $key["name"] ?></h1>
         <div class="grid grid-cols-2 gap-2">
             <div class="">
-                <img src="./public/images/container/canon-eos-1500d-kit-1855mm-f3556-iii(2) 1.png" alt="" class="w-95% h-80%">
+                <!-- <img src="./public/images/container/canon-eos-1500d-kit-1855mm-f3556-iii(2) 1.png" alt="" class="w-95% h-80%"> -->
+                <img src="./public/images/container/<?= $key['img']; ?>" alt="" class="w-95% h-80%">
             </div>
 
             <div class="">
