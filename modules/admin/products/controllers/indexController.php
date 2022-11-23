@@ -12,8 +12,11 @@ function indexAction() {
 }
 
 function createAction() {
-    $data['products'] = get_list_products();
+    $data['categories'] = get_list_categories();
+    $data['madein'] = get_list_madein();
+    $data['insurance'] = get_list_insurance();
     load_view('create', $data);
+   
 }
 
 function createPostAction() {
