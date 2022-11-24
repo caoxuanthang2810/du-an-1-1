@@ -217,26 +217,55 @@ function get_auth()
     return $_SESSION["auth"];
 }
 
+function remove_auth()
+{
+    unset($_SESSION["auth"]);
+    return true;
+}
+
+function is_admin()
+{
+    return is_auth() && get_auth()['id_role'] == 1;
+}
+
 function request_auth($isLogin = true)
 {
+    $request_role = get_role() === 'admin' ? 1 : 2;
+
     if (is_auth() !== $isLogin) {
-        if(get_auth()){
-            if($_SESSION["auth"]["id_role"] = 2){
-            header("Location: " . ($isLogin ? '?role=client&mod=dang_nhap' : '?role=client'));
-            }else if($_SESSION["auth"]["id_role"] = 1){
-                header("Location: " . ($isLogin ? '?role=admin&mod=auth' : '?role=admin'));
-            }else{
-                echo "Có lõi rồi đấy";
-            }
-        }
+        $auth = get_auth();
+        header("Location: " . ($isLogin ? '?role='. ($auth['id_role'] == 2 ? 'client' : 'adnu') . '&mod=dang_nhap' : '/?role=' . ($auth['id_role'] == 2 ? 'client' : 'admin')));
         die;
     }
-
-    // if (is_auth() !== $isLogin) {
-    //     header("Location: " . ($isLogin ? '?role=admin&mod=auth' : '?role=admin'));
-    //     die;
-    // }
+    if (is_auth()) {
+        $auth = get_auth();
+        if ($auth['role'] != $request_role) {
+            header("Location: ?role=dưqdwqdqwdqwdqwdqwdqwdqw" . ($auth['id_role'] == 2 ? 'client' : 'admin'));
+            die;
+        }
+    }
 }
+
+// function request_auth($isLogin = true)
+// {
+//     if (is_auth() !== $isLogin) {
+//         if(get_auth()){
+//             if($_SESSION["auth"]["id_role"] = 2){
+//             header("Location: " . ($isLogin ? '?role=client&mod=dang_nhap' : '?role=client'));
+//             }else if($_SESSION["auth"]["id_role"] = 1){
+//                 header("Location: " . ($isLogin ? '?role=admin&mod=auth' : '?role=admin'));
+//             }else{
+//                 echo "Có lõi rồi đấy";
+//             }
+//         }
+//         die;
+//     }
+
+//     if (is_auth() !== $isLogin) {
+//         header("Location: " . ($isLogin ? '?role=admin&mod=auth' : '?role=admin'));
+//         die;
+//     }
+// }
 
 
 ?>

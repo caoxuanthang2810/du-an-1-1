@@ -1,6 +1,11 @@
 <?php get_header('base', $title) ?>
 <?php $user = get_auth() ?>
+<?php 
+    // echo "<pre>";
+    // print_r($user);
+    // echo "<pre>";
 
+?>
 <head>
 
 
@@ -41,7 +46,7 @@
                             </div>
                             <div>
                                 <p class="mt-[10px] text-[#FF0000]"><?php echo $_SESSION["auth"]["username"] ?></p>
-                                <a href="" class="hover:underline">Đăng xuất</a>
+                                <a href="?role=client&mod=dang_nhap&action=logout" class="hover:underline">Đăng xuất</a>
                             </div>
                         </ul>
                     <?php
