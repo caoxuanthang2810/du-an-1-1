@@ -240,7 +240,7 @@ function request_auth($isLogin = true)
     if (is_auth()) {
         $auth = get_auth();
         if ($auth['role'] != $request_role) {
-            header("Location: ?role=dưqdwqdqwdqwdqwdqwdqwdqw" . ($auth['id_role'] == 2 ? 'client' : 'admin'));
+            header("Location: ?role=" . ($auth['id_role'] == 2 ? 'client' : 'admin'));
             die;
         }
     }
