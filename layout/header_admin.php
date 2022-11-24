@@ -15,7 +15,7 @@
 
 <div class="h-[50px] flex justify-between bg-[#F29D38] leading-[50px]">
 	<div class="ml-[250px]">
-			<span class="text-white font-bold">Xin Chào <span class="text-[#ff0000]"><?php echo get_auth()['username']?></span></span>
+			<span class="text-white font-bold">Xin Chào <span class="text-[#ff0000]">Admin</span></span>
 	</div>
 	<div class="mr-10">
 		<a href="?role=client&mod=home" class="mr-5">
