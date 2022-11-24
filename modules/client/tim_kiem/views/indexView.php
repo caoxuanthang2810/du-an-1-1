@@ -1,39 +1,9 @@
-<?php get_header('', 'Trang chủ') ?>
-<?php // $user = get_auth() ?>
-
+<?php get_header('', 'Tìm kiếm') ?>
 <div class="container mx-auto mb-6">
-    <header>
-        <img src="./public/images/container/banner1.png" class="w-full" alt="">
-    </header>
-
-    <div class=" flex justify-between mt-[40px] ">
-
-        <div>
-            <img src="../Asset/Image/logo/nen-dau-tu-mua-lens-hay-nang-cap-body-may-anh--1 1.png" alt="">
-        </div>
-        <div>
-            <img src="../Asset/Image/logo/images (1) 1.png" alt="">
-        </div>
-        <div>
-            <img src="../Asset/Image/logo/nen-dau-tu-mua-lens-hay-nang-cap-body-may-anh--2 1.png" alt="">
-        </div>
-    </div>
-    <div class="flex justify-between">
-        <div>
-            <h2 class="mt-[15px] font-bold text-[25px] mb-5">Sản phẩm bán chạy</h2>
-        </div>
-        <div class="mt-[23px] ">
-            <a href="?role=client&mod=danh_muc">
-
-                <button class="border border-[#EFA969] font-bold w-[100px] h-[40px] text-[18px] hover:bg-[#EFA969] hover:text-white rounded-xl">Xem Thêm</button>
-            </a>
-        </div>
-    </div>
-
-
+    <h2 class="font-bold text-[25px] text-center my-9">Sản phẩm tìm kiếm</h2>
     <div>
         <div class="grid grid-cols-4 gap-24 text-center">
-            <?php foreach ($products as $product) : ?>
+            <?php foreach ($product as $product) : ?>
                 <a href="?role=client&mod=chi_tiet&id=<?= $product['id']; ?>">
                     <div class="border-2 border-[#EFA969] rounded-xl p-4">
                         <div>
@@ -54,6 +24,7 @@
         </div>
 
     </div>
+    
 </div>
 
 <?php get_footer() ?>
