@@ -24,3 +24,23 @@ function get_categories_by_id($id_cate)
     $result = db_fetch_row("SELECT * FROM `products` WHERE id_categories = $id_cate");
     return $result;
 }
+
+function create_comment($id_product,$content) {
+    $user = get_auth();
+    $id = db_insert('comments', [
+        'content' => $content,
+        'time' => date('Y-m-d H:i:s'),
+        'id_product' => $id_product,
+        'id_user' => $user['id'],
+    ]);
+    return $id;
+}
+
+function get_comments_by_id($id)
+{
+    $result = db_fetch_row("SELECT comm.*,u.username FROM `comments` comm
+    INNER JOIN `users` u ON u.id = comm.id_user
+    INNER JOIN `products` p ON p.id = comm.id_product
+    WHERE p.id = $id");
+    return $result;
+}

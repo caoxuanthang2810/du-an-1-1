@@ -6,20 +6,29 @@ function construct() {
 
 function indexAction() {
     $id = $_GET['id'];
-    $cate = get_one_products($id);
+    $cate= get_one_products($id);
     $data["products"] = $cate;
-    // foreach($data as $key){
-    //     // extract($data)
-    //     $id_cate = $key["id_categories"];
-    //     $data['categories'] = get_categories_by_id($id_cate);
+    if ($cate) {
+        $data['comments'] = get_comments_by_id($id);
+        load_view('index', $data);
+    }
+    //  else {
+    //     header('Location: ?role=admin&mod=users');
     // }
-    load_view('index', $data);
+
+    // $cate= get_comments_by_id($id);
+    // $data["comments"] = $cate;
+    
+    // load_view('index', $data);
 }
 
 
-// function commentAction() {
-//     $id = $_GET['id'];
-//     $cate = get_one_products($id);
-//     $data["products"] = $cate;
-//     load_view('index', $data);
-// }
+function commentPostAction() {
+    $id_product = $_GET['id'];
+    $content = $_POST["content"];
+    
+    create_comment($id_product,$content);
+    // $data["products"] = $cate;
+    // load_view('index', $data);
+    header('Location: ?role=client&mod=chi_tiet&id='.$id_product);
+}

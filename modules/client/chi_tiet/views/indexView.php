@@ -1,46 +1,45 @@
 <?php get_header('', 'Chi tiết sản phẩm') ?>
 <div class=" container mx-auto">
-    <?php foreach ($data as $key) : ?>
+    <?php //foreach ($data as $key) : 
+    ?>
+    <!-- Copy -->
+    <div class=" mt-10  border-b-2 border-gray-500">
+        <h1 class="text-2xl text-[#FF0000] ml-12  font-medium"><?php echo $products["name"] ?></h1>
+        <div class="grid grid-cols-2 gap-2">
+            <div class="">
+                <!-- <img src="./public/images/container/canon-eos-1500d-kit-1855mm-f3556-iii(2) 1.png" alt="" class="w-95% h-80%"> -->
+                <img src="./public/images/container/<?= $products['img']; ?>" alt="" class="w-95% h-80%">
+            </div>
 
-
-        <!-- Copy -->
-        <div class=" mt-10  border-b-2 border-gray-500">
-            <h1 class="text-2xl text-[#FF0000] ml-12  font-medium"><?php echo $key["name"] ?></h1>
-            <div class="grid grid-cols-2 gap-2">
-                <div class="">
-                    <!-- <img src="./public/images/container/canon-eos-1500d-kit-1855mm-f3556-iii(2) 1.png" alt="" class="w-95% h-80%"> -->
-                    <img src="./public/images/container/<?= $key['img']; ?>" alt="" class="w-95% h-80%">
+            <div class="">
+                <p class="text-xl text-black-900 my-7 font-normal">Mã sản phẩm: <span><?php echo $products["id"] ?></span></p>
+                <p class="text-xl text-black-900 my-7 font-normal">Số lượng: <Span><?php echo $products["quantily"] ?></Span></p>
+                <p class="text-xl text-black-900 my-7 font-normal">Giá bán <span class="text-[#FF0000]"><?php echo $products["price"] ?> VNĐ </span></p>
+                <p class="text-xl text-black-900 my-7 font-normal">Thương hiệu: <span><?php echo $products["name_cate"] ?></span></p>
+                <p class="text-xl text-black-900 my-7 font-normal">Bảo hành: <span><?php echo $products["name_insurance"] ?></span></p>
+                <p class="text-xl text-black-900 my-10 font-normal">Xuất sứ : <span><?php echo $products["name_made_in"] ?></span></p>
+                <div class="flex ml-4">
+                    <i class="fa-solid fa-plus mt-2 mr-5 text-3xl"></i>
+                    <div class="w-[60px] h-[50px] border-2 border-slate-500 text-center"><span class="leading-[40px] text-3xl">1</span></div><i class="fa-solid fa-minus mt-2 ml-5 text-3xl"></i>
+                </div>
+                <div class="flex mt-6 my-10">
+                    <div class="w-[150px] h-[55px] bg-[#EFA969] text-center mt-4 rounded ">
+                        <a href="?role=client&mod=thanh_toan&id=<?php echo $products["id"] ?>" class="text-2xl text-[#FFFFFF] leading-[50px] font-bold ">Mua Ngay</a>
+                    </div>
+                    <div class="w-[150px] h-[55px] bg-[#FFFFF] text-center mt-4  w-1/5 ml-10 rounded border-2 border-[#EFA969]">
+                        <a href="?role=client&mod=gio_hang&id=<?php echo $products["id"] ?>" class="text-2xl text-[#EFA969] leading-[50px] font-bold  ">Giỏ Hàng</a>
+                    </div>
                 </div>
 
-                <div class="">
-                    <p class="text-xl text-black-900 my-7 font-normal">Mã sản phẩm: <span><?php echo $key["id"] ?></span></p>
-                    <p class="text-xl text-black-900 my-7 font-normal">Số lượng: <Span><?php echo $key["quantily"] ?></Span></p>
-                    <p class="text-xl text-black-900 my-7 font-normal">Giá bán <span class="text-[#FF0000]"><?php echo $key["price"] ?> VNĐ </span></p>
-                    <p class="text-xl text-black-900 my-7 font-normal">Thương hiệu: <span><?php echo $key["name_cate"] ?></span></p>
-                    <p class="text-xl text-black-900 my-7 font-normal">Bảo hành: <span><?php echo $key["name_insurance"] ?></span></p>
-                    <p class="text-xl text-black-900 my-10 font-normal">Xuất sứ : <span><?php echo $key["name_made_in"] ?></span></p>
-                    <div class="flex ml-4">
-                        <i class="fa-solid fa-plus mt-2 mr-5 text-3xl"></i>
-                        <div class="w-[60px] h-[50px] border-2 border-slate-500 text-center"><span class="leading-[40px] text-3xl">1</span></div><i class="fa-solid fa-minus mt-2 ml-5 text-3xl"></i>
-                    </div>
-                    <div class="flex mt-6 my-10">
-                        <div class="w-[150px] h-[55px] bg-[#EFA969] text-center mt-4 rounded ">
-                            <a href="?role=client&mod=thanh_toan&id=<?php echo $key["id"] ?>" class="text-2xl text-[#FFFFFF] leading-[50px] font-bold ">Mua Ngay</a>
-                        </div>
-                        <div class="w-[150px] h-[55px] bg-[#FFFFF] text-center mt-4  w-1/5 ml-10 rounded border-2 border-[#EFA969]">
-                            <a href="?role=client&mod=gio_hang&id=<?php echo $key["id"] ?>" class="text-2xl text-[#EFA969] leading-[50px] font-bold  ">Giỏ Hàng</a>
-                        </div>
-                    </div>
-
-                </div>
             </div>
         </div>
+    </div>
 
-        <div class=" border-b-2 border-gray-500">
-            <h2 class="text-2xl text-[#000000] font-bold mt-4">TÍNH NĂNG NỔI BẬT</h2>
+    <div class=" border-b-2 border-gray-500">
+        <h2 class="text-2xl text-[#000000] font-bold mt-4">TÍNH NĂNG NỔI BẬT</h2>
 
-            <div class="ml-10 grid grid-cols-2 gap-2 w-80%">
-                <!-- <div class="">
+        <div class="ml-10 grid grid-cols-2 gap-2 w-80%">
+            <!-- <div class="">
                 <p class="text-xl text-[#000000] font-bold mt-4">Máy Ảnh Canon EOS 1500D Kit 18-55mm F3.5-5.6 IS II</p>
                 <p class="text-xl text-[#000000] mt-4">- Cảm biến 24.1MP APS-C CMOS</p>
                 <p class="text-xl text-[#000000] mt-2"> - Chíp xử lý hình ảnh DIGIC 4+</p>
@@ -59,32 +58,36 @@
                 <p class="text-xl text-[#000000] mt-4">- Kích thước: 129X101.3X77.6 mm</p>
                 <p class="text-xl text-[#000000] mt-4">- Phụ kiện đi kèm: cáp trước sau ống kính, pin, sạc pin, dây đeo, CD-ROM, cáp USB, sách hướng dẫn, thẻ bảo hành</p>
             </div> -->
-                <div class="mt-5">
-                    <span><?php echo $key["description"] ?></span>
-                </div>
+            <div class="mt-5">
+                <span><?php echo $products["description"] ?></span>
             </div>
         </div>
+    </div>
 
-    <?php endforeach; ?>
+    <?php //endforeach; 
+    ?>
     <div class="">
         <h1 class="text-2xl text-[#000000] font-bold mt-4 my-10">Đánh giá sản phẩm </h1>
         <div class="border-2 border-gray-400 my-10 rounded ml-10">
             <div class="ml-10">
-                <div class="">
-                    <h2 class="text-xl text-[#000000] font-bold mt-4">Thắng Cao</h2>
-                    <p class="text-xl text-black-900 ml-2 font-normal my-2">Máy ảnh đẹp quấ có tiền mua luôn</p>
-                </div>
-                <div>
-                    <h2 class="text-xl text-[#000000] font-bold mt-4">Cường Bịpp</h2>
-                    <p class="text-xl text-black-900 ml-2 font-normal my-2">Máy ảnh đẹp quấ có tiền mua luôn</p>
-                </div>
+                <?php //foreach($comments as $row):?>
+                    <div class="">
+                        <h2 class="text-xl text-[#000000] font-bold mt-4"><?php echo $comments["username"] ?></h2>
+                        <p class="text-xl text-black-900 ml-2 font-normal my-2"><?php echo $comments["content"] ?></p>
+                    </div>
+                <?php //endforeach; ?>
+                <?php 
+                    // echo "<pre>";
+                    // print_r($comments);
+                    // echo "<pre>";
+                ?>
             </div>
         </div>
         <div class=" text-center my-4">
             <?php if (is_auth()) : ?>
-                <form action="" method="POST">
-                    <input type="text" name="" id="" class="w-[700px] h-[40px] rounded-xl border-2 border-gray-400 pl-2" placeholder="Nhập bình luận...">
-                    <button class="w-[100px] h-[40px] bg-[#EFA969] rounded-3xl text-xl ml-6   text-[#FFFFFF] font-medium " required>Gửi</button>
+                <form action="?role=client&mod=chi_tiet&action=comment&id=<?php echo $products["id"] ?>" method="POST">
+                    <input type="text" name="content" id="" class="w-[700px] h-[40px] rounded-xl border-2 border-gray-400 pl-2" placeholder="Nhập bình luận...">
+                    <button class="w-[100px] h-[40px] bg-[#EFA969] rounded-3xl text-xl ml-6   text-[#FFFFFF] font-medium">Gửi</button>
                 </form>
             <?php else : ?>
                 <form action="" method="post">
