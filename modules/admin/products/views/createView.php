@@ -21,10 +21,7 @@
                 Số lượng:
                 <input type="text" name="quantily" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[75px]">
             </div>
-            <div class=" mt-3">
-                Mô tả sản phẩm:
-                <input type="text" name="description" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[25px]">
-            </div>
+            
             <div class=" mt-3">
                 Thời gian bảo hành:
                 <select name="insurance" id="">
@@ -61,6 +58,11 @@
             <div class=" mt-5">
                 <span class="mr-[50px]">Ảnh sản phẩm</span>
                 <input type="file" name="img">
+            </div>
+            <div class=" mt-3">
+                Mô tả sản phẩm:
+                <textarea name="description" id="" cols="30" rows="5" value="<?= $products['description'] ?>" class="pl-2 w-[400px] border-2 border-[#EFA969] rounded-md ml-[25px]"></textarea>
+
             </div>
             <div class="text-center">
                 <button type="submit" class="w-[163px] h-[50px] bg-orange-300 rounded-md text-white	my-[50px] ">Thêm mới</button>
