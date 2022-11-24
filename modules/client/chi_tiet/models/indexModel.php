@@ -17,3 +17,10 @@ function get_one_products($id)
     INNER JOIN `categories` c ON c.id = p.id_categories WHERE p.id = $id");
     return $result;
 }
+
+
+function get_categories_by_id($id_cate)
+{
+    $result = db_fetch_row("SELECT * FROM `products` WHERE id_categories = $id_cate");
+    return $result;
+}
