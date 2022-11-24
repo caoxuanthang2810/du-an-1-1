@@ -87,6 +87,11 @@ function  get_img()
 function get_list_categories() {
     $result = db_fetch_array("SELECT * FROM `categories` ");
     return $result;
+    function get_one_category($id) {
+        $result = db_fetch_row("SELECT*FROM `categories`WHERE id = $id");
+        return $result;
+    }
+    
 }
 function get_list_madein() {
     $result = db_fetch_array("SELECT * FROM `made_in`");

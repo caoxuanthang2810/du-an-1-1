@@ -8,28 +8,28 @@
         <form action="" method="POST" enctype="multipart/form-data " class="ml-[350px]">
 
             <div class=" mt-3">
-                Tên tài khỏan:
+                Tên tài khoản:
                 <input type="text" name="username" value="<?= $users['username'] ?>" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[40px]">
             </div>
             <div class=" mt-3">
                 Mật khẩu:
-                <input type="text" name="password" value="<?= $users['password'] ?>" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[115px]">
+                <input type="text" name="password" value="<?= $users['password'] ?>" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[70px]">
             </div>
             <div class=" mt-3">
                 Email:
-                <input type="text" name="email" value="<?= $users['email'] ?>" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[75px]">
+                <input type="text" name="email" value="<?= $users['email'] ?>" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[100px]">
             </div>
             <div class=" mt-3">
                 Số điện thoại:
-                <input type="text" name="phone" value="<?= $users['phone'] ?>" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[25px]">
+                <input type="text" name="phone" value="<?= $users['phone'] ?>" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[48px]">
             </div>
             <div class=" mt-3">
                 Địa chỉ:
-                <input type="text" name="address" value="<?= $users['address'] ?>" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[5px]">
+                <input type="text" name="address" value="<?= $users['address'] ?>" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[95px]">
             </div>
             <div class=" mt-3">
                 Chức vụ:
-                
+
                 <select name="id_role" id="">
                            <?php foreach ($role as $value): ?>
                               <option value="<?= $value['id_role'] ?>"><?php echo $value['name_role']; ?></option>
@@ -43,4 +43,3 @@
     </div>
 </div>
 <?php get_footer() ?>
-
