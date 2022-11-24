@@ -31,11 +31,9 @@
                 Chức vụ:
                 
                 <select name="id_role" id="">
-                           <?php foreach ($role as $value) { ?>
+                           <?php foreach ($role as $value): ?>
                               <option value="<?= $value['id_role'] ?>"><?php echo $value['name_role']; ?></option>
-                           <?php
-                           }
-                           ?>
+                           <?php endforeach; ?>
                         </select>
             </div>
             <div class="text-center">

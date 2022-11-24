@@ -13,7 +13,7 @@ function indexPostAction() {
     request_auth(false);
     // validation
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = md5($_POST['password']);
     if (empty($email) || empty($password)) {
         push_notification('danger', ['Vui lòng nhập đầy đủ thông tin tài khoản và mật khẩu']);
         header('Location: ?role=client&mod=dang_nhap');
@@ -34,7 +34,7 @@ function indexPostAction() {
 
 function logoutAction()
 {
-    request_auth(true);
     remove_auth();
     header('Location: ?role=client&mod=dang_nhap');
+    request_auth(true);
 }

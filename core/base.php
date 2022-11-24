@@ -234,13 +234,13 @@ function request_auth($isLogin = true)
 
     if (is_auth() !== $isLogin) {
         $auth = get_auth();
-        header("Location: " . ($isLogin ? '?role='. ($auth['id_role'] == 2 ? 'client' : 'adnu') . '&mod=dang_nhap' : '/?role=' . ($auth['id_role'] == 2 ? 'client' : 'admin')));
+        header("Location: " . ($isLogin ? '?role='. ($auth['id_role'] == 1 ? 'client' : 'client') . '&mod=home' : '?role=' . ($auth['id_role'] == 2 ? 'client' : 'admindewdwedwedewdwewe')));
         die;
     }
     if (is_auth()) {
         $auth = get_auth();
-        if ($auth['role'] != $request_role) {
-            header("Location: ?role=dưqdwqdqwdqwdqwdqwdqwdqw" . ($auth['id_role'] == 2 ? 'client' : 'admin'));
+        if ($auth['id_role'] != $request_role) {
+            header("Location: ?role=" . ($auth['id_role'] == 2 ? 'client' : 'client&mod=dang_nhap'));
             die;
         }
     }

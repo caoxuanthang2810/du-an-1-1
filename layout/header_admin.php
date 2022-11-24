@@ -1,26 +1,31 @@
 <?php get_header('base', $title) ?>
+<?php //$user = get_auth() ?>
 
 <head>
 	<meta charset="UTF-8">
 </head>
 
+<?php 
+    // echo "<pre>";
+    // print_r($user);
+    // echo "<pre>";
+
+?>
+
 
 <div class="h-[50px] flex justify-between bg-[#F29D38] leading-[50px]">
 	<div class="ml-[250px]">
-		<a href="?role=client&mod=home">
-			<i class="fa-solid fa-arrow-left text-white"></i>
-			<span class="text-white font-bold">TRANG CHỦ</span>
-		</a>
+			<span class="text-white font-bold">Xin Chào <span class="text-[#ff0000]"><?php echo get_auth()['username']?></span></span>
 	</div>
 	<div class="mr-10">
 		<a href="?role=client&mod=home" class="mr-5">
 			<i class="fa-solid fa-house text-white"></i>
 			<span class="text-white font-bold">VỀ WEBSITE</span>
 		</a>
-		<a href="">
+		<!-- <a href="">
 			<i class="fa-solid fa-arrow-right-to-bracket text-white"></i>
 			<span class="text-white font-bold">ĐĂNG XUẤT</span>
-		</a>
+		</a> -->
 	</div>
 
 </div>

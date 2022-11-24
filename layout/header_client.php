@@ -1,11 +1,12 @@
 <?php get_header('base', $title) ?>
-<?php $user = get_auth() ?>
-<?php 
-    // echo "<pre>";
-    // print_r($user);
-    // echo "<pre>";
+<?php // $user = get_auth() ?>
+<?php
+// echo "<pre>";
+// print_r($user);
+// echo "<pre>";
 
 ?>
+
 <head>
 
 
@@ -35,23 +36,23 @@
             </div>
 
             <div class="flex gap-8 items-center">
-
                 <div class="">
-                    <?php
-                    if (isset($user)) {
-                    ?>
+                    <?php if (is_auth()) : ?>
                         <ul class="flex gap-5">
                             <div>
                                 <img class="w-[40px] h-[40px]" src="./public/images/logo/avata.png" alt="">
                             </div>
                             <div>
-                                <p class="mt-[10px] text-[#FF0000]"><?php echo $_SESSION["auth"]["username"] ?></p>
+                                <p class="mt-[10px] text-[#FF0000]"><?php echo get_auth()['username']?></p>
+                                <?php if (is_admin()) : ?>
+                                    <div>
+                                        <a href="?role=admin" class="hover:underline">Trang quản trị</a>
+                                    </div>
+                                <?php endif ?>
                                 <a href="?role=client&mod=dang_nhap&action=logout" class="hover:underline">Đăng xuất</a>
                             </div>
                         </ul>
-                    <?php
-                    } else {
-                    ?>
+                    <?php else : ?>
                         <ul class="flex gap-5">
                             <li class="border border-[#EFA969] rounded-[10px] p-3 font-bold">
                                 <a href="?role=client&mod=dang_nhap">Đăng nhập</a>
@@ -60,11 +61,10 @@
                                 <a href="?role=client&mod=dang_ky">Đăng ký</a>
                             </li>
                         </ul>
-
-                    <?php
-                    }
-                    ?>
+                    <?php endif; ?>
                 </div>
+
+
 
                 <div>
                     <ul>
