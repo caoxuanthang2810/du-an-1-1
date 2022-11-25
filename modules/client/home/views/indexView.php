@@ -3,7 +3,7 @@
 
 <div class="container mx-auto mb-6">
     <header >
-        <img id="anh" src="./public/images/container/banner1.png" onclick="load()" class="w-full" alt="">
+        <img id="change_image" src="./public/images/container/banner1.png" class="w-full" alt="">
     </header>
 
     <div class=" flex justify-between mt-[40px] ">

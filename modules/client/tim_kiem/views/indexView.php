@@ -3,7 +3,7 @@
     <h2 class="font-bold text-[25px] text-center my-9">Sản phẩm tìm kiếm</h2>
     <div>
         <div class="grid grid-cols-4 gap-24 text-center">
-            <?php foreach ($pro as $product) : ?>
+            <?php foreach ($products as $product) : ?>
                 <a href="?role=client&mod=chi_tiet&id=<?= $product['id']; ?>">
                     <div class="border-2 border-[#EFA969] rounded-xl p-4">
                         <div>
