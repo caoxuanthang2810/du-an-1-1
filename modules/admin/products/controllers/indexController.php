@@ -43,7 +43,7 @@ function createPostAction() {
         $image = $_FILES['img']['name'];
         $target_file = $target_dir . $image;
         $allowUpload = true;
-        $allowtype = ['jpg', 'png', 'jpeg', 'gif'];
+        $allowtype = ['jpg', 'png', 'jpeg', 'gif','jfif'];
         $maxfilesize = 2000000;
 
         $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
@@ -130,7 +130,7 @@ function updatePostAction() {
         $image = $_FILES['img']['name'];
         $target_file = $target_dir . $image;
         $allowUpload = true;
-        $allowtype = ['jpg', 'png', 'jpeg', 'gif'];
+        $allowtype = ['jpg', 'png', 'jpeg', 'gif','jfif'];
         $maxfilesize = 2000000;
 
         $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
