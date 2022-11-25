@@ -24,14 +24,14 @@
 
                 <div class="">
                     <div class="my-3 font-bold">Mật khẩu</div>
-                    <input type="text" name="password" id="password" class="border border-[#EFA969] w-[400px] py-4 pl-4 rounded-[5px]" placeholder="*********">
+                    <input type="password" name="password" id="password" class="border border-[#EFA969] w-[400px] py-4 pl-4 rounded-[5px]" placeholder="*********">
                     <span id="msg-error-pass" class="flex items-center mt-2 ml-2 text-[#ff4d4f]"></span>
                     <span id="msg-error-re-pass-same-1" class="flex items-center mt-2 ml-2 text-[#ff4d4f]"></span>
                 </div>
 
                 <div class="">
                     <div class="my-3 font-bold">Nhập lại mật khẩu</div>
-                    <input type="text" id="passwordcheck" class="border border-[#EFA969] w-[400px] py-4 pl-4 rounded-[5px]" placeholder="*********">
+                    <input type="password" id="passwordcheck" class="border border-[#EFA969] w-[400px] py-4 pl-4 rounded-[5px]" placeholder="*********">
                     <span id="msg-error-re-pass" class="flex items-center mt-2 ml-2 text-[#ff4d4f]"></span>
                     <span id="msg-error-re-pass-same-2" class="flex items-center mt-2 ml-2 text-[#ff4d4f]"></span>
                 </div>

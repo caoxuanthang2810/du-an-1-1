@@ -18,7 +18,7 @@
 
                 <div class="">
                     <div class="my-3 font-bold">Mật khẩu</div>
-                    <input type="text" name="password" id="password" class="border border-[#EFA969] w-[400px] py-4 pl-4 rounded-[5px]" placeholder="*********">
+                    <input type="password" name="password" id="password" class="border border-[#EFA969] w-[400px] py-4 pl-4 rounded-[5px]" placeholder="*********">
                     <span id="msg-error-pass" class="flex items-center mt-1 ml-2 text-[#ff4d4f]"></span>
                 </div>
 

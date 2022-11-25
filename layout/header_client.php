@@ -72,7 +72,7 @@
                             <a href="?role=client&mod=gio_hang" class="flex items-center">
                                 <!-- <img src="https://cdn.pnj.io/images/image-update/layout/icon-cart-new.svg" alt=""> -->
                                 <i class="fa-solid fa-cart-shopping"></i>
-                                <span class="ml-2">Giỏ hàng</span>
+                                <span class="ml-2 hover:underline hover:text-[#7daafb]">Giỏ hàng</span>
                             </a>
                         </li>
                     </ul>
@@ -90,9 +90,9 @@
             <div class="py-[5px] flex items-center justify-between border-b-2 border-slate-500 h-[80px]">
                 <div>
                     <ul class="flex gap-5">
-                        <li class="hover:text-black hover:underline text-lg "><a href="?role=client&mod=home">Trang chủ</a></li>
-                        <li class="hover:text-black hover:underline text-lg"><a href="?role=client&mod=gioi_thieu">Giới thiệu</a></li>
-                        <li class="hover:text-black hover:underline text-lg"><a href="?role=client&mod=danh_muc">Danh mục sản phẩm</a></li>
+                        <li class="hover:underline hover:text-[#7daafb] text-lg "><a href="?role=client&mod=home">Trang chủ</a></li>
+                        <li class="hover:underline hover:text-[#7daafb] text-lg"><a href="?role=client&mod=gioi_thieu">Giới thiệu</a></li>
+                        <li class="hover:underline hover:text-[#7daafb] text-lg"><a href="?role=client&mod=danh_muc">Danh mục sản phẩm</a></li>
                     </ul>
                 </div>
                 <div class="form__search max-w-[35%] py-2 ">
