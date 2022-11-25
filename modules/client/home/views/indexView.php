@@ -2,8 +2,8 @@
 <?php // $user = get_auth() ?>
 
 <div class="container mx-auto mb-6">
-    <header>
-        <img src="./public/images/container/banner1.png" class="w-full" alt="">
+    <header >
+        <img id="anh" src="./public/images/container/banner1.png" onclick="load()" class="w-full" alt="">
     </header>
 
     <div class=" flex justify-between mt-[40px] ">
@@ -55,5 +55,5 @@
 
     </div>
 </div>
-</div>
+<script src="/public/js/load_anh.js"></script>
 <?php get_footer() ?>
