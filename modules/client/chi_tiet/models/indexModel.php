@@ -38,9 +38,6 @@ function create_comment($id_product,$content) {
 
 function get_comments_by_id($id)
 {
-    $result = db_fetch_row("SELECT comm.*,u.username FROM `comments` comm
-    INNER JOIN `users` u ON u.id = comm.id_user
-    INNER JOIN `products` p ON p.id = comm.id_product
-    WHERE p.id = $id");
+    $result = db_fetch_array("SELECT * FROM comments join users on users.id = comments.id_user WHERE comments.id_product = '$id'");
     return $result;
 }

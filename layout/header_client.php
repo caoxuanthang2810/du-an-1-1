@@ -64,9 +64,6 @@
                         </ul>
                     <?php endif; ?>
                 </div>
-
-
-
                 <div>
                     <ul>
                         <li>

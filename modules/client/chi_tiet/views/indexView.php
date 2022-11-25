@@ -70,17 +70,18 @@
         <h1 class="text-2xl text-[#000000] font-bold mt-4 my-10">Đánh giá sản phẩm </h1>
         <div class="border-2 border-gray-400 my-10 rounded ml-10">
             <div class="ml-10">
-                <?php //foreach($comments as $row):?>
+                <?php foreach($comments as $row):?>
                     <div class="">
-                        <h2 class="text-xl text-[#000000] font-bold mt-4"><?php echo $comments["username"] ?></h2>
-                        <p class="text-xl text-black-900 ml-2 font-normal my-2"><?php echo $comments["content"] ?></p>
+                        <?php if($row["username"] == "Admin"): ?>
+                            <h2 class="text-xl text-[#FF0000] font-bold mt-4"><?php echo $row["username"]?> - Quản trị viên </h2>
+                            <span class="text-center"><?php echo $row["time"]?></span>
+                        <?php else: ?>
+                            <h2 class="text-xl text-[#59eaeb] font-bold mt-4"><?php echo $row["username"]?> - Khách hàng </h2>
+                            <span class="text-center"><?php echo $row["time"]?></span>
+                        <?php endif; ?>
+                        <p class="text-xl text-black-900 ml-2 font-normal my-2"><?php echo $row["content"] ?></p>
                     </div>
-                <?php //endforeach; ?>
-                <?php 
-                    // echo "<pre>";
-                    // print_r($comments);
-                    // echo "<pre>";
-                ?>
+                <?php endforeach;?>
             </div>
         </div>
         <div class=" text-center my-4">
