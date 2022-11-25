@@ -17,3 +17,17 @@ function get_one_products($id)
     INNER JOIN `categories` c ON c.id = p.id_categories WHERE p.id = $id");
     return $result;
 }
+
+function create_bills($id_product,$fullname,$email,$phone,$address) {
+    $user = get_auth();
+    $id = db_insert('bills', [
+        'fullname' => $fullname,
+        'email' => $email,
+        'phone' => $phone,
+        'address' => $address,
+        'time' => date('Y-m-d H:i:s'),
+        'id_product' => $id_product,
+        'id_user' => $user["id"]
+    ]);
+    return $id;
+}
