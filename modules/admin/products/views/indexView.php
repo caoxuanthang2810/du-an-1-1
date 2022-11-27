@@ -47,7 +47,7 @@
                   <tr class="text-center h-[55px]">
                      <td><?= $row['id'] ?></td>
                      <td><?= $row['name'] ?></td>
-                     <td><?= $row['price'] ?></td>
+                     <td><?= currency_format($row['price']) ?></td>
                      <td><?= $row['quantily'] ?></td>
                      <td><img src="./public/images/container/<?= $row['img']; ?>" alt=""></td>
                      <td><?= $row['description'] ?></td>

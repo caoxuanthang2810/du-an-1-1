@@ -10,6 +10,7 @@ function indexAction() {
     $data["products"] = $cate;
     if ($cate) {
         $data['comments'] = get_comments_by_id($id);
+        load("helper","format");
         load_view('index', $data);
     }
     //  else {
