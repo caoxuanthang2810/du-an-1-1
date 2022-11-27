@@ -16,6 +16,8 @@ function cateAction(){
     $id = $_GET['id'];
     $cate = get_one_category($id);
     $data['products'] = $cate;
+    load("helper","format");
     load_view('index',$data);
+
 }
 ?>
