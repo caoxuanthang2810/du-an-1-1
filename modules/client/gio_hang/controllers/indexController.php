@@ -10,6 +10,6 @@ function indexAction() {
         $id =(int) $_GET['id'];
         $pro = get_products_by_id($id);
         show_array($pro);
-
+        
     }
 }
