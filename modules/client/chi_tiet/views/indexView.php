@@ -13,7 +13,7 @@
 
             <div class="">
                 <p class="text-xl text-black-900 my-7 font-normal">Mã sản phẩm: <span><?php echo $products["id"] ?></span></p>
-                <p class="text-xl text-black-900 my-7 font-normal">Số lượng: <Span><?php echo $products["quantily"] ?></Span></p>
+                <p class="text-xl text-black-900 my-7 font-normal ">Số lượng: <Span><?php echo $products["quantily"] ?></Span></p>
                 <p class="text-xl text-black-900 my-7 font-normal">Giá bán <span class="text-[#FF0000]"><?= currency_format($products['price']) ?> </span></p>
                 <p class="text-xl text-black-900 my-7 font-normal">Thương hiệu: <span><?php echo $products["name_cate"] ?></span></p>
                 <p class="text-xl text-black-900 my-7 font-normal">Bảo hành: <span><?php echo $products["name_insurance"] ?></span></p>
@@ -58,7 +58,7 @@
                 <p class="text-xl text-[#000000] mt-4">- Kích thước: 129X101.3X77.6 mm</p>
                 <p class="text-xl text-[#000000] mt-4">- Phụ kiện đi kèm: cáp trước sau ống kính, pin, sạc pin, dây đeo, CD-ROM, cáp USB, sách hướng dẫn, thẻ bảo hành</p>
             </div> -->
-            <div class="mt-5">
+            <div class="mt-5 indent-2">
                 <span><?php echo $products["description"] ?></span>
             </div>
         </div>
