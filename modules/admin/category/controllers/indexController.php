@@ -7,8 +7,7 @@ function construct() {
 
 function indexAction() {
     $data['categories'] = get_list_categories();// lấy mảng  có danh mục trọng đb
-    load("helper","format");
-
+    
     load_view('index', $data);
 }
 
