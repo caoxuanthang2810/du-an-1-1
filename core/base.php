@@ -267,5 +267,8 @@ function request_auth($isLogin = true)
 //     }
 // }
 
-
+function get_list_categories() {
+    $result = db_fetch_array("SELECT * FROM `categories` ");
+    return $result;
+}
 ?>

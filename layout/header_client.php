@@ -1,5 +1,7 @@
 <?php get_header('base', $title) ?>
-<?php // $user = get_auth() 
+
+<?php
+$category = get_list_categories();
 ?>
 <?php
 // echo "<pre>";
@@ -89,12 +91,12 @@
             <div class="py-[5px] flex items-center justify-between border-b-2 border-slate-500 h-[80px]">
                 <div>
                     <ul class="flex gap-5">
-                        <li class="hover:underline hover:text-[#7daafb] text-lg "><a href="?role=client&mod=home">Trang chủ</a></li>
-                        <li class="hover:underline hover:text-[#7daafb] text-lg"><a href="?role=client&mod=gioi_thieu">Giới thiệu</a></li>
+                        <li class="hover:underline hover:text-[#7daafb] text-lg font-medium"><a href="?role=client&mod=home">TRANG CHỦ</a></li>
+                        <li class="hover:underline hover:text-[#7daafb] text-lg font-medium"><a href="?role=client&mod=gioi_thieu">GIỚI THIỆU</a></li>
+                        <?php foreach($category as $cate):?>
+                        <li class="hover:underline hover:text-[#7daafb] text-lg font-medium"><a href="?role=client&mod=home&action=cate&id=<?= $cate['id']; ?>"><?= $cate['name_cate'] ?></a></li>
+                        <?php endforeach ?>
                         
-                        <li class="hover:underline hover:text-[#7daafb] text-lg"><a href="?role=client&mod=home&action=cate&id=1">CANON</a></li>
-                        <li class="hover:underline hover:text-[#7daafb] text-lg"><a href="?role=client&mod=home&action=cate&id=4">SONY</a></li>
-                        <li class="hover:underline hover:text-[#7daafb] text-lg"><a href="?role=client&mod=home&action=cate&id=5">NIKON</a></li>
                     </ul>
                 </div>
                 <div class="form__search max-w-[35%] py-2 ">
