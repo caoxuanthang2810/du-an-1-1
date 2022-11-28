@@ -17,9 +17,9 @@
                     <tr class="text-center">
                         <th><?= $item['id']; ?></th>
                         <th><?= $item['name'] ?></th>
-                        <th><?= $item['price'] ?></th>
+                        <th><?= currency_format($item['price']) ?></th>
                         <td><input type="number" min="1" max="30" name="qty[<?php echo $item['id'] ?>]" value="<?php echo $item['qty'] ?>"></td>
-                        <th><?php echo $item['sub_total'] ?></th>
+                        <th><?= currency_format($item['sub_total']) ?></th>
                         <th>
                             <a href="?role=client&mod=gio_hang&action=delete&id=<?php echo $item['id'] ?>" onclick="return confirm('Bạn chắc chắn muốn xoá Sản phẩm: <?= $item['name'] ?> không? Hành động sẽ xoá danh mục và toàn bộ sản phẩm có trong danh mục này.')" class="fa-solid fa-trash-can"></a>
 
@@ -31,12 +31,12 @@
             </table>
             <input type="submit" id="update_cart" class=" border border-[#EFA969] rounded-xl  mt-[80px] font-bold p-4 text-center hover:bg-[#EFA969]" name="btn_update" value="Cập nhật giỏ hàng">
         </form>
+    
         <?php
     } else {
         echo "Không co phan tu nao trong gio hang";
     }
     ?>
-    
             <h1 class="font-bold text-[20px] float-right">Tổng tiền: <?= currency_format($total); ?> </h1>
         
 
