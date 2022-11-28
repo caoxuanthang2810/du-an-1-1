@@ -14,7 +14,7 @@
             <div class="">
                 <p class="text-xl text-black-900 my-7 font-normal">Mã sản phẩm: <span><?php echo $products["id"] ?></span></p>
                 <p class="text-xl text-black-900 my-7 font-normal">Số lượng: <Span><?php echo $products["quantily"] ?></Span></p>
-                <p class="text-xl text-black-900 my-7 font-normal">Giá bán <span class="text-[#FF0000]"><?php echo $products["price"] ?> VNĐ </span></p>
+                <p class="text-xl text-black-900 my-7 font-normal">Giá bán <span class="text-[#FF0000]"><?php echo currency_format($products["price"]) ?></span></p>
                 <p class="text-xl text-black-900 my-7 font-normal">Thương hiệu: <span><?php echo $products["name_cate"] ?></span></p>
                 <p class="text-xl text-black-900 my-7 font-normal">Bảo hành: <span><?php echo $products["name_insurance"] ?></span></p>
                 <p class="text-xl text-black-900 my-10 font-normal">Xuất sứ : <span><?php echo $products["name_made_in"] ?></span></p>
