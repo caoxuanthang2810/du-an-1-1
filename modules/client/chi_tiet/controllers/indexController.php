@@ -8,7 +8,7 @@ function indexAction() {
     $id = $_GET['id'];
     $cate= get_one_products($id);
     $data["products"] = $cate;
-    load("helper","format");
+    
     if ($cate) {
         $data['comments'] = get_comments_by_id($id);
         load("helper","format");
