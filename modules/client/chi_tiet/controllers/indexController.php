@@ -11,6 +11,7 @@ function indexAction() {
     load("helper","format");
     if ($cate) {
         $data['comments'] = get_comments_by_id($id);
+        load("helper","format");
         load_view('index', $data);
     }
     //  else {

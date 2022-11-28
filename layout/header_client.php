@@ -50,7 +50,8 @@
                                         <a href="?role=admin" class="hover:underline">Trang quản trị</a>
                                     </div>
                                 <?php endif ?>
-                                <a href="?role=client&mod=dang_nhap&action=logout" class="hover:underline">Đăng xuất</a>
+                                <a href="?role=client&mod=dang_nhap&action=logout" class="hover:underline">
+                                   <button>Đăng xuất</button> </a>
                             </div>
                         </ul>
                     <?php else : ?>
@@ -90,7 +91,10 @@
                     <ul class="flex gap-5">
                         <li class="hover:underline hover:text-[#7daafb] text-lg "><a href="?role=client&mod=home">Trang chủ</a></li>
                         <li class="hover:underline hover:text-[#7daafb] text-lg"><a href="?role=client&mod=gioi_thieu">Giới thiệu</a></li>
-                        <li class="hover:underline hover:text-[#7daafb] text-lg"><a href="?role=client&mod=danh_muc">Danh mục sản phẩm</a></li>
+                        
+                        <li class="hover:underline hover:text-[#7daafb] text-lg"><a href="?role=client&mod=home&action=cate&id=1">CANON</a></li>
+                        <li class="hover:underline hover:text-[#7daafb] text-lg"><a href="?role=client&mod=home&action=cate&id=4">SONY</a></li>
+                        <li class="hover:underline hover:text-[#7daafb] text-lg"><a href="?role=client&mod=home&action=cate&id=5">NIKON</a></li>
                     </ul>
                 </div>
                 <div class="form__search max-w-[35%] py-2 ">
