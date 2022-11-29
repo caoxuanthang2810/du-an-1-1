@@ -20,10 +20,7 @@
                 <p class="text-xl text-black-900 my-7 font-normal">Thương hiệu: <span><?php echo $products["name_cate"] ?></span></p>
                 <p class="text-xl text-black-900 my-7 font-normal">Bảo hành: <span><?php echo $products["name_insurance"] ?></span></p>
                 <p class="text-xl text-black-900 my-10 font-normal">Xuất sứ : <span><?php echo $products["name_made_in"] ?></span></p>
-                <div class="flex ml-4">
-                    <i class="fa-solid fa-plus mt-2 mr-5 text-3xl"></i>
-                    <div class="w-[60px] h-[50px] border-2 border-slate-500 text-center"><span class="leading-[40px] text-3xl">1</span></div><i class="fa-solid fa-minus mt-2 ml-5 text-3xl"></i>
-                </div>
+               
                 <div class="flex mt-6 my-10">
                     <div class="w-[150px] h-[55px] bg-[#EFA969] text-center mt-4 rounded ">
                         <a href="?role=client&mod=thanh_toan&id=<?php echo $products["id"] ?>" class="text-2xl text-[#FFFFFF] leading-[50px] font-bold ">Mua Ngay</a>

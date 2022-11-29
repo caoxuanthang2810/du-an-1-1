@@ -18,6 +18,11 @@ function get_one_products($id)
     return $result;
 }
 
+function get_product_by_id_cate($id,$id_categories){
+$result =db_fetch_array("SELECT * FROM `products` WHERE id_categories=".$id_categories." AND id <>".$id);
+return $result;
+
+}
 
 function get_categories_by_id($id_cate)
 {
