@@ -1,5 +1,6 @@
 function checkFormRegister(){
     var CheckEmail = /^\w+@[a-zA-Z]{3,}\.com$/i;
+    var CheckPhone = /0\d{9,10}/;
     
     var email = document.getElementById("email");
     var phone = document.getElementById("phone");
