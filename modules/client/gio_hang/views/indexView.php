@@ -31,17 +31,28 @@
             </table>
             <input type="submit" id="update_cart" class=" border border-[#EFA969] rounded-xl  mt-[80px] font-bold p-4 text-center hover:bg-[#EFA969]" name="btn_update" value="Cập nhật giỏ hàng">
         </form>
-    
-        <?php
+
+        <h1 class="font-bold text-[20px] float-right">Tổng tiền: <?= currency_format($total); ?> </h1>
+
+
+        <div class="w-[300px] mx-auto">
+            <h2 class="border border-[#EFA969] rounded-xl  mt-[60px] font-bold p-4 text-center hover:bg-[#EFA969] ">Thanh toán</h2>
+        </div>
+    <?php
     } else {
-        echo "Không co phan tu nao trong gio hang";
+    ?>
+        <div class="flex justify-center">
+            <div class="">
+                <img src="./public/images/logo/no-cart.png" alt="">
+                <div class="flex justify-center">
+                    <span class="mt-5 font-bold text-[24px]">
+                        Chưa có sản phẩm
+                    </span>
+                </div>
+            </div>
+        </div>
+    <?php
     }
     ?>
-            <h1 class="font-bold text-[20px] float-right">Tổng tiền: <?= currency_format($total); ?> </h1>
-        
-
-    <div class="w-[300px] mx-auto">
-        <h2 class="border border-[#EFA969] rounded-xl  mt-[60px] font-bold p-4 text-center hover:bg-[#EFA969] ">Thanh toán</h2>
-    </div>
 </div>
 <?php get_footer() ?>
