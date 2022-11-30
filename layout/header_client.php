@@ -46,7 +46,7 @@ $category = get_list_categories();
                                 <img class="w-[40px] h-[40px]" src="./public/images/logo/avata.png" alt="">
                             </div>
                             <div>
-                                <p class="mt-[10px] text-[#FF0000]"><?php echo get_auth()['username'] ?></p>
+                                <p class="mt-[10px] text-[#FF0000]"><?php echo get_auth()['fullname'] ?></p>
                                 <?php if (is_admin()) : ?>
                                     <div>
                                         <a href="?role=admin" class="hover:underline">Trang quản trị</a>

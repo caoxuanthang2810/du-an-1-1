@@ -13,9 +13,9 @@ function get_list_role() {
     $result = db_fetch_array("SELECT * FROM `role`");
     return $result;
 }
-function update_users($id, $username,$password,$email,$phone,$address,$id_role) {
+function update_users($id, $fullname,$password,$email,$phone,$address,$id_role) {
     db_update('users', [
-        'username' => $username,
+        'fullname' => $fullname,
         'password' => $password,
         'email' => $email,
         'phone' => $phone,

@@ -74,11 +74,11 @@
             <div class="ml-10">
                 <?php foreach($comments as $row):?>
                     <div class="">
-                        <?php if($row["username"] == "Admin"): ?>
-                            <h2 class="text-xl text-[#FF0000] font-bold mt-4"><?php echo $row["username"]?> - Quản trị viên </h2>
+                        <?php if($row["fullname"] == "Admin"): ?>
+                            <h2 class="text-xl text-[#FF0000] font-bold mt-4"><?php echo $row["fullname"]?> - Quản trị viên </h2>
                             <span class="text-center"><?php echo $row["time"]?></span>
                         <?php else: ?>
-                            <h2 class="text-xl text-[#59eaeb] font-bold mt-4"><?php echo $row["username"]?> - Khách hàng </h2>
+                            <h2 class="text-xl text-[#59eaeb] font-bold mt-4"><?php echo $row["fullname"]?> - Khách hàng </h2>
                             <span class="text-center"><?php echo $row["time"]?></span>
                         <?php endif; ?>
                         <p class="text-xl text-black-900 ml-2 font-normal my-2"><?php echo $row["content"] ?></p>

@@ -12,6 +12,9 @@ function indexPostAction() {
     $username = $_POST['username'];
     $password = md5($_POST['password']);
     $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $address = $_POST['address'];
+
     $id_role = 2;
 
 
@@ -21,7 +24,9 @@ function indexPostAction() {
         header('Location: ?role=client&mod=dang_ky');
         die();
     }
-    create_users_login($username,$password,$email,$id_role = 2);
+    // create_users_login($username,$password,$email,$id_role = 2);
+
+    create_users_login($username,$password,$email, $phone, $address, $id_role = 2);
 
     push_notification('success', ['Tạo mới danh mục sản phẩm thành công']);
     header('Location: ?role=client&mod=dang_nhap');

@@ -10,12 +10,14 @@ function get_one_users($id) {
     return $result;
 }
 
-function create_users_login($username,$password,$email,$id_role = 2) {
+function create_users_login($username,$password,$email, $phone, $address, $id_role = 2) {
     // $user = get_auth();
     $id = db_insert('users', [
-        'username' => $username,
+        'fullname' => $username,
         'password' => $password,
         'email' => $email,
+        'phone' => $phone,
+        'address' => $address,
         'id_role' => $id_role
     ]);
     return $id;
