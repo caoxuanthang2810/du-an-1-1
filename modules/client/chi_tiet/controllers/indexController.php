@@ -6,12 +6,18 @@ function construct() {
 
 function indexAction() {
     $id = $_GET['id'];
-    $cate= get_one_products($id);
-    $data["products"] = $cate;
+    $id_categories = $_GET['id_cate'];
+    $pro= get_one_products($id);
+    $cate=get_product_by_id_cate($id,$id_categories);
+    $data['cate'] = $cate;
+    
+    
+    $data["products"] = $pro;
     
     // $data['pro'] = get_product_by_id_cate($id,$id_categories);
     
-    if ($cate) {
+    if ($pro) {
+        // $data['cate'] = $id_cate;
         $data['comments'] = get_comments_by_id($id);
         load("helper","format");
         load_view('index', $data);

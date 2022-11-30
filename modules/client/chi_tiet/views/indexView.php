@@ -112,7 +112,25 @@
 
         <div>
             <div class="grid grid-cols-4 gap-24 text-center">
-                <div class="border-2 border-[#EFA969] rounded-xl">
+            <?php foreach ($cate as $product) : ?>
+                <a href="?role=client&mod=chi_tiet&id=<?= $product['id']; ?>&id_cate=<?=$product['id_categories']?>">
+                    <div class="border-2 border-[#EFA969] rounded-xl p-4 h-[500px]">
+                        <div class="h-[300px]">
+                            <img src="./public/images/container/<?= $product['img']; ?>" alt="" class="mx-auto mt-3">
+                        </div>
+                        <div class="h-[80px]">
+                            <p class="font-semibold "><?= $product['name'] ?></p>
+                        </div>
+                        <div >
+                            <span class="text-red-500 font-bold "><?= currency_format($product['price']) ?></span>
+                        </div>
+                        <div class="mt-3 mb-4 h-[100px] ">
+                            <button class="border border-[#EFA969] rounded-xl font-bold w-[100px] text-[18px] hover:bg-[#EFA969]  hover:text-white p-1 w-[120px]">Mua Hàng</button>
+                        </div>
+                    </div>
+                </a>
+            <?php endforeach ?>
+                <!-- <div class="border-2 border-[#EFA969] rounded-xl">
                     <div>
                         <img src="../Asset/Image/product/canon-eos-1500d-kit-1855mm-f3556-iii(2) 1.png" alt="" class="mx-auto mt-3">
                     </div>
@@ -168,7 +186,7 @@
                         <button class="border border-[#D2BDBD] font-bold w-[100px] text-[18px] hover:bg-[#EFA969] h-[40px] hover:text-white rounded-lg">Mua Hàng</button>
                     </div>
 
-                </div>
+                </div> -->
             </div>
 
         </div>
