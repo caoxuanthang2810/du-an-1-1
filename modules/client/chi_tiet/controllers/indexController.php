@@ -9,6 +9,8 @@ function indexAction() {
     $cate= get_one_products($id);
     $data["products"] = $cate;
     
+    // $data['pro'] = get_product_by_id_cate($id,$id_categories);
+    
     if ($cate) {
         $data['comments'] = get_comments_by_id($id);
         load("helper","format");
