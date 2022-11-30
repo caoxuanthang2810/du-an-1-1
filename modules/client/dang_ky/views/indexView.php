@@ -17,9 +17,9 @@
                 </div>
 
                 <div class="">
-                    <div class="my-3 font-bold">Tên tài khoản</div>
-                    <input type="text" name="username" id="userName" class="border border-[#EFA969] w-[400px] py-4 pl-4 rounded-[5px]" placeholder="John.snow">
-                    <span id="msg-error-username" class="flex items-center mt-2 ml-2 text-[#ff4d4f]"></span>
+                    <div class="my-3 font-bold">Họ và tên</div>
+                    <input type="text" name="fullname" id="fullname" class="border border-[#EFA969] w-[400px] py-4 pl-4 rounded-[5px]" placeholder="John.snow">
+                    <span id="msg-error-fullname" class="flex items-center mt-2 ml-2 text-[#ff4d4f]"></span>
                 </div>
 
                 <div class="">
@@ -39,13 +39,13 @@
                 <div class="">
                     <div class="my-3 font-bold">Số điện thoại</div>
                     <input type="text" name="phone" id="phone" class="border border-[#EFA969] w-[400px] py-4 pl-4 rounded-[5px]" placeholder="John.snow">
-                    <span id="msg-error-username" class="flex items-center mt-2 ml-2 text-[#ff4d4f]"></span>
+                    <span id="msg-error-phone" class="flex items-center mt-2 ml-2 text-[#ff4d4f]"></span>
                 </div>
 
                 <div class="">
                     <div class="my-3 font-bold">Địa chỉ</div>
                     <input type="text" name="address" id="address" class="border border-[#EFA969] w-[400px] py-4 pl-4 rounded-[5px]" placeholder="John.snow">
-                    <span id="msg-error-username" class="flex items-center mt-2 ml-2 text-[#ff4d4f]"></span>
+                    <span id="msg-error-address" class="flex items-center mt-2 ml-2 text-[#ff4d4f]"></span>
                 </div>
 
                 <div class="w-[400px] mt-[30px] font-bold p-4 flex bg-[#EFA969] justify-center items-center">
