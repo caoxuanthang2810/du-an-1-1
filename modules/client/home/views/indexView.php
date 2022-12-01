@@ -62,7 +62,7 @@ $pages = ceil($number / 7);
         <div class="pagination">
             <a class="" href="#">&laquo;</a>
         <?php for($i = 1;$i <= $pages; $i++):?>
-            <a class="" href="?page=<?php echo $i?>"><?php echo $i ?></a>
+            <a class="" href="?role=client&mod=home&page=<?php echo $i?>"><?php echo $i ?></a>
         <?php endfor; ?>
             <a href="#">&raquo;</a>
         </div>

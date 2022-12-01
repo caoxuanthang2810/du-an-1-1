@@ -6,8 +6,15 @@ function construct() {
 }
 
 function indexAction() {
-    
-    $data['users'] = get_list_users();// lấy mảng  có danh mục trọng đb
+            
+    $Current_page = 1;
+
+    if(isset($_GET["page"])){
+        $Current_page = $_GET["page"];
+    }
+
+    $index = ($Current_page - 1) * 5;
+    $data['users'] = get_list_users($index);// lấy mảng  có danh mục trọng đb
     load_view('index', $data);
 }
 

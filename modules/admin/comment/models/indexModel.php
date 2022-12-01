@@ -4,8 +4,8 @@
 //     return $result;
 // }
 
-function get_list_comment() {
-    $result = db_fetch_array("SELECT * FROM `comments`");
+function get_list_comment($index) {
+    $result = db_fetch_array("SELECT * FROM `comments` LIMIT $index,5");
     return $result;
 }
 
