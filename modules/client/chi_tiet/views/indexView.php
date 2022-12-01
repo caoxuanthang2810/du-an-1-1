@@ -20,7 +20,7 @@
                 <p class="text-xl text-black-900 my-7 font-normal">Thương hiệu: <span><?php echo $products["name_cate"] ?></span></p>
                 <p class="text-xl text-black-900 my-7 font-normal">Bảo hành: <span><?php echo $products["name_insurance"] ?></span></p>
                 <p class="text-xl text-black-900 my-10 font-normal">Xuất sứ : <span><?php echo $products["name_made_in"] ?></span></p>
-               
+            <?php if(is_auth()): ?>
                 <div class="flex mt-6 my-10">
                     <div class="w-[150px] h-[55px] bg-[#EFA969] text-center mt-4 rounded ">
                         <a href="?role=client&mod=thanh_toan&id=<?php echo $products["id"] ?>" class="text-2xl text-[#FFFFFF] leading-[50px] font-bold ">Mua Ngay</a>
@@ -29,7 +29,9 @@
                         <a href="?role=client&mod=gio_hang&id=<?php echo $products["id"] ?>" class="text-2xl text-[#EFA969] leading-[50px] font-bold  ">Giỏ Hàng</a>
                     </div>
                 </div>
-
+            <?php else: ?>
+                <div class="font-bold text-[18px]">Bạn phải đăng nhập mới sử dụng được chức năng mua hàng và giỏ hàng.</div>
+            <?php endif; ?>
             </div>
         </div>
     </div>
@@ -130,69 +132,8 @@
                     </div>
                 </a>
             <?php endforeach ?>
-                <!-- <div class="border-2 border-[#EFA969] rounded-xl">
-                    <div>
-                        <img src="../Asset/Image/product/canon-eos-1500d-kit-1855mm-f3556-iii(2) 1.png" alt="" class="mx-auto mt-3">
-                    </div>
-                    <div>
-                        <p class="font-semibold mt-2 mb-2">MÁY ẢNH CANON EOS 1500D KIT EF-S18-55MM F3.5-5.6 IS II</p>
-                    </div>
-                    <div>
-                        <span class="text-red-500 font-bold ">11,090,000 VNĐ</span>
-                    </div>
-                    <div class="mt-3 mb-4">
-                        <button class="border border-[#D2BDBD] font-bold w-[100px] text-[18px] hover:bg-[#EFA969] h-[40px] hover:text-white rounded-lg">Mua Hàng</button>
-                    </div>
-                </div>
-                <div class="border border-[#EFA969]  rounded-xl">
-                    <div>
-                        <img src="../Asset/Image/product/may-anh-canon-eos-m50-ii-kit-efm1545mm 1.png" alt="" class="mx-auto mt-3">
-                    </div>
-                    <div>
-                        <p class="font-semibold mt-2 mb-2">MÁY ẢNH CANON EOS M50 II KIT EF-M15-45MM F3.5-6.3 IS STM - ĐEN</p>
-                    </div>
-                    <div>
-                        <span class="text-red-500 font-bold">21,290,000 VNĐ</span>
-                    </div>
-                    <div class="mt-3 mb-4">
-                        <button class="border border-[#D2BDBD] font-bold w-[100px] text-[18px] hover:bg-[#EFA969] h-[40px] hover:text-white rounded-lg">Mua Hàng</button>
-                    </div>
-                </div>
-                <div class="border border-[#EFA969] rounded-xl ">
-                    <div>
-                        <img src="../Asset/Image/product/CX64700_front_black 1.png" alt="" class="mx-auto mt-3">
-                    </div>
-                    <div>
-                        <p class="font-semibold mt-[45px]">MÁY ẢNH SONY ZV-1F</p>
-                    </div>
-                    <div class="mt-[25px]">
-                        <span class="text-red-500 font-bold">13,990,000 VNĐ</span>
-                    </div>
-                    <div class="mt-3 mb-3">
-                        <button class="border border-[#D2BDBD] font-bold w-[100px] text-[18px] hover:bg-[#EFA969] h-[40px] hover:text-white rounded-lg">Mua Hàng</button>
-                    </div>
-                </div>
-                <div class="border border-[#EFA969] rounded-xl ">
-                    <div>
-                        <img src="../Asset/Image/product/may-anh-canon-eos-r-ong-kinh-canon-rf-24-105mm-f4-l-is-usm-hang-nhap-khau 1.png" alt="" class="mx-auto mt-3">
-                    </div>
-                    <div>
-                        <p class="font-semibold mt-3">MÁY ẢNH CANON EOS R KIT RF24-105MM F4 L IS USM (NHẬP KHẨU)</p>
-                    </div>
-                    <div>
-                        <span class="text-red-500 font-bold">64,990,000 VNĐ</span>
-                    </div>
-                    <div class="mt-3 mb-3">
-                        <button class="border border-[#D2BDBD] font-bold w-[100px] text-[18px] hover:bg-[#EFA969] h-[40px] hover:text-white rounded-lg">Mua Hàng</button>
-                    </div>
-
-                </div> -->
             </div>
-
         </div>
-
-
-
     </div>
 </div>
 <?php get_footer() ?>
