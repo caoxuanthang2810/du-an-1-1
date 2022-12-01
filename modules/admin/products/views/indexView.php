@@ -1,17 +1,18 @@
 <?php get_header('', 'Trang quản lý sản phẩm') ?>
+<?php
+$number = 0;
 
+$productCount = get_count("id", "products");
+
+if ($productCount != null && count($productCount) > 0) {
+   $number = $productCount[0]['numberCount'];
+}
+$pages = ceil($number / 4);
+?>
 <div class="  bg-[#fff] pt-2 ">
    <div class="container mx-auto ">
-
-
-
-
       <form action="" class="flex my-[20px] justify-between my-[20px] mx-[200px] mt-[-510px]">
          <div>
-            <input type="text" class="pl-2 h-[42px] rounded-[5px]" placeholder="Nhập từ khóa tìm kiếm">
-            <button class="w-[111px] h-[42px] bg-white border-2 ml-[20px] rounded-[5px]">
-               <p>Tìm kiếm</p>
-            </button>
          </div>
          <div>
             <div class="w-[150px] h-[50px] bg-amber-400  ml-[20px] rounded-[5px] text-center">
@@ -25,7 +26,7 @@
          </div>
       </form>
 
-      <div class="bg-white  ml-[180px]  w-5/6">
+      <div class="bg-white ml-[180px]  w-5/6">
          <div class="bg-slate-100 h-[50px] ">
 
             <table>
@@ -35,7 +36,7 @@
                   <th class="w-[500px]">Giá sản phẩm</th>
                   <th class="w-[200px]">Số lượng</th>
                   <th class="w-[200px]">Ảnh sản phẩm</th>
-                  <th class="w-[200px]">Mô tả sản phẩm</th>
+                  <!-- <th class="w-[200px]">Mô tả sản phẩm</th> -->
                   <th class="w-[200px]">Bảo hành</th>
                   <th class="w-[200px]">Xuất Xứ</th>
                   <th class="w-[200px]">Mã danh mục</th>
@@ -50,14 +51,10 @@
                      <td><?= currency_format($row['price']) ?></td>
                      <td><?= $row['quantily'] ?></td>
                      <td><img src="./public/images/container/<?= $row['img']; ?>" alt=""></td>
-                     <td><?= $row['description'] ?></td>
-                     <td>
-                        
-                        <?= $row['name_insurance'] ?>
-                     </td>
+                     <!-- <td><?= $row['description'] ?></td> -->
+                     <td><?= $row['name_insurance'] ?></td>
                      <td><?= $row['name_made_in'] ?></td>
-                     <td>
-                        <?= $row['name_cate'] ?></td>
+                     <td><?= $row['name_cate'] ?></td>
                      <td>
                         <a href="?role=admin&mod=products&action=update&id=<?php echo $row['id'] ?>">
                            <button> <i class="fa-solid fa-pen mr-2"></i></button>
@@ -69,8 +66,17 @@
                      </td>
                   </tr>
                <?php endforeach; ?>
-
             </table>
+
+            <div class="flex mt-5 justify-end mr-5">
+               <div class="pagination">
+                  <a class="" href="#">&laquo;</a>
+                  <?php for ($i = 1; $i <= $pages; $i++) : ?>
+                     <a class="" href="?role=admin&mod=products&page=<?php echo $i ?>"><?php echo $i ?></a>
+                  <?php endfor; ?>
+                  <a href="#">&raquo;</a>
+               </div>
+            </div>
          </div>
       </div>
    </div>

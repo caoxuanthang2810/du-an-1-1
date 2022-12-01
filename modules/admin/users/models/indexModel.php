@@ -1,7 +1,7 @@
 <?php
 
-function get_list_users() {
-    $result = db_fetch_array("SELECT u.*,r.name_role FROM `users` u INNER JOIN `role` r ON u.id_role = r.id_role");
+function get_list_users($index) {
+    $result = db_fetch_array("SELECT u.*,r.name_role FROM `users` u INNER JOIN `role` r ON u.id_role = r.id_role LIMIT $index,5");
     return $result;
 }
 
