@@ -1,4 +1,4 @@
-<?php get_header('', 'Thanh toán thành công') ?>
+<?php get_header('', 'Hóa đơn') ?>
 
 <!--  -->
 <div class="container mx-auto mb-6">
