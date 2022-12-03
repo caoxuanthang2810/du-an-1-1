@@ -9,7 +9,7 @@ function indexAction() {
 }
 
 function indexPostAction() {
-    $username = $_POST['username'];
+    $username = $_POST['fullname'];
     $password = md5($_POST['password']);
     $email = $_POST['email'];
     $phone = $_POST['phone'];
