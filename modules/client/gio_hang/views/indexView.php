@@ -7,6 +7,7 @@
                 <tr class="bg-[#FAFAFA]">
                     <th class="">Mã sản phẩm</th>
                     <th class="w-1/4">Tên sản phẩm</th>
+                    <th>Ảnh sản phẩm</th>
                     <th class="">Giá tiền</th>
                     <th class="">Số lượng</th>
                     <th class="">Thành tiền</th>
@@ -17,6 +18,7 @@
                     <tr class="text-center">
                         <th><?= $item['id']; ?></th>
                         <th><?= $item['name'] ?></th>
+                        <th class="w-[200px]"><img src="./public/images/container/canon-eos-850d-body-2-500x500.jpg" alt="" class="mx-auto w-2/3"></th>
                         <th><?= currency_format($item['price']) ?></th>
                         <td><input type="number" min="1" max="30" name="qty[<?php echo $item['id'] ?>]" value="<?php echo $item['qty'] ?>"></td>
                         <th><?= currency_format($item['sub_total']) ?></th>

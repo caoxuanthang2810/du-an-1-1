@@ -40,5 +40,5 @@ function commentPostAction() {
     create_comment($id_product,$content);
     // $data["products"] = $cate;
     // load_view('index', $data);
-    header('Location: ?role=client&mod=chi_tiet&id='.$id_product);
+    header('Location: ?role=client&mod=chi_tiet&id='.$id_product );
 }

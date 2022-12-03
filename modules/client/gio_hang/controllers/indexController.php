@@ -19,6 +19,7 @@ function indexAction()
         $_SESSION['cart']['buy'][$id] = array(
             'id' => $pro['id'],
             'name' => $pro['name'],
+            'img' => $pro['img'],
             'price' => $pro['price'],
             'qty' => $qty,
             'sub_total' => $pro['price'] * $qty
