@@ -1,13 +1,5 @@
 <?php
-
-
-function update_user_by_id($id, $fullname, $password, $email, $phone, $address,) {
-    db_update('users', [
-       'fullname' => $fullname,
-       'password' => $password,
-       'email' => $email,
-       'phone' => $phone,
-       'address' => $address
-    ], "id = $id");
-    return $id;
+function get_list_users() {
+    $result = db_fetch_array("SELECT * FROM `tbl_users`");
+    return $result;
 }
