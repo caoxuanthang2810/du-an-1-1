@@ -56,7 +56,7 @@ function indexPostAction(){
         }
 
         unset($_SESSION['cart']['buy']);
-        header('Location: ?role=client&mod=bills');
+        header('Location: ?role=client&mod=hoa_don');
 }
 }
 function deleteAction()
