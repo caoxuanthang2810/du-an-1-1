@@ -40,7 +40,7 @@ function indexAction()
 }
 function indexPostAction(){
     $id_user = get_auth()['id'];
-    $code = RAND(0, 99);
+    $code = MT_RAND();
     $status = 1;
     $price = $_SESSION['cart']['infor']['total'];
     $time = date('Y-m-d H:i:s');
