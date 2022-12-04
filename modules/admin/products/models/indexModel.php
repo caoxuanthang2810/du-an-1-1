@@ -51,39 +51,39 @@ function delete_products($id) {
     return true;
 }
 
-function  get_img()
-{
+// function  get_img()
+// {
 
-    if (isset($_FILES['img'])) {
+//     if (isset($_FILES['img'])) {
 
-        $error = [];
+//         $error = [];
 
-        $target_dir = './public/images/container/';
-        $image = $_FILES['img']['name'];
-        $target_file = $target_dir . $image;
-        $allowUpload = true;
-        $allowtype = ['jpg', 'png', 'jpeg', 'gif'];
-        $maxfilesize = 2000000;
+//         $target_dir = './public/images/container/';
+//         $image = $_FILES['img']['name'];
+//         $target_file = $target_dir . $image;
+//         $allowUpload = true;
+//         $allowtype = ['jpg', 'png', 'jpeg', 'gif'];
+//         $maxfilesize = 2000000;
 
-        $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
-        if (!in_array($imageFileType, $allowtype)) { // in_a
-            $error['img_type'] = "File không được định dạng";
-            $allowUpload = false;
-        }
+//         $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+//         if (!in_array($imageFileType, $allowtype)) { // in_a
+//             $error['img_type'] = "File không được định dạng";
+//             $allowUpload = false;
+//         }
 
-        if ($_FILES['img']['size'] > $maxfilesize) {
-            echo " File không vượt quá " . $maxfilesize . "(Bytes)";
-            $allowUpload = false;
-        }
-        // up loadfile
-        if ($allowUpload == true) {
-            move_uploaded_file($_FILES['img']['tmp_name'], $target_file);
+//         if ($_FILES['img']['size'] > $maxfilesize) {
+//             echo " File không vượt quá " . $maxfilesize . "(Bytes)";
+//             $allowUpload = false;
+//         }
+//         // up loadfile
+//         if ($allowUpload == true) {
+//             move_uploaded_file($_FILES['img']['tmp_name'], $target_file);
 
-            // move_uploaded_file($image['tmp_name'], "./public/images/container/" . $image['name']);
+//             // move_uploaded_file($image['tmp_name'], "./public/images/container/" . $image['name']);
 
-        }
-    }
-}
+//         }
+//     }
+// }
 // function get_list_categories() {
 //     $result = db_fetch_array("SELECT * FROM `categories` ");
 //     return $result;

@@ -21,6 +21,7 @@ $pages = ceil($number / 5);
                         <th class="w-[100px]">ID</th>
                         <th class="w-[250px]">Tên tài khoản</th>
                         <th class="w-[500px]">Mật khẩu</th>
+                        <th class="w-[200px]">Hình ảnh </th>
                         <th class="w-[200px]">Email </th>
                         <th class="w-[200px]">Số điện thoại</th>
                         <th class="w-[200px]">Địa chỉ</th>
@@ -36,6 +37,7 @@ $pages = ceil($number / 5);
                             <td><?= $id ?></td>
                             <td><?= $fullname ?></td>
                             <td><?= $password ?></td>
+                <td><img src="./public/images/user/<?= $key['img']?>" alt="" class="mx-auto mt-3"></td>
                             <td><?= $email ?></td>
                             <td><?= $phone ?></td>
                             <td><?= $address ?></td>

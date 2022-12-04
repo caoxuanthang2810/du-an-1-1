@@ -1,7 +1,7 @@
 <?php get_header('', 'Thông tin cá nhân') ?>
 <div class="container mx-auto">
     <div class="flex justify-center mt-[28px]">
-        <form action="" class="w-[600px] flex justify-center mb-[190px]" method="POST">
+        <form action="" class="w-[600px] flex justify-center mb-[190px]" method="POST" enctype="multipart/form-data">
             <div>
                 <div class="flex justify-center">
                     <div class="text-center">
@@ -32,6 +32,15 @@
                 <div class="">
                     <div class="my-3 font-bold">Địa chỉ</div>
                     <input type="text" name="address" value="<?=$user['address']?>" class="border border-[#EFA969] w-[400px] py-4 pl-4 rounded-[5px]" placeholder="John.snow">
+                </div>
+
+                <div>
+                <div class="my-3 font-bold">Hình ảnh</div>
+
+                <img src="./public/images/container/<?= $user['img']; ?>" alt="" class="mx-auto mt-3">
+                </div>
+                <div>
+                    <input type="file" name="img">
                 </div>
 
                 <div class="w-[400px] mt-[30px] font-bold p-4 flex bg-[#EFA969] justify-center items-center">

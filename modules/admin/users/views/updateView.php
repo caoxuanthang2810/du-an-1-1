@@ -36,8 +36,11 @@
                            <?php endforeach; ?>
                         </select>
             </div>
+            <div>
+                <input type="file" name="img">
+            </div>
             <div class="text-center">
-                <button type="submit" class="w-[163px] h-[50px] bg-orange-300 rounded-md text-white	my-[50px] ">Thêm mới</button>
+                <button type="submit" class="w-[163px] h-[50px] bg-orange-300 rounded-md text-white	my-[50px] ">Cập nhật</button>
             </div>
         </form>
     </div>

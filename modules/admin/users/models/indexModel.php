@@ -13,7 +13,7 @@ function get_list_role() {
     $result = db_fetch_array("SELECT * FROM `role`");
     return $result;
 }
-function update_users($id, $fullname,$password,$email,$phone,$address,$id_role) {
+function update_users($id, $fullname,$password,$email,$phone,$address,$id_role, $img) {
     db_update('users', [
         'fullname' => $fullname,
         'password' => $password,
@@ -21,7 +21,9 @@ function update_users($id, $fullname,$password,$email,$phone,$address,$id_role) 
         'phone' => $phone,
         'address' => $address,
         'id_role' => $id_role,
+        'img' => $img
     ], "id = $id");
+    get_img();
     return true;
 }
 
@@ -29,3 +31,4 @@ function delete_users($id) {
     db_delete('users', "id = $id");
     return true;
 }
+

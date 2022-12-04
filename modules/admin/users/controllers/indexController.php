@@ -53,7 +53,36 @@ function updatePostAction() {
     $phone = $_POST['phone'];
     $address = $_POST['address'];
     $id_role= $_POST['id_role'];
+    $img = $_FILES['img'];
 
+    if (isset($_FILES['img'])) {
+
+        $error = [];
+
+        $target_dir = './public/images/user/';
+        $image = $_FILES['img']['name'];
+        $target_file = $target_dir . $image;
+        $allowUpload = true;
+        $allowtype = ['jpg', 'png', 'jpeg', 'gif','jfif'];
+        $maxfilesize = 2000000;
+
+        $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+        if (!in_array($imageFileType, $allowtype)) { // in_a
+            $error['img_type'] = "File không được định dạng";
+            $allowUpload = false;
+        }
+
+        if ($_FILES['img']['size'] > $maxfilesize) {
+            echo " File không vượt quá " . $maxfilesize . "(Bytes)";
+            $allowUpload = false;
+        }
+        // up loadfile
+        if ($allowUpload == true) {
+            move_uploaded_file($_FILES['img']['tmp_name'], $target_file);
+
+            // move_uploaded_file($image['tmp_name'], "./public/images/container/" . $image['name']);
+        }
+    }
     
     if (empty($name)) {
         push_notification('errors', [
@@ -61,7 +90,7 @@ function updatePostAction() {
         ]);
         header('Location: ?role=admin&mod=users&action=update&id='.$id);
     }
-    update_users($id, $username,$password,$email,$phone,$address,$id_role);
+    update_users($id, $username,$password,$email,$phone,$address,$id_role, $img);
     push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
     header('Location: ?role=admin&mod=users');
 }
