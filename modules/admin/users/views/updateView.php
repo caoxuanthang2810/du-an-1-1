@@ -9,7 +9,7 @@
 
             <div class=" mt-3">
                 Tên tài khoản:
-                <input type="text" name="username" value="<?= $users['fullname'] ?>" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[40px]">
+                <input type="text" name="fullname" value="<?= $users['fullname'] ?>" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[40px]">
             </div>
             <div class=" mt-3">
                 Mật khẩu:
