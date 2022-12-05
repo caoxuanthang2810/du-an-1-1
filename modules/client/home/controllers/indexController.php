@@ -13,7 +13,7 @@ function indexAction() {
         $Current_page = $_GET["page"];
     }
 
-    $index = ($Current_page - 1) * 7;
+    $index = ($Current_page - 1) * 8;
     $list_product = get_list_products($index);
     $data['products'] = $list_product;
     load("helper","format");

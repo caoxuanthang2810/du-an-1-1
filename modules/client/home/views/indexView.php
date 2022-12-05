@@ -7,7 +7,7 @@ $productCount = get_count("id", "products");
 if ($productCount != null && count($productCount) > 0) {
     $number = $productCount[0]['numberCount'];
 }
-$pages = ceil($number / 7);
+$pages = ceil($number / 8);
 ?>
 
 <div class="container mx-auto mb-6">

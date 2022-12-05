@@ -1,6 +1,6 @@
 <?php
 function get_list_products($index) {
-    $result = db_fetch_array("SELECT * FROM `products` LIMIT $index,7");
+    $result = db_fetch_array("SELECT * FROM `products` LIMIT $index,8");
     return $result;
 }
 

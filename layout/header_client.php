@@ -88,8 +88,8 @@ if (isset(get_auth()['id'])) {
                                 <!-- <img src="https://cdn.pnj.io/images/image-update/layout/icon-cart-new.svg" alt=""> -->
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 <span class="ml-2 hover:underline hover:text-[#7daafb]">Giỏ hàng <sup class="text-xl bg-"><?php if (isset($count_cart)) {
-                                                                                                                    echo $count_cart;
-                                                                                                                } ?></sup></span>
+                                                                                                                                echo $count_cart;
+                                                                                                                            } ?></sup></span>
                             </a>
                             <a href="?role=client&mod=hoa_don" class="flex items-center mt-4">
                                 <!-- <img src="https://cdn.pnj.io/images/image-update/layout/icon-cart-new.svg" alt=""> -->
