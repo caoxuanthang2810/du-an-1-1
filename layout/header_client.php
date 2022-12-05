@@ -2,24 +2,15 @@
 
 <?php
 $category = get_list_categories();
-if (isset($_SESSION['cart']['buy'])) {
+if (is_cart_buy()) {
     $count_cart = count($_SESSION['cart']['buy']);
 } else {
     $count_cart = 0;
 }
 ?>
 <?php
-// echo "<pre>";
-// print_r($user);
-// echo "<pre>";
-if (isset(get_auth()['id'])) {
+if (is_auth()) {
     $id_user = get_auth()['id'];
-
-    function get_user($id)
-    {
-        $result = db_fetch_row("SELECT * FROM `users` WHERE `id` = $id ");
-        return $result;
-    }
     $users = get_user($id_user);
 }
 ?>
@@ -87,9 +78,13 @@ if (isset(get_auth()['id'])) {
                             <a href="?role=client&mod=gio_hang" class="flex items-center">
                                 <!-- <img src="https://cdn.pnj.io/images/image-update/layout/icon-cart-new.svg" alt=""> -->
                                 <i class="fa-solid fa-cart-shopping"></i>
-                                <span class="ml-2 hover:underline hover:text-[#7daafb]">Giỏ hàng <sup class="text-xl bg-"><?php if (isset($count_cart)) {
-                                                                                                                                echo $count_cart;
-                                                                                                                            } ?></sup></span>
+                                <span class="ml-2 hover:underline hover:text-[#7daafb]">Giỏ hàng
+                                    <sup class="text-xl text-white bg-[#000] rounded-[25%]">
+                                        <?php if (isset($count_cart)) {
+                                            echo $count_cart;
+                                        } ?>
+                                    </sup>
+                                </span>
                             </a>
                             <a href="?role=client&mod=hoa_don" class="flex items-center mt-4">
                                 <!-- <img src="https://cdn.pnj.io/images/image-update/layout/icon-cart-new.svg" alt=""> -->

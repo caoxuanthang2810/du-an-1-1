@@ -1,7 +1,5 @@
 <?php get_header('', 'Chi tiết sản phẩm') ?>
 <div class=" container mx-auto">
-    <?php //foreach ($data as $key) : 
-    ?>
     <!-- Copy -->
     <div class=" mt-10  border-b-2 border-gray-500">
         <h1 class="text-2xl text-[#FF0000] ml-12  font-medium"><?php echo $products["name"] ?></h1>
@@ -87,9 +85,9 @@
         </div>
         <div class=" text-center my-4">
             <?php if (is_auth()) : ?>
-                <form action="?role=client&mod=chi_tiet&action=comment&id=<?php echo $products["id"] ?>" method="POST">
+                <form action="?role=client&mod=chi_tiet&action=comment&id=<?php echo $products["id"] ?>&id_cate=<?php $cate["id"] ?>" method="POST">
                     <input type="text" name="content" id="" class="w-[700px] h-[40px] rounded-xl border-2 border-gray-400 pl-2" placeholder="Nhập bình luận...">
-                    <button class="w-[100px] h-[40px] bg-[#EFA969] rounded-3xl text-xl ml-6   text-[#FFFFFF] font-medium">Gửi</button>
+                    <button name="btn_comment" class="w-[100px] h-[40px] bg-[#EFA969] rounded-3xl text-xl ml-6   text-[#FFFFFF] font-medium">Gửi</button>
                 </form>
             <?php else : ?>
                 <form action="" method="post">
