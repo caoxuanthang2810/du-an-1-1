@@ -276,4 +276,7 @@ function get_count($id,$nameTable) {
     $result = db_fetch_array("SELECT count($id) as numberCount FROM `$nameTable` ");
     return $result;
 }
+function get_count_bill($count_cart){
+    
+}
 ?>

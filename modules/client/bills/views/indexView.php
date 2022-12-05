@@ -1,30 +1,25 @@
 <?php get_header('', 'Thanh toán') ?>
-<div class="container mx-auto mb-6">
+<div class="container mx-auto h-[1000px] ">
     <h2 class="font-bold text-[25px] text-center my-9">Thanh toán</h2>
     <?php if (isset($_SESSION['cart']['buy'])) { ?>
-        <form action="" class=" mb-[190px]" method="POST">
+        <form action=""  method="POST">
+        <div class="grid grid-cols-2 grap-5"> 
+
             <?php foreach ($cart['buy'] as $key) : ?>
-                <div class="border border-[#EFA969] h-[200px]">
-                    <div class="flex justify-center">
+                <div class="border border-[#EFA969] h-[200px] mb-10 ml-10">
+                    <div class="grid grid-cols-2 grap-4">
                         <div>
-                            <img src="./public/images/container/<?= $key['img']; ?>" alt="" class=" w-[180px]">
+                            <img src="./public/images/container/<?= $key['img']; ?>" alt="" class=" w-[180px] ml-4">
                         </div>
-                        <div>
-                            <h3 class="font-semibold text-[21px] my-[50px] mx-7"><?php echo $key["name"] ?></h3>
+                        <div class="mt-10">
+                            <h3 class="font-semibold text-[21px] "><?php echo $key["name"] ?></h3>
+                            <p class=" font-semibold text[18px] ">Số Lượng: <?php echo $key["qty"] ?></p>
+                            <span class="font-bold text-[18px] text-red-500">Giá: <?= currency_format($total) ?></span>
                         </div>
-                    </div>
-                    <div class="text-center">
-                        <div>
-                            <p class=" mt-[-80px] font-semibold text[18px] ml-[20px]">Số Lượng: <?php echo $key["qty"] ?></p>
-                        </div>
-
-
-                    </div>
-                    <div class="text-center  mt-[-50px] ml-[460px]">
-                        <span class="font-bold text-[18px] text-red-500">Giá: <?= currency_format($total) ?></span>
                     </div>
                 </div>
             <?php endforeach; ?>
+        </div>
             <div class=" mt-[28px] text-center">
                 <div class=" grid grid-cols-2">
 

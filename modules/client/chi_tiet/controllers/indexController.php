@@ -6,10 +6,17 @@ function construct() {
 
 function indexAction() {
     $id = $_GET['id'];
+
     $id_categories = $_GET['id_cate'];
     $pro= get_one_products($id);
     $cate=get_product_by_id_cate($id,$id_categories);
     $data['cate'] = $cate;
+
+    if(isset($_GET['id'])){
+
+        update_view($id);
+    }
+    
     
     
     $data["products"] = $pro;
@@ -22,6 +29,8 @@ function indexAction() {
         load("helper","format");
         load_view('index', $data);
     }
+
+
     //  else {
     //     header('Location: ?role=admin&mod=users');
     // }
@@ -42,3 +51,4 @@ function commentPostAction() {
     // load_view('index', $data);
     header('Location: ?role=client&mod=chi_tiet&id='.$id_product );
 }
+

@@ -2,6 +2,11 @@
 
 <?php
 $category = get_list_categories();
+if (isset($_SESSION['cart']['buy'])) {
+    $count_cart = count($_SESSION['cart']['buy']);
+} else {
+    $count_cart = 0;
+}
 ?>
 <?php
 // echo "<pre>";
@@ -62,7 +67,7 @@ if (isset(get_auth()['id'])) {
                                     </div>
                                 <?php endif ?>
                                 <a href="?role=client&mod=dang_nhap&action=logout" class="hover:underline">
-                                   <button>Đăng xuất</button> </a>
+                                    <button>Đăng xuất</button> </a>
                             </div>
                         </ul>
                     <?php else : ?>
@@ -82,7 +87,9 @@ if (isset(get_auth()['id'])) {
                             <a href="?role=client&mod=gio_hang" class="flex items-center">
                                 <!-- <img src="https://cdn.pnj.io/images/image-update/layout/icon-cart-new.svg" alt=""> -->
                                 <i class="fa-solid fa-cart-shopping"></i>
-                                <span class="ml-2 hover:underline hover:text-[#7daafb]">Giỏ hàng</span>
+                                <span class="ml-2 hover:underline hover:text-[#7daafb]">Giỏ hàng <sup class="text-xl bg-"><?php if (isset($count_cart)) {
+                                                                                                                    echo $count_cart;
+                                                                                                                } ?></sup></span>
                             </a>
                             <a href="?role=client&mod=hoa_don" class="flex items-center mt-4">
                                 <!-- <img src="https://cdn.pnj.io/images/image-update/layout/icon-cart-new.svg" alt=""> -->
@@ -107,10 +114,10 @@ if (isset(get_auth()['id'])) {
                     <ul class="flex gap-5">
                         <li class="hover:underline hover:text-[#7daafb] text-lg font-medium"><a href="?role=client&mod=home">TRANG CHỦ</a></li>
                         <li class="hover:underline hover:text-[#7daafb] text-lg font-medium"><a href="?role=client&mod=gioi_thieu">GIỚI THIỆU</a></li>
-                        <?php foreach($category as $cate):?>
-                        <li class="hover:underline hover:text-[#7daafb] text-lg font-medium"><a href="?role=client&mod=home&action=cate&id=<?= $cate['id']; ?>"><?= $cate['name_cate'] ?></a></li>
+                        <?php foreach ($category as $cate) : ?>
+                            <li class="hover:underline hover:text-[#7daafb] text-lg font-medium"><a href="?role=client&mod=home&action=cate&id=<?= $cate['id']; ?>"><?= $cate['name_cate'] ?></a></li>
                         <?php endforeach ?>
-                        
+
                     </ul>
                 </div>
                 <div class="form__search max-w-[35%] py-2 ">

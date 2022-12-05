@@ -34,6 +34,11 @@ return $result;
 //     $result = db_fetch_row("SELECT * FROM `products` WHERE id_categories = $id_cate");
 //     return $result;
 // }
+function update_view($id){
+
+    $result = db_query("UPDATE `products` SET view = view + 1 WHERE `id` = $id");
+    return $result;
+}
 
 function create_comment($id_product,$content) {
     $user = get_auth();
