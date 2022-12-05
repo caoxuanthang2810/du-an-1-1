@@ -25,8 +25,8 @@
                     <div class="w-[150px] h-[55px] bg-[#EFA969] text-center mt-4 rounded ">
                         <a href="?role=client&mod=thanh_toan&id=<?php echo $products["id"] ?>" class="text-2xl text-[#FFFFFF] leading-[50px] font-bold ">Mua Ngay</a>
                     </div>
-                    <div class="w-[150px] h-[55px] bg-[#FFFFF] text-center mt-4  w-1/5 ml-10 rounded border-2 border-[#EFA969]">
-                        <a href="?role=client&mod=gio_hang&id=<?php echo $products["id"] ?>" class="text-2xl text-[#EFA969] leading-[50px] font-bold  ">Giỏ Hàng</a>
+                    <div class="w-[150px] h-[55px] bg-[#FFFFF] text-center mt-4  w-[200px] ml-10 rounded border-2 border-[#EFA969]">
+                        <a href="?role=client&mod=gio_hang&id=<?php echo $products["id"] ?>" class="text-2xl text-[#EFA969] leading-[50px] font-bold  ">Thêm Giỏ Hàng</a>
                     </div>
                 </div>
             <?php else: ?>

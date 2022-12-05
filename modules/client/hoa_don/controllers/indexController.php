@@ -1,12 +1,20 @@
 <?php
 
-function construct() {
+function construct()
+{
     load_model('index');
+    load('helper','format');
 }
 
-function indexAction() {
-    $id = $_GET['id'];
-    $cate = get_one_bill_products($id);
-    $data["bills"] = $cate;
-    load_view('index', $data);
+function indexAction()
+{
+    $id = get_auth()['id'];
+    
+    $data['bills'] = get_bills_by_id($id);
+    // show_array($data);
+    // die;
+
+    load_view('index',$data);
+    
 }
+
