@@ -9,17 +9,17 @@
 
             <div class="w-[400px] h-[400px] container mx-auto">
                 <form action="" method="POST" class="text-center">
-                    <div class="hidden mt-3">
+                    <div class=" mt-3">
                         Tên tài khoản:
                         <input type="text" name="time" value="<?= $bills['time'] ?>" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[40px]">
                     </div>
 
-                    <div class="hidden mt-3">
+                    <div class=" mt-3">
                         Tên tài khoản:
                         <input type="text" name="id_user" value="<?= $bills['id_user'] ?>" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[40px]">
                     </div>
 
-                    <div class="hidden mt-3">
+                    <div class=" mt-3">
                         Tên tài khoản:
                         <input type="text" name="price" value="<?= $bills['price'] ?>" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[40px]">
                     </div>
@@ -30,11 +30,11 @@
                     </div>
 
                     <div class=" mt-3">
-                        Chức vụ:
+                        Trạng thái đơn hàng:
 
                         <select name="status" id="">
-                            <?php foreach ($role as $value) : ?>
-                                <option value="<?= $value['id_role'] ?>"><?php echo $value['name_role']; ?></option>
+                            <?php foreach ($status as $value) : ?>
+                                <option value="<?= $value['id'] ?>"><?php echo $value['name']; ?></option>
                             <?php endforeach; ?>
                         </select>
                     </div>

@@ -17,6 +17,7 @@ function updateAction()
     $cate = get_one_bills($id);
     $data['bills'] = $cate;
     if ($cate) {
+        $data['status'] = get_list_status();
         load_view('update', $data);
     } else {
         header('Location: ?role=admin&mod=bills');
@@ -30,7 +31,12 @@ function updatePostAction() {
         header('Location: ?role=admin&mod=bills');
         die();
     }
-    $name = $_POST['name_role'];
+    $id_user = $_POST['id_user'];
+    $time = $_POST['time'];
+    $code = $_POST['code'];
+    $price = $_POST['price'];
+    $status = $_POST['status'];
+
     
     if (empty($name)) {
         push_notification('errors', [
@@ -38,7 +44,7 @@ function updatePostAction() {
         ]);
         header('Location: ?role=admin&mod=bills&action=update&id='.$id);
     }
-    update_role($id, $name);
+    update_role($id, $time, $id_user, $status, $price, $code);
     push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
     header('Location: ?role=admin&mod=bills');
 }

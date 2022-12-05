@@ -9,6 +9,12 @@ function get_list_bills() {
     return $result;
 }
 
+function get_list_status() {
+    $result = db_fetch_array("SELECT * FROM `status`");
+    return $result;
+}
+
+
 function get_one_bills($id) {
     $result = db_fetch_row("SELECT * FROM `bills` WHERE id = $id");
     return $result;
@@ -26,10 +32,10 @@ function get_one_bills($id) {
 // }
 
 
-function update_role($id, $id_user, $status, $price, $code) {
+function update_role($id,$time, $id_user, $status, $price, $code) {
     // $users = get_auth();
     db_update('bills', [
-        'time' => time(),
+        'time' => $time,
         'id_user' => $id_user,
         'status' => $status,
         'price' => $price,
