@@ -42,28 +42,6 @@
 
 
                 </table>
-                <!-- <table>
-      <tr>
-         <th class="ml-[30px]">Tên đơn</th>
-         <th>Giá sản phẩm</th>
-         <th>Số lượng</th>
-         <th>Ảnh sản phẩm</th>
-         <th>Bảo hành</th>
-         <th>Xuất Xứ</th>
-         <th>Mã danh mục</th>
-         <th>Hành động</th>
-      </tr>
-      
-      <tr>
-         <td>1</td>
-         <td>5</td>
-         </tr>
-         <tr>
-         <td>9</td>
-         <td>10</td>
-         </tr>
-      </table> -->
-
             </div>
         </div>
     </div>
