@@ -5,7 +5,9 @@
 // }
 
 function get_list_bills() {
-    $result = db_fetch_array("SELECT * FROM `bills`");
+    $result = db_fetch_array("SELECT bi.*,sta.name as name_status, u.fullname FROM `bills` bi
+    INNER JOIN `status` sta ON sta.id = bi.status 
+    INNER JOIN `users` u ON u.id = bi.id_user");
     return $result;
 }
 

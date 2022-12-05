@@ -28,8 +28,8 @@
                         <tr class="text-center h-[55px]">
                             <td><?=$id?></td>
                             <td><?= $time?></td>
-                            <td><?= $id_user?></td>
-                            <td><?= $status?></td>
+                            <td><?= $fullname?></td>
+                            <td><?= $name_status?></td>
                             <td><?= $price?></td>
                             <td><?= $code?></td>
                             <td>
