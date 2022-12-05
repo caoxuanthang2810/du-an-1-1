@@ -43,6 +43,7 @@
 				<p class="h-[30px] mt-5"><a href="?role=admin&mod=products" class="text-lg ml-4 text-medium text-black hover:text-[#EFA969]">Quản Lý Sản Phẩm</a></p>
 				<p class="h-[30px] mt-5"><a href="?role=admin&mod=comment" class="text-lg ml-4 text-medium text-black hover:text-[#EFA969]">Quản Lý Bình Luận</a></p>
 				<p class="h-[30px] mt-5"><a href="?role=admin&mod=category" class="text-lg ml-4 text-medium text-black hover:text-[#EFA969]">Quản Lý Danh Mục</a></p>
+				<p class="h-[30px] mt-5"><a href="?role=admin&mod=bills" class="text-lg ml-4 text-medium text-black hover:text-[#EFA969]">Quản Lý Hóa Đơn</a></p>
 				<p class="h-[30px] mt-5"><a href="?role=admin&mod=insurance" class="text-lg ml-4 text-medium text-black hover:text-[#EFA969]">Bảo Hành</a></p>
 				<p class="h-[30px] mt-5"><a href="?role=admin&mod=role" class="text-lg ml-4 text-medium text-black hover:text-[#EFA969]">Chức Vụ</a></p>
 				<p class="h-[30px] mt-5"><a href="?role=admin&mod=made_in" class="text-lg ml-4 text-medium text-black hover:text-[#EFA969]">Xuất Xứ</a></p>
