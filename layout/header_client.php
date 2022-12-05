@@ -7,16 +7,16 @@ $category = get_list_categories();
 // echo "<pre>";
 // print_r($user);
 // echo "<pre>";
-if (isset(get_auth()['id'])) {
-    $id_user = get_auth()['id'];
+// if (isset(get_auth()['id'])) {
+//     $id_user = get_auth()['id'];
 
-    function get_user($id)
-    {
-        $result = db_fetch_row("SELECT * FROM `users` WHERE `id` = $id ");
-        return $result;
-    }
-    $users = get_user($id_user);
-}
+//     function get_user($id)
+//     {
+//         $result = db_fetch_row("SELECT * FROM `users` WHERE id = $id ");
+//         return $result;
+//     }
+//     $users = get_user($id_user);
+// }
 ?>
 
 <head>
