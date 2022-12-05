@@ -84,6 +84,11 @@ if (isset(get_auth()['id'])) {
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 <span class="ml-2 hover:underline hover:text-[#7daafb]">Giỏ hàng</span>
                             </a>
+                            <a href="?role=client&mod=hoa_don" class="flex items-center mt-4">
+                                <!-- <img src="https://cdn.pnj.io/images/image-update/layout/icon-cart-new.svg" alt=""> -->
+                                <i class="fa-solid fa-file-invoice"></i>
+                                <span class="ml-2 hover:underline hover:text-[#7daafb]">Hóa Đơn</span>
+                            </a>
                         </li>
                     </ul>
                 </div>

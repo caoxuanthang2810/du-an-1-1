@@ -1,6 +1,6 @@
 <?php get_header('', 'Giỏ hàng') ?>
 <div class="container mx-auto mb-6 mt-[60px]">
-    <?php if (isset($cart)) { ?>
+    <?php if (isset($_SESSION['cart']['buy'])) { ?>
         <form action="" method="POST">
 
             <table class="w-full ">
@@ -18,7 +18,7 @@
                     <tr class="text-center">
                         <th><?= $item['id']; ?></th>
                         <th><?= $item['name'] ?></th>
-                        <th class="w-[200px]"><img src="./public/images/container/canon-eos-850d-body-2-500x500.jpg" alt="" class="mx-auto w-2/3"></th>
+                        <th class="w-[200px]"><img src="./public/images/container/<?= $item['img'] ?>" alt="" class="mx-auto w-2/3"></th>
                         <th><?= currency_format($item['price']) ?></th>
                         <td><input type="number" min="1" max="30" name="qty[<?php echo $item['id'] ?>]" value="<?php echo $item['qty'] ?>"></td>
                         <th><?= currency_format($item['sub_total']) ?></th>
@@ -36,10 +36,12 @@
 
         <h1 class="font-bold text-[20px] float-right">Tổng tiền: <?= currency_format($total); ?> </h1>
 
+        <a href="?role=client&mod=bills">
 
-        <div class="w-[300px] mx-auto">
-            <h2 class="border border-[#EFA969] rounded-xl  mt-[60px] font-bold p-4 text-center hover:bg-[#EFA969] ">Thanh toán</h2>
-        </div>
+            <div class="w-[300px] mx-auto">
+                <h2 class="border border-[#EFA969] rounded-xl  mt-[60px] font-bold p-4 text-center hover:bg-[#EFA969] ">Thanh toán</h2>
+            </div>
+        </a>
     <?php
     } else {
     ?>
