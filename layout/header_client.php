@@ -3,10 +3,12 @@
 <?php
 $category = get_list_categories();
 ?>
+
 <?php
 // echo "<pre>";
 // print_r($user);
 // echo "<pre>";
+
 if (isset(get_auth()['id'])) {
     $id_user = get_auth()['id'];
 
