@@ -278,6 +278,11 @@ function get_user($id)
     $result = db_fetch_row("SELECT * FROM `users` WHERE `id` = $id ");
     return $result;
 }
+function get_product_by_id_cate($id, $id_categories)
+{
+    $result = db_fetch_array("SELECT * FROM `products` WHERE id_categories=" . $id_categories . " AND id <>" . $id);
+    return $result;
+}
 
 function is_cart_buy()
 {
@@ -287,5 +292,4 @@ function is_cart_buy()
 
 function get_count_bill($count_cart)
 {
-
 }

@@ -38,7 +38,7 @@ $pages = ceil($number / 8);
     <div>
         <div class="grid grid-cols-4 gap-24 text-center">
             <?php foreach ($products as $product) : ?>
-                <a href="?role=client&mod=chi_tiet&id=<?= $product['id']; ?>&id_cate=<?= $product['id_categories'] ?>">
+                <a href="?role=client&mod=chi_tiet&id=<?= $product['id'];?>">
                     <div class="border-2 border-[#EFA969] rounded-xl p-4 h-[500px]">
                         <div class="h-[300px]">
                             <img src="./public/images/container/<?= $product['img']; ?>" alt="" class="mx-auto mt-3">

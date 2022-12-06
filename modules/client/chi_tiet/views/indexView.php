@@ -85,9 +85,9 @@
         </div>
         <div class=" text-center my-4">
             <?php if (is_auth()) : ?>
-                <form action="?role=client&mod=chi_tiet&action=comment&id=<?php echo $products["id"] ?>&id_cate=<?php $cate["id"] ?>" method="POST">
+                <form action="?role=client&mod=chi_tiet&action=comment&id=<?php echo $products["id"] ?>" method="POST">
                     <input type="text" name="content" id="" class="w-[700px] h-[40px] rounded-xl border-2 border-gray-400 pl-2" placeholder="Nhập bình luận...">
-                    <button name="btn_comment" class="w-[100px] h-[40px] bg-[#EFA969] rounded-3xl text-xl ml-6   text-[#FFFFFF] font-medium">Gửi</button>
+                    <button class="w-[100px] h-[40px] bg-[#EFA969] rounded-3xl text-xl ml-6 text-[#FFFFFF] font-medium">Gửi</button>
                 </form>
             <?php else : ?>
                 <form action="" method="post">
@@ -112,6 +112,7 @@
 
         <div>
             <div class="grid grid-cols-4 gap-24 text-center">
+            <?php $cate = get_product_by_id_cate($products["id"], $products["id_categories"])?>
             <?php foreach ($cate as $product) : ?>
                 <a href="?role=client&mod=chi_tiet&id=<?= $product['id']; ?>&id_cate=<?=$product['id_categories']?>">
                     <div class="border-2 border-[#EFA969] rounded-xl p-4 h-[500px]">
