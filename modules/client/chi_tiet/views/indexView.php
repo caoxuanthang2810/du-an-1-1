@@ -6,7 +6,7 @@
         <div class="grid grid-cols-2 gap-2">
             <div class="">
                 <!-- <img src="./public/images/container/canon-eos-1500d-kit-1855mm-f3556-iii(2) 1.png" alt="" class="w-95% h-80%"> -->
-                <img src="./public/images/container/<?= $products['img']; ?>" alt="" class="w-95% h-80%">
+                <img src="./public/images/container/<?= $products['img']; ?>" alt="" class="w-[600px] h-[550px]">
             </div>
 
             <div class="">
@@ -57,7 +57,7 @@
                 <p class="text-xl text-[#000000] mt-4">- Kích thước: 129X101.3X77.6 mm</p>
                 <p class="text-xl text-[#000000] mt-4">- Phụ kiện đi kèm: cáp trước sau ống kính, pin, sạc pin, dây đeo, CD-ROM, cáp USB, sách hướng dẫn, thẻ bảo hành</p>
             </div> -->
-            <div class="mt-5 indent-2">
+            <div class="mt-5 indent-2 text-xl font-normal">
                 <span><?php echo $products["description"] ?></span>
             </div>
         </div>

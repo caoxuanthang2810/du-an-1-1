@@ -86,10 +86,10 @@ if (is_auth()) {
                                     </sup>
                                 </span>
                             </a>
-                            <a href="?role=client&mod=hoa_don" class="flex items-center mt-4">
+                            <a href="?role=client&mod=hoa_don" class="flex items-center mt-4 text-center">
                                 <!-- <img src="https://cdn.pnj.io/images/image-update/layout/icon-cart-new.svg" alt=""> -->
-                                <i class="fa-solid fa-file-invoice"></i>
-                                <span class="ml-2 hover:underline hover:text-[#7daafb]">Hóa Đơn</span>
+                                <i class="fa-solid fa-file-invoice ml-2"></i>
+                                <span class="ml-2 hover:underline hover:text-[#7daafb] ">Hóa Đơn</span>
                             </a>
                         </li>
                     </ul>
