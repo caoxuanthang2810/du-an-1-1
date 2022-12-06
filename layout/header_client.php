@@ -47,9 +47,12 @@ if (is_auth()) {
                 <div class="">
                     <?php if (is_auth()) : ?>
                         <ul class="flex gap-5">
-                            <div>
-                                <img class="w-[40px] h-[40px]" src="./public/images/logo/avata.png" alt="">
-                            </div>
+                            <a href="?role=client&mod=thong_tin_ca_nhan&id=<?= get_auth()['id']; ?>">
+                        
+                                <div>
+                                    <img class="w-[40px] h-[40px]" src="./public/images/logo/avata.png" alt="">
+                                </div>
+                        </a>
                             <div>
                                 <p class="mt-[10px] text-[#FF0000]"><?php echo $users['fullname'] ?></p>
                                 <?php if (is_admin()) : ?>
