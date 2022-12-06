@@ -25,7 +25,7 @@
                 <span class="font-bold text-[18px] text-red-500">Giá: <?= currency_format($bill['price']) ?></span>
             </div>
             <div class="text-center  mt-[10px] ml-[460px]">Thời gian: <?= $bill['time'] ?></div>
-            <div class="text-center  mt-[10px] ml-[460px]">Thời gian: <?= $bill['name_status'] ?></div>
+            <div class="text-center  mt-[10px] ml-[460px]">Trạng th: <?= $bill['name_status'] ?></div>
             <div class="text-center  mt-[10px] ml-[460px]"></div>
         </div>
         <?php endforeach; ?>

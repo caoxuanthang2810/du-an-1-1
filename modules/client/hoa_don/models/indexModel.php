@@ -10,7 +10,7 @@
 // }
 
 function get_bills_by_id($id){
-    $result = db_fetch_array("SELECT b.code,b.time,b.price,b.id_user,s.name as name_status FROM `bills` b
+    $result = db_fetch_array("SELECT b.code,b.time,b.price,b.id_user,b.status,s.name as name_status FROM `bills` b
     INNER JOIN `status` s on s.id = b.`status`
     WHERE b.id_user = $id");
     return $result;
