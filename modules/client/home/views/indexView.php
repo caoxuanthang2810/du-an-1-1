@@ -29,7 +29,7 @@ $pages = ceil($number / 8);
     </div>
     <div class="flex justify-between">
         <div>
-            <h2 class="mt-[15px] font-bold text-[25px] mb-5">SẢN PHẨM HOT</h2>
+            <h2 class="mt-[15px] font-bold text-[#E73445] text-[25px] mb-5">SẢN PHẨM HOT</h2>
             <div class="grid grid-cols-4 gap-24 text-center">
                 <?php foreach ($products_top_4 as $product) : ?>
                     <a href="?role=client&mod=chi_tiet&id=<?= $product['id']; ?>">

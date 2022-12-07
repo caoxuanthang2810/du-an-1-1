@@ -25,8 +25,7 @@
                 <span class="font-bold text-[18px] text-red-500">Giá: <?= currency_format($bill['price']) ?></span>
             </div>
             <div class="text-center  mt-[10px] ml-[460px]">Thời gian: <?= $bill['time'] ?></div>
-            <div class="text-center  mt-[10px] ml-[460px]">Trạng th: <?= $bill['name_status'] ?></div>
-            <div class="text-center  mt-[10px] ml-[460px]"></div>
+            <div class="text-center  mt-[10px] ml-[460px]">Trạng thái: <?= $bill['name_status'] ?></div>
         </div>
         <?php endforeach; ?>
         
@@ -35,12 +34,18 @@
             <a href="?role=client&mod=home">
                 <button class="rounded-t-md rounded-b-md w-[163px] h-[50px] font-bold text-white bg-orange-300 mb-[30px]">Trang chủ</button>
             </a>
+            <?php if($bill['status'] == 1): ?>
             <form action="" method="POST">
 
                 <a href="">
                     <button class="rounded-t-md rounded-b-md w-[163px] h-[50px] font-bold text-white bg-orange-300" type="submit">Hủy Đơn Hàng</button>
                 </a>
             </form>
+            <?php elseif($bill['status'] == 4): ?>
+                <h1>Đơn hàng đã hủy</h1>
+            <?php else: ?>
+                <h1>Đơn hàng đã giao, không được hủy</h1>
+            <?php endif; ?>
         </div>
 </div>
 <!-- Địa chỉ nhận hàng -->
