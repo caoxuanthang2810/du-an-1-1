@@ -19,7 +19,7 @@
                     <input type="text" name="phone" value="0<?=$user['phone']?>" class="border border-[#EFA969] w-[400px] py-4 pl-4 rounded-[5px]" placeholder="Số điện thoại">
                 </div>
 
-                <div class="">
+                <div class="hidden">
                     <div class="my-3 font-bold">Mật khẩu</div>
                     <input type="password" name="password" value="<?=$user['password']?>" class="border border-[#EFA969] w-[400px] py-4 pl-4 rounded-[5px]" placeholder="Mật khẩu">
                 </div>
