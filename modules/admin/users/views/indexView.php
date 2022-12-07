@@ -35,7 +35,7 @@ $pages = ceil($number / 5);
                         <tr class="text-center h-[55px]">
                             <td><?= $id ?></td>
                             <td><?= $fullname ?></td>
-                            <td><?= $password ?></td>
+                            <td>***************</td>
                             <td><?= $email ?></td>
                             <td><?= $phone ?></td>
                             <td><?= $address ?></td>
