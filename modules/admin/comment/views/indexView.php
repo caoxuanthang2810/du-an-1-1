@@ -7,7 +7,7 @@ $productCount = get_count("id", "comments");
 if ($productCount != null && count($productCount) > 0) {
    $number = $productCount[0]['numberCount'];
 }
-$pages = ceil($number / 5);
+$pages = ceil($number / 7);
 ?>
 <!--begin::Subheader-->
 <div class=" bg-gray-300 pt-2  ">
