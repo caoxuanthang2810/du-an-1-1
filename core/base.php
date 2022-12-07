@@ -280,7 +280,8 @@ function get_user($id)
 }
 function get_product_by_id_cate($id, $id_categories)
 {
-    $result = db_fetch_array("SELECT * FROM `products` WHERE id_categories=" . $id_categories . " AND id <>" . $id);
+    // $result = db_fetch_array("SELECT * FROM `products` WHERE id_categories=" . $id_categories . " AND id <>" . $id);
+    $result = db_fetch_array("SELECT * FROM `products` WHERE id_categories=" . $id_categories . " AND id <>" . $id . " LIMIT 4");
     return $result;
 }
 
