@@ -16,6 +16,7 @@ function indexAction() {
     $index = ($Current_page - 1) * 8;
     $list_product = get_list_products($index);
     $data['products'] = $list_product;
+    $data['products_top_4'] = get_top_4_products();
     load("helper","format");
     load_view('index', $data);
 }
