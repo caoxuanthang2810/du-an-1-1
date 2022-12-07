@@ -33,9 +33,9 @@ $pages = ceil($number / 8);
             <div class="grid grid-cols-4 gap-24 text-center">
                 <?php foreach ($products_top_4 as $product) : ?>
                     <a href="?role=client&mod=chi_tiet&id=<?= $product['id']; ?>">
-                        <div class="border-2 border-[#EFA969] rounded-xl p-4 h-[500px]">
+                        <div class="border-2 border-[#EFA969] rounded-xl p-4 h-[500px]" id="anh">
                             <div class="h-[300px]">
-                                <img src="./public/images/container/<?= $product['img']; ?>" alt="" class="mx-auto mt-3">
+                                <img src="./public/images/container/<?= $product['img']; ?>" alt="" class="mx-auto mt-3 w-5/6">
                             </div>
                             <div class="h-[80px]">
                                 <p class="font-semibold "><?= $product['name'] ?></p>
@@ -63,9 +63,9 @@ $pages = ceil($number / 8);
         <div class="grid grid-cols-4 gap-24 text-center">
             <?php foreach ($products as $product) : ?>
                 <a href="?role=client&mod=chi_tiet&id=<?= $product['id']; ?>">
-                    <div class="border-2 border-[#EFA969] rounded-xl p-4 h-[500px]">
+                    <div class="border-2 border-[#EFA969] rounded-xl p-4 h-[500px]" id="anh">
                         <div class="h-[300px]">
-                            <img src="./public/images/container/<?= $product['img']; ?>" alt="" class="mx-auto mt-3">
+                            <img src="./public/images/container/<?= $product['img']; ?>" alt="" class="mx-auto mt-3 w-5/6">
                         </div>
                         <div class="h-[80px]">
                             <p class="font-semibold "><?= $product['name'] ?></p>

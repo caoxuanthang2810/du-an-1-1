@@ -11,3 +11,8 @@
   }
 
   .pagination a:hover:not(.active) {background-color: #ddd;}
+
+  #anh>div:hover{
+    transform: scale(1.2);
+    padding: 10px;
+  }

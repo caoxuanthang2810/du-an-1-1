@@ -114,8 +114,8 @@
             <?php foreach ($cate as $product) : ?>
                 <a href="?role=client&mod=chi_tiet&id=<?= $product['id']; ?>&id_cate=<?=$product['id_categories']?>">
                     <div class="border-2 border-[#EFA969] rounded-xl p-4 h-[500px]">
-                        <div class="h-[300px]">
-                            <img src="./public/images/container/<?= $product['img']; ?>" alt="" class="mx-auto mt-3">
+                        <div class="h-[300px] anh">
+                            <img src="./public/images/container/<?= $product['img']; ?>" alt="" class="mx-auto mt-3 w-5/6">
                         </div>
                         <div class="h-[80px]">
                             <p class="font-semibold "><?= $product['name'] ?></p>
