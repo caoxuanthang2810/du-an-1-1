@@ -13,7 +13,7 @@ function indexAction() {
         $Current_page = $_GET["page"];
     }
 
-    $index = ($Current_page - 1) * 5;
+    $index = ($Current_page - 1) * 7;
     $data['comment'] = get_list_comment($index);// lấy mảng  có danh mục trọng đb
     load_view('index', $data);
 }
