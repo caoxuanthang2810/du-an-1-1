@@ -34,7 +34,7 @@ $pages = ceil($number / 5);
                             <td><?= $row['id_user'] ?></td>
                             <td>
 
-                                <button> <i class="fa-solid fa-pen mr-2"></i></button>
+                                
                                 <a href="?role=admin&mod=comment&action=delete&id=<?php echo $row['id'] ?>" onclick="return confirm('Bạn chắc chắn muốn xoá danh mục: <?php echo $row['content'] ?> không? Hành động sẽ xoá danh mục và toàn bộ sản phẩm có trong danh mục này.')">
                                     <button><i class="fa-solid fa-trash-can"></i></button>
                                 </a>
