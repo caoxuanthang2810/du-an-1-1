@@ -4,7 +4,7 @@
     <div class="bg-white ml-[180px] w-5/6 mt-[-510px] ">
         <div class="">
             <div class="font-bold text-3xl my-[10px] text-center">
-                <h1>Sửa chức vụ</h1>
+                <h1>Sửa Trạng Thái Đơn Hàng</h1>
             </div>
 
             <div class="w-[400px] h-[400px] container mx-auto">
@@ -29,7 +29,7 @@
                         <input type="text" name="code" value="<?= $bills['code'] ?>" class="pl-2 w-[400px] h-[50px] border-2 border-[#EFA969] rounded-md ml-[40px]">
                     </div>
 
-                    <div class=" mt-3">
+                    <div class=" mt-[50px]">
                         Trạng thái đơn hàng:
 
                         <select name="status" id="">
@@ -38,7 +38,7 @@
                             <?php endforeach; ?>
                         </select>
                     </div>
-                    <button type="submit" class="w-[163px] h-[50px] bg-orange-300 rounded-md text-white	my-[100px]">Thêm mới</button>
+                    <button type="submit" class="w-[163px] h-[50px] bg-orange-300 rounded-md text-white	my-[100px]">Cập nhật</button>
                 </form>
             </div>
 

@@ -13,13 +13,8 @@ function get_list_role() {
     $result = db_fetch_array("SELECT * FROM `role`");
     return $result;
 }
-function update_users($id, $fullname,$password,$email,$phone,$address,$id_role) {
+function update_users($id, $id_role) {
     db_update('users', [
-        'fullname' => $fullname,
-        'password' => $password,
-        'email' => $email,
-        'phone' => $phone,
-        'address' => $address,
         'id_role' => $id_role,
     ], "id = $id");
     return true;

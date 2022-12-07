@@ -38,5 +38,5 @@ function logoutAction()
     // $_SESSION['cart']['buy'] = [];
     unset($_SESSION['cart']);   
     header('Location: ?role=client&mod=dang_nhap');
-    request_auth(true);
+    // request_auth(true);
 }
