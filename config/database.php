@@ -29,5 +29,12 @@ $db = array(
     'database' => 'gmkbrjnqhosting_nhom1',
 );
 
+// $db = array(
+//     'hostname' => 'localhost',
+//     'username' => 'root',
+//     'password' => '',
+//     'database' => 'gmkbrjnqhosting_nhom1',
+// );
+
 
 
