@@ -6,8 +6,14 @@ function construct() {
 }
 
 function indexAction() {
-    
-    $data['bills'] = get_list_bills();// lấy mảng  có danh mục trọng đb
+    $Current_page = 1;
+
+    if(isset($_GET["page"])){
+        $Current_page = $_GET["page"];
+    }
+
+    $index = ($Current_page - 1) * 5;
+    $data['bills'] = get_list_bills($index);// lấy mảng  có danh mục trọng đb
     load_view('index', $data);
 }
 
