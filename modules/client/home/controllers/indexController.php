@@ -24,6 +24,7 @@ function indexAction() {
 function cateAction(){
     $id = $_GET['id'];
     $cate = get_one_category($id);
+    $data['products_top_4'] = get_top_4_products();
     $data['products'] = $cate;
     load("helper","format");
     load_view('index',$data);
