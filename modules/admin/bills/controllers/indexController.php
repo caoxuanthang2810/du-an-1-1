@@ -12,7 +12,7 @@ function indexAction() {
         $Current_page = $_GET["page"];
     }
 
-    $index = ($Current_page - 1) * 5;
+    $index = ($Current_page - 1) * 7;
     $data['bills'] = get_list_bills($index);// lấy mảng  có danh mục trọng đb
     load_view('index', $data);
 }
