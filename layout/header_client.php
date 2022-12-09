@@ -121,11 +121,15 @@ if (is_auth()) {
                 <div class="form__search max-w-[35%] py-2 ">
                     <form action="?role=client&mod=tim_kiem&action=search" class="flex " method="POST">
                         <input type="text" name="tim_kiem" placeholder="Tìm Kiếm Nhanh" class=" bg-[#ededed] border-[#ededed] text-[18px] rounded-[35px] pl-2 outline-transparent" required>
-                        <a href="?role=client&mod=tim_kiem&action=search">
+                        <!-- <a href="?role=client&mod=tim_kiem&action=search">
                             <buttion class="form__search_btn text-[24px] pr-2 ml-3" type="submit">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </buttion>
-                        </a>
+                        </a> -->
+                        <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass text-[24px] pr-2 ml-3"></i>
+
+                        </button>
                     </form>
                 </div>
             </div>
