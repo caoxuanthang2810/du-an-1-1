@@ -5,9 +5,9 @@
         <div class="grid grid-cols-4 gap-24 text-center">
             <?php foreach ($products as $product) : ?>
                 <a href="?role=client&mod=chi_tiet&id=<?= $product['id']; ?>">
-                    <div class="border-2 border-[#EFA969] rounded-xl p-4">
+                    <div class="border-2 border-[#EFA969] rounded-xl p-4" id="anh">
                         <div>
-                            <img src="./public/images/container/<?= $product['img']; ?>" alt="" class="mx-auto mt-3">
+                            <img src="./public/images/container/<?= $product['img']; ?>" alt="" class="mx-auto mt-3 w-5/6">
                         </div>
                         <div>
                             <p class="font-semibold mt-2 mb-1 p-3"><?= $product['name'] ?></p>
