@@ -10,8 +10,7 @@ function indexAction()
 {
     if(is_auth()){
         $id = get_auth()['id'];
-    }else{
-        $id = 1;
+    
     }
     
     $data['bills'] = get_bills_by_id($id);
