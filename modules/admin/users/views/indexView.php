@@ -45,9 +45,9 @@ $pages = ceil($number / 7);
                                 <a href="?role=admin&mod=users&action=update&id=<?= $id ?>">
                                     <button> <i class="fa-solid fa-pen mr-2"></i></button>
                                 </a>
-                                <a href="?role=admin&mod=users&action=delete&id=<?= $id ?>" onclick="return confirm('Bạn chắc chắn muốn xoá danh mục: <?php echo $row['name_made_in'] ?> không? Hành động sẽ xoá danh mục và toàn bộ sản phẩm có trong danh mục này.')">
+                                <!-- <a href="?role=admin&mod=users&action=delete&id=<?= $id ?>" onclick="return confirm('Bạn chắc chắn muốn xoá danh mục: <?php echo $row['name_made_in'] ?> không? Hành động sẽ xoá danh mục và toàn bộ sản phẩm có trong danh mục này.')">
                                     <button><i class="fa-solid fa-trash-can"></i></button>
-                                </a>
+                                </a> -->
 
                             </td>
                         </tr>

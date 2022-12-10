@@ -10,15 +10,19 @@ function indexAction()
 {
     if(is_auth()){
         $id = get_auth()['id'];
-    }else{
-        $id = 1;
+        $data['bills'] = get_bills_by_id($id);
+        load_view('index',$data);
+    }
+    else{
+        load_view('index');
+
     }
     
-    $data['bills'] = get_bills_by_id($id);
+   // $data['bills'] = get_bills_by_id($id);
     // show_array($data);
     // die;
 
-    load_view('index',$data);
+    //load_view('index',$data);
     
 }
 
