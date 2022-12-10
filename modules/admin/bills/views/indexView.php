@@ -26,25 +26,30 @@ $pages = ceil($number / 6);
 
                         <th class="w-[1250px]">Trạng thái đơn hàng</th>
 
-                        <th class="w-[1250px]">Giá</th>
-                        
-                        <th class="w-[1250px]">Code</th>
-            
+                        <th class="w-[1000px]">Giá</th>
+
+                        <th class="w-[1000px]">Code</th>
+                        <th class="w-[450px]">Hành động</th>
+
+
                     </tr>
 
                     <?php foreach ($bills as $key) :
                         extract($key)
                     ?>
                         <tr class="text-center h-[55px]">
-                            <td><?=$id?></td>
-                            <td><?= $time?></td>
-                            <td><?= $fullname?></td>
-                            <td><?= $name_status?></td>
-                            <td><?= $price?></td>
-                            <td><?= $code?></td>
+                            <td><?= $id ?></td>
+                            <td><?= $time ?></td>
+                            <td><?= $fullname ?></td>
+                            <td><?= $name_status ?></td>
+                            <td><?= $price ?></td>
+                            <td><?= $code ?></td>
                             <td>
-                                <a href="?role=admin&mod=bills&action=update&id=<?=$id?>">
-                                    <button> <i class="fa-solid fa-pen mr-2"></i></button>
+                                <a href="?role=admin&mod=chi_tiet_hoa_don&code=<?= $key['code'] ?> ">
+                                    <button ><i class="fa-solid fa-list-ul"></i></button>
+                                </a>
+                                <a href="?role=admin&mod=bills&action=update&id=<?= $id ?>">
+                                    <button class="ml-3"> <i class="fa-solid fa-pen mr-2"></i></button>
                                 </a>
                             </td>
                         </tr>

@@ -14,16 +14,19 @@ function indexAction()
         $pro = get_products_by_id($id);
         $qty = 1;
         if (isset($_SESSION['cart']['buy']) && array_key_exists($id, $_SESSION['cart']['buy'])) {
-            $qty = $_SESSION['cart']['buy'][$id]['qty'] + 1;
+            $qty = $_SESSION['cart']['buy'][$id]['qty'] + 1; 
         }
         $_SESSION['cart']['buy'][$id] = array(
             'id' => $pro['id'],
             'name' => $pro['name'],
             'img' => $pro['img'],
+            'quantily' => $pro['quantily'],
             'price' => $pro['price'],
             'qty' => $qty,
             'sub_total' => $pro['price'] * $qty
         );
+        // show_array($_SESSION['cart']['infor']);
+        // die;
         update_info_cart();
     }
     if (!empty($_SESSION['cart'])) {
