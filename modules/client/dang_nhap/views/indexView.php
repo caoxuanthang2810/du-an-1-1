@@ -1,4 +1,5 @@
 <?php get_header('', 'Đăng nhập') ?>
+<?php $notifications = get_notification(); ?>
 <div class="container mx-auto">
     <div class="flex justify-center mt-[28px]">
         <form action="" class="w-[600px] flex justify-center mb-[190px]" method="POST">
@@ -20,6 +21,11 @@
                     <div class="my-3 font-bold">Mật khẩu</div>
                     <input type="password" name="password" id="password" class="border border-[#EFA969] w-[400px] py-4 pl-4 rounded-[5px]" placeholder="*********">
                     <span id="msg-error-pass" class="flex items-center mt-1 ml-2 text-[#ff4d4f]"></span>
+                    <?php foreach ($notifications as $notification) : ?>
+                        <?php foreach ($notification['msgs'] as $msg): ?>
+                            <span class="flex items-center mt-1 ml-2 text-[#ff4d4f]"><?php echo $msg ?></span>
+                        <?php endforeach; ?>
+                    <?php endforeach; ?>
                 </div>
 
                 <div class="w-[400px] mt-[30px] font-bold text-white p-4 flex bg-[#EFA969] justify-center items-center">
