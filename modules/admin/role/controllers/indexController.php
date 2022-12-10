@@ -11,22 +11,6 @@ function indexAction() {
     load_view('index', $data);
 }
 
-function createAction() {
-    load_view('create');
-}
-
-function createPostAction() {
-    $name = $_POST['name_role'];
-    if (empty($name)) {
-        push_notification('danger', ['Vui lòng nhập vào tên danh mục']);
-        header('Location: ?role=admin&mod=role&action=create');
-        die();
-    }
-    create_role($name);
-    push_notification('success', ['Tạo mới danh mục sản phẩm thành công']);
-    header('Location: ?role=admin&mod=role');
-}
-
 function deleteAction() {
     $id = $_GET['id'];
     delete_role($id);
