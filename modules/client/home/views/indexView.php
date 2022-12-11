@@ -15,18 +15,6 @@ $pages = ceil($number / 8);
         <img id="change_image" src="./public/images/container/banner1.png" class="w-full" alt="">
     </header>
 
-    <div class=" flex justify-between mt-[40px] ">
-
-        <div>
-            <img src="../Asset/Image/logo/nen-dau-tu-mua-lens-hay-nang-cap-body-may-anh--1 1.png" alt="">
-        </div>
-        <div>
-            <img src="../Asset/Image/logo/images (1) 1.png" alt="">
-        </div>
-        <div>
-            <img src="../Asset/Image/logo/nen-dau-tu-mua-lens-hay-nang-cap-body-may-anh--2 1.png" alt="">
-        </div>
-    </div>
     <div class="flex justify-between">
         <div>
             <h2 class="mt-[15px] font-bold text-[#E73445] text-[25px] mb-5">SẢN PHẨM HOT</h2>

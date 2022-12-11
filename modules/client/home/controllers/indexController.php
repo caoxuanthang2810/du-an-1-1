@@ -1,7 +1,7 @@
 <?php
 
 function construct() {
-    
+    // hàm dùng chung
     load_model('index');
 }
 
