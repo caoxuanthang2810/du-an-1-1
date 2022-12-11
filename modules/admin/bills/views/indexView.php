@@ -18,9 +18,9 @@ $pages = ceil($number / 6);
 
                 <table>
                     <tr class="text-center h-[55px]">
-                        <th class="w-[100px]">Mã hóa đơn</th>
+                        <th class="w-[250px]">Mã hóa đơn</th>
 
-                        <th class="w-[1250px]">Thời gian mua</th>
+                        <th class="w-[1050px]">Thời gian mua</th>
 
                         <th class="w-[100px]">Tài khoản</th>
 

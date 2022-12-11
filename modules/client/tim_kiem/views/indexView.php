@@ -13,7 +13,7 @@
                             <p class="font-semibold mt-2 mb-1 p-3"><?= $product['name'] ?></p>
                         </div>
                         <div>
-                            <span class="text-red-500 font-bold "><?= $product['price'] ?> VNĐ</span>
+                            <span class="text-red-500 font-bold "><?= currency_format($product['price']) ?></span>
                         </div>
                         <div class="mt-3 mb-4">
                             <button class="border border-[#EFA969] rounded-xl font-bold w-[100px] text-[18px] hover:bg-[#EFA969]  hover:text-white p-1">Mua Hàng</button>
