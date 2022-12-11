@@ -21,7 +21,7 @@ $pages = ceil($number / 7);
                         <th class="w-[650px]">Nội dung</th>
                         <th class="w-[250px]">Thời gian bình luận</th>
                         <th class="w-[200px]">Mã sản phẩm</th>
-                        <th class="w-[200px]">Mã khách hàng</th>
+                        <th class="w-[200px]">Tên khách hàng</th>
                         <th class="w-[200px]">Hành động</th>
                     </tr>
                     <?php foreach ($comment as $row) : ?>
@@ -31,7 +31,7 @@ $pages = ceil($number / 7);
                             <td><?= $row['content'] ?></td>
                             <td><?= $row['time'] ?></td>
                             <td><?= $row['id_product'] ?></td>
-                            <td><?= $row['id_user'] ?></td>
+                            <td><?= $row['fullname'] ?></td>
                             <td>
 
                                 
