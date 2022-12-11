@@ -17,6 +17,7 @@ function indexPostAction() {
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $address = $_POST['address'];
+
     update_user_by_id($id, $fullname, $password, $email, $phone, $address);
     header('location:?role=client&mod=thong_tin_ca_nhan');
 
