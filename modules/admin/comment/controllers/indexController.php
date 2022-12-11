@@ -18,12 +18,12 @@ function indexAction() {
     load_view('index', $data);
 }
 
-function deleteAction() {
-    $id = $_GET['id'];
-    delete_comment($id);
-    push_notification('success', ['Xoá danh mục sản phẩm thành công']);
-    header('Location: ?role=admin&mod=comment');
-}
+// function deleteAction() {
+//     $id = $_GET['id'];
+//     delete_comment($id);
+//     push_notification('success', ['Xoá danh mục sản phẩm thành công']);
+//     header('Location: ?role=admin&mod=comment');
+// }
 
 // function createAction() {
     //     load_view('create');

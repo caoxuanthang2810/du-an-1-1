@@ -35,6 +35,8 @@ function get_action()
     return $action;
 }
 
+
+
 /*
  * -------------------------------
  * Load
@@ -294,3 +296,5 @@ function is_cart_buy()
 function get_count_bill($count_cart)
 {
 }
+
+
