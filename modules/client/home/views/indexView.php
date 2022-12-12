@@ -71,7 +71,7 @@ $pages = ceil($number / 8);
         </div>
     </div>
 
-    <div class="flex mt-5 justify-end mr-5">
+    <div class="flex mt-8 justify-end mr-5">
         <nav aria-label="Page navigation example">
             <ul class="inline-flex items-center -space-x-px">
                 <li>
