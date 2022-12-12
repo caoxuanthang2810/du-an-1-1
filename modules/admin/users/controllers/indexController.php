@@ -47,11 +47,7 @@ function updatePostAction() {
         header('Location: ?role=admin&mod=users');
         die();
     }
-    // $username = $_POST['username'];
-    // $password = $_POST['password'];
-    // $email = $_POST['email'];
-    // $phone = $_POST['phone'];
-    // $address = $_POST['address'];
+    
     $id_role= $_POST['id_role'];
 
     
